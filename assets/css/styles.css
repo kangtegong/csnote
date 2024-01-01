@@ -1,0 +1,189 @@
+body {
+    background-color: #f6f5e9;
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 20px; 
+    line-height: 1.6;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 3px solid #ccc;
+    border-image: url(assets/svg/bq.svg) 0 6 3 6 stretch stretch;
+}
+
+th {
+    border-right: 3px solid #CD0000;
+    border-image: url(assets/svg/bq.svg) 0 6 3 6 stretch stretch;
+    width: 25%; 
+}
+
+td {
+    width: 75%; 
+}
+
+img {
+    max-width: 65%; 
+    height: auto; 
+}
+
+/* 화면 크기별 반응형 설정 */
+@media screen and (max-width: 768px) {
+    th, td {
+        padding: 5px;
+    }
+    th {
+        width: 30%; 
+    }
+    td {
+        width: 70%; 
+    }
+    
+    .navbar #referenceFilter {
+        display: none;
+    }
+
+    /* 폰트 크기 조정 */
+    body {
+        font-size: 14px; /* 기본 폰트 크기보다 작게 조정 */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* 더 작은 화면을 위한 폰트 크기 조정 */
+    body {
+        font-size: 12px; /* 더 작은 폰트 크기로 조정 */
+    }
+
+    th, td {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .navbar #subjectsLink {
+        display: none;
+    }
+
+    /* 가장 작은 화면을 위한 폰트 크기 조정 */
+    body {
+        font-size: 10px; /* 더 작게 조정 */
+    }
+
+    th, td {
+        font-size: 10px;
+    }
+}
+
+@media print {
+    .navbar {
+        display: none;
+    }
+}
+
+/* 네비게이션 바 스타일 */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    align-items: center; /* 중앙 정렬을 위해 추가 */
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 14px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 14px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar span.registered-keywords {
+    float: right; 
+    color: yellow; 
+    padding: 14px 16px; 
+}
+
+.navbar input[type="text"] {
+    margin: 0 10px;
+    padding: 0 10px; 
+    border: none;
+    background: #333;
+    font-size: 16px;
+    color: #f2f2f2;
+    float: left;
+    box-shadow: none;
+    outline: none;
+    vertical-align: middle; /* 중앙 정렬을 위해 추가 */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+code {
+    display: block; /* 블록 요소처럼 보이게 함 */
+    background-color: #f4f4f4; /* 코드 블록의 배경색 */
+    border: 1px solid #ccc; /* 경계선 */
+    padding: 10px; /* 내부 여백 */
+    margin: 10px 0; /* 위아래 마진 */
+    border-radius: 5px; /* 경계선 둥근 처리 */
+    white-space: pre-wrap; /* 공백 문자 유지 및 줄바꿈 */
+    word-wrap: break-word; /* 긴 텍스트 자동 줄바꿈 */
+    font-family: monospace; /* 고정폭 글꼴 사용 */
+}

@@ -1,0 +1,455 @@
+sections:
+  - title: "데이터베이스"
+    content:
+      - subtitle: "데이터베이스의 큰 그림"
+        items:
+            - term: "데이터베이스"
+              description: "여러 사람이 공유하여 사용할 목적으로 체계화해<br>통합, 관리하는 데이터의 집합"
+              superscript: "database"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/512 페이지"
+            - term: "데이터베이스 관리 시스템(DBMS)"
+              description: "데이터베이스를 관리하기 위한 소프트웨어로,<br>데이터의 정의, 조작, 제어를 수행"
+              superscript: "Database Management System"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/512 페이지"
+              image: "assets/img/db/dbms.png"
+            - term: "관계형 데이터베이스 관리 시스템(RDBMS)"
+              description: "데이터를 테이블 형식으로 저장하며,<br>테이블 간의 관계를 정의하는 시스템<br>MySQL, Oracle, PostgreSQL, SQLite, MariaDB,<br>MS SQL Server 등이 있음"
+              superscript: "Relational DataBase Management System"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/513 페이지"
+              image: "assets/img/db/rdbms.png"
+            - term: "NoSQL 데이터베이스 관리 시스템"
+              description: "관계형 모델을 사용하지 않는 데이터베이스 시스템으로,<br>유연한 스키마와 높은 확장성을 제공<br>MongoDB, redis 등이 대표적"
+              superscript: "NoSQL DataBase Management System"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/513 페이지"
+              image: "assets/img/db/mongodb.png"
+            - term: "쿼리 (데이터베이스)"
+              description: "데이터베이스에 데이터를 조회, 삽입, 갱신, 삭제하기 위한 명령어"
+              superscript: "query"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/515 페이지"
+            - term: "SQL"
+              description: "데이터베이스에 질의하기 위한 구조화된 언어로,<br>데이터베이스를 정의, 조작, 제어하는 데 사용<br>SELECT, INSERT, UPDATE, DELETE 등의 명령어가 있음"
+              superscript: "Structured Query Language"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/515 페이지"
+            - term: "DDL"
+              description: "데이터 정의를 위한 언어로,<br>테이블, 인덱스 등의 데이터 구조를 정의하고 관리<br>CREATE, ALTER, DROP 등의 명령어가 있음"
+              superscript: "Data Definition Language"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/516 페이지"
+            - term: "DML"
+              description: "데이터 조작을 위한 언어로,<br>테이블의 레코드를 조회, 삽입, 갱신, 삭제하는 기능<br>SELECT, INSERT, UPDATE, DELETE 등의 명령어가 있음"
+              superscript: "Data Manipulation Language"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/516 페이지"
+            - term: "DCL"
+              description: "데이터 제어를 위한 언어로,<br>데이터베이스의 작업을 커밋하거나 롤백하고,<br>사용자에게 권한을 부여하거나 회수하는 기능<br>COMMIT, ROLLBACK, GRANT, REVOKE 등의 명령어가 있음"
+              superscript: "Data Control Language"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/516 페이지"
+            - term: "TCL"
+              description: "트랜잭션을 제어하는 언어로,<br>트랜잭션의 시작과 종료, 복구를 관리<br>BEGIN, COMMIT, ROLLBACK 등의 명령어가 있음"
+              superscript: "Transaction Control Language"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/516 페이지"
+            - term: "엔티티"
+              description: "독립적으로 존재할 수 있는 객체로,<br>데이터베이스에서 저장 및 관리되는 데이터 단위"
+              superscript: "Entity"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/519 페이지"
+            - term: "속성"
+              description: "엔티티의 특성으로,<br>엔티티가 가지고 있는 데이터를 설명하는 필드"
+              superscript: "attribute"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/519 페이지"
+            - term: "도메인"
+              description: "엔티티의 속성이 가질 수 있는 값의 범위"
+              superscript: "domain"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/520 페이지"
+            - term: "릴레이션"
+              description: "이차원 테이블 형태로 데이터를 저장하는 엔티티의 집합"
+              superscript: "relation"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/520 페이지"
+            - term: "컬렉션"
+              description: "MongoDB에서 데이터를 저장하는 단위로,<br>엔티티 집합을 표현하는 단위"
+              superscript: "collection"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/520 페이지"
+            - term: "레코드"
+              description: "데이터베이스에 저장된 엔티티의 인스턴스로,<br>하나의 행에 해당"
+              superscript: "record"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/520 페이지"
+            - term: "필드"
+              description: "엔티티 속성을 표현하는 열로,<br>하나의 데이터 요소를 나타냄"
+              superscript: "field"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/520 페이지"
+            - term: "도큐먼트"
+              description: "MongoDB에서 개별 레코드를 JSON 형태로 저장하는 단위"
+              superscript: "document"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/520 페이지"
+            - term: "카디날리티"
+              description: "한 필드에 대한 고유 값의 수로,<br>데이터베이스에서 중복되지 않는 레코드의 개수"
+              superscript: "cardinality"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/521 페이지"
+            - term: "스키마"
+              description: "데이터베이스에 저장되는 데이터의 구조와 제약 조건을 정의하는 구조"
+              superscript: "schema"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/521 페이지"
+            - term: "스키마리스 데이터베이스"
+              description: "고정된 스키마 없이 데이터를 저장하여 유연성을 제공"
+              superscript: "schemaless database"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/521 페이지"
+            - term: "트랜잭션"
+              description: "데이터베이스에서 수행되는 작업의 논리적 단위로,<br>ACID 속성을 가짐"
+              superscript: "transaction"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/523 페이지"
+            - term: "초당 트랜잭션 (TPS)"
+              description: "데이터베이스의 성능을 나타내는 지표로,<br>1초당 처리할 수 있는 트랜잭션의 수"
+              superscript: "Transactions Per Second"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/523 페이지"
+            - term: "ACID"
+              description: "데이터베이스 트랜잭션이 지켜야 할 성질로,<br>원자성, 일관성, 격리성, 지속성을 의미"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/524 페이지"
+            - term: "원자성 (데이터베이스)"
+              description: "하나의 트랜잭션이 완전히 수행되거나,<br>전혀 수행되지 않아야 하는 성질"
+              superscript: "Atomicity"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/524 페이지"
+            - term: "커밋"
+              description: "트랜잭션의 작업을 영구적으로 저장하는 연산"
+              superscript: "commit"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/525 페이지"
+            - term: "롤백"
+              description: "트랜잭션의 작업을 취소하고,<br>이전 상태로 되돌리는 연산"
+              superscript: "rollback"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/525 페이지"
+            - term: "일관성 (데이터베이스)"
+              description: "트랜잭션 전후로 데이터베이스가 일관된 상태를 유지해야 하는 성질"
+              superscript: "consistency"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/525 페이지"
+            - term: "격리성 (데이터베이스)"
+              description: "동시에 수행되는 여러 트랜잭션이 서로 간섭하지 않도록 보장하는 성질"
+              superscript: "isolation"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/526 페이지"
+            - term: "지속성 (데이터베이스)"
+              description: "트랜잭션이 성공적으로 완료된 후,<br>그 결과가 영구적으로 반영되는 성질"
+              superscript: "durability"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/526 페이지"
+
+      - subtitle: "RDBMS의 기본"
+        items:
+            - term: "키"
+              description: "테이블의 레코드를 식별할 수 있는 하나 이상의 필드로,<br>기본 키, 후보 키, 외래 키 등이 있음"
+              superscript: "key"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/532 페이지"
+            - term: "후보 키"
+              description: "테이블의 한 레코드를 유일하게 식별할 수 있는 필드의 최소 집합"
+              superscript: "candidate key"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/533 페이지"
+            - term: "복합 키"
+              description: "두 개 이상의 필드로 구성된 후보 키로,<br>여러 필드를 결합하여 유일성을 보장"
+              superscript: "composite key"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/533 페이지"
+            - term: "슈퍼 키"
+              description: "유일성을 만족하지만,<br>최소성을 만족하지 않는 필드의 집합"
+              superscript: "super key"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/533 페이지"
+            - term: "기본 키"
+              description: "테이블의 각 레코드를 유일하게 식별할 수 있는 필드로,<br>테이블 당 하나만 존재"
+              superscript: "primary key"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/534 페이지"
+            - term: "대체 키"
+              description: "기본 키가 아닌 후보 키"
+              superscript: "alternate key"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/534 페이지"
+            - term: "외래 키"
+              description: "다른 테이블의 기본 키를 참조하는 필드로,<br>테이블 간의 관계를 정의"
+              superscript: "foreign key"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/534 페이지"
+              image: "assets/img/db/fk.png"
+            - term: "일대일 대응 관계 (데이터베이스)"
+              description: "하나의 레코드가 다른 테이블의 레코드 하나에만 대응되는 관계"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/536 페이지"
+              image: "assets/img/db/onetoone.png"
+            - term: "일대다 대응 관계 (데이터베이스)"
+              description: "하나의 레코드가 다른 테이블의 여러 레코드와 대응되는 관계"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/536 페이지"
+              image: "assets/img/db/onetomany.png"
+            - term: "다대다 대응 관계 (데이터베이스)"
+              description: "여러 레코드가 다른 테이블의 여러 레코드와 연결되는 관계"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/536 페이지"
+              image: "assets/img/db/manytomany.png"
+            - term: "무결성 제약 조건"
+              description: "데이터베이스의 일관성과 유효한 데이터를 유지하기 위해 지켜야 하는 규칙"
+              superscript: "integrity constraint"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/539 페이지"
+            - term: "도메인 제약 조건"
+              description: "테이블이 가질 수 있는 필드 타입과 범위에 대한 규칙"
+              superscript: "domain constraint"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/540 페이지"
+            - term: "원자 값"
+              description: "더 이상 쪼갤 수 없는 단일한 값"
+              superscript: "atomic value"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/540 페이지"
+            - term: "키 제약 조건"
+              description: "키로 지정된 필드에 중복된 값이 존재해서는 안 되는 제약 조건"
+              superscript: "key constraint"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/541 페이지"
+            - term: "엔티티 무결성 제약 조건"
+              description: "기본 키로 지정된 필드는 고유한 값이어야 하며,<br>NULL이 되어서는 안 되는 규칙"
+              superscript: "entity integrity constraint"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/541 페이지"
+            - term: "참조 무결성 제약 조건"
+              description: "외래 키를 통해 참조된 데이터는 실제로 존재해야 하는 규칙"
+              superscript: "referential integrity constraint"
+              references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/541 페이지"
+
+      - subtitle: "효율적 쿼리"
+        items:
+          - term: "서브 쿼리"
+            description: "다른 SQL문에 포함된 SQL문으로,<br>주로 SELECT, INSERT, UPDATE, DELETE 문에 사용"
+            superscript: "subquery"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/573_페이지"
+          - term: "조인"
+            description: "두 개 이상의 테이블을 결합하여,<br>하나의 결과 집합으로 반환하는 SQL 연산"
+            superscript: "join"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/576_페이지"
+          - term: "내부 조인"
+            description: "두 테이블 간의 조인 조건을 만족하는 레코드만 반환하는 조인 방식"
+            superscript: "inner join"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/577_페이지"
+            image: "assets/img/db/inner_join.png"
+          - term: "외부 조인"
+            description: "조인 조건을 만족하지 않는 레코드도 포함하여 반환하는 조인 방식<br>왼쪽 외부 조인, 오른쪽 외부 조인, 전체 외부 조인 등이 있음"
+            superscript: "outer join"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/577_페이지"
+          - term: "왼쪽 외부 조인"
+            description: "왼쪽 테이블의 모든 레코드를 포함하고,<br>조인 조건을 만족하지 않는 오른쪽 테이블의 레코드는 NULL로 반환"
+            superscript: "left outer join"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/577_페이지"
+            image: "assets/img/db/left_join.png"
+          - term: "오른쪽 외부 조인"
+            description: "오른쪽 테이블의 모든 레코드를 포함하고,<br>조인 조건을 만족하지 않는 왼쪽 테이블의 레코드는 NULL로 반환"
+            superscript: "right outer join"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/577_페이지"
+            image: "assets/img/db/right_join.png"
+          - term: "전체 외부 조인"
+            description: "두 테이블의 모든 레코드를 포함하고,<br>조인 조건을 만족하지 않는 레코드는 NULL로 반환"
+            superscript: "full outer join"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/577_페이지"
+            image: "assets/img/db/full_join.png"
+          - term: "뷰"
+            description: "SELECT문의 결과로 생성된 가상의 테이블로,<br>저장된 데이터의 일부분만을 제공하여 보안을 강화하고,<br>복잡한 쿼리를 단순화"
+            superscript: "view"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/584_페이지"
+          - term: "인덱스"
+            description: "테이블의 검색 속도를 높이기 위해 사용하는 자료구조로,<br>대량의 데이터를 효율적으로 조회"
+            superscript: "index"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/587_페이지"
+            image: "assets/img/db/index.png"
+          - term: "클러스터형 인덱스"
+            description: "테이블 당 하나만 생성할 수 있으며,<br>테이블의 물리적 순서를 인덱스 순서에 맞게 정렬"
+            superscript: "clustered index"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/588_페이지"
+          - term: "세컨더리 인덱스"
+            description: "클러스터형 인덱스 외에 추가로 생성할 수 있는 인덱스로,<br>클러스터형 인덱스와는 달리 테이블의 물리적 순서를 변경하지 않음"
+            superscript: "secondary index"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/588_페이지"
+
+      - subtitle: "데이터베이스 설계"
+        items:
+          - term: "ER 다이어그램"
+            description: "데이터베이스에 저장되는 엔티티의 구조를 모델링한 다이어그램으로,<br>엔티티, 속성, 관계 등을 도식화"
+            superscript: "ER diagram"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/594 페이지"
+          - term: "피터 첸 표기법"
+            description: "전통적인 형태의 ERD 표기 방식으로,<br>엔티티와 관계를 다이어그램으로 표현"
+            superscript: "Peter Chen notation"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/595 페이지"
+            image: "assets/img/db/peterchen.png"
+          - term: "IE 표기법"
+            description: "정보 엔지니어링 표기법으로,<br>테이블 간의 관계를 직관적으로 표현"
+            superscript: "IE notation"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/596 페이지"
+            image: "assets/img/db/ie.png"
+          - term: "식별 관계"
+            description: "참조되는 엔티티가 존재해야 참조하는 엔티티가 존재할 수 있는 관계"
+            superscript: "identifying relationship"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/596 페이지"
+          - term: "비식별 관계"
+            description: "참조되는 엔티티가 존재하지 않아도 참조하는 엔티티가 존재할 수 있는 관계"
+            superscript: "non-identifying relationship"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/596 페이지"
+          - term: "정규화"
+            description: "데이터베이스 설계 과정에서 테이블의 데이터 중복을 최소화하고,<br>일관성을 유지하기 위해 테이블을 분해하는 과정"
+            superscript: "Normal Form"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/597 페이지"
+            image: "assets/img/db/normalization.png"
+          - term: "제 1 정규화"
+            description: "모든 속성이 원자값을 가지도록 테이블을 구성"
+            superscript: "1NF"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/599 페이지"
+          - term: "제 2 정규화"
+            description: "기본 키가 아닌 모든 속성이 기본 키 전체에 완전히 종속되도록 테이블을 구성"
+            superscript: "2NF"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/600 페이지"
+          - term: "제 3 정규화"
+            description: "기본 키가 아닌 모든 속성이 기본 키에 이행적으로 종속되지 않도록 테이블을 구성"
+            superscript: "3NF"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/602 페이지"
+          - term: "보이스/코드 정규화"
+            description: "제 3 정규형을 만족하면서,<br>모든 결정자가 후보 키가 되도록 테이블을 구성"
+            superscript: "Boyce-Codd Normal Form"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/603 페이지"
+          - term: "부분 함수 종속성"
+            description: "기본 키의 일부에만 종속된 필드"
+            superscript: "partial functional dependency"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/600 페이지"
+          - term: "완전 함수 종속성"
+            description: "기본 키 전체에 종속된 필드"
+            superscript: "full functional dependency"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/600 페이지"
+          - term: "이행 함수 종속성"
+            description: "기본 키가 아닌 다른 필드가 또 다른 필드에 종속된 관계"
+            superscript: "transitive functional dependency"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/602 페이지"
+          - term: "역정규화"
+            description: "성능 향상을 위해 정규화된 테이블을 다시 통합하는 과정"
+            superscript: "denormalization"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/604 페이지"
+
+      - subtitle: "NoSQL"
+        items:
+          - term: "키-값 데이터베이스"
+            description: "레코드를 키와 값의 쌍으로 저장하는 데이터베이스로,<br>빠른 데이터 액세스가 가능"
+            superscript: "key-value database"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/605_페이지"
+          - term: "인-메모리 데이터베이스"
+            description: "데이터를 보조기억장치가 아닌 메모리에 저장하여<br>빠른 데이터베이스 접근 속도를 제공"
+            superscript: "in-memory database"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/605_페이지"
+          - term: "도큐먼트 데이터베이스"
+            description: "레코드를 도큐먼트라는 단위로 저장하고 관리하는 데이터베이스로,<br>JSON, BSON 형태로 데이터를 저장"
+            superscript: "document database"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/606_페이지"
+          - term: "그래프 데이터베이스"
+            description: "데이터를 그래프의 노드 형태로 저장하여,<br>복잡한 관계 데이터를 효율적으로 관리"
+            superscript: "graph database"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/607_페이지"
+          - term: "칼럼 패밀리 데이터베이스"
+            description: "열을 기준으로 데이터를 저장하는 데이터베이스로,<br>대량의 데이터를 효율적으로 관리"
+            superscript: "column-family database"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/607_페이지"
+          - term: "데이터베이스 분할"
+            description: "테이블을 물리적으로 분할하여,<br>분산 환경에서 데이터베이스를 효율적으로 관리하는 기술"
+            superscript: "database partitioning"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/621_페이지"
+            image: "assets/img/db/db_partitioning.png"
+          - term: "수평적 분할"
+            description: "테이블의 행을 기준으로 테이블을 나누어 저장하여<br>데이터의 일부분만을 효율적으로 관리"
+            superscript: "horizontal partitioning"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/621_페이지"
+          - term: "수직적 분할"
+            description: "테이블의 열을 기준으로 테이블을 나누어 저장하여<br>데이터의 특정 부분만을 효율적으로 관리"
+            superscript: "vertical partitioning"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/621_페이지"
+          - term: "범위 분할"
+            description: "레코드 데이터가 가질 수 있는 범위를 정의하고,<br>해당 범위를 기준으로 테이블을 나누는 방식"
+            superscript: "range partitioning"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/622_페이지"
+          - term: "목록 분할"
+            description: "레코드 데이터가 특정 목록에 포함된 값을 가질 경우,<br>해당 레코드를 별도의 테이블로 분할"
+            superscript: "list partitioning"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/623_페이지"
+          - term: "해시 분할"
+            description: "특정 열 데이터에 대한 해시 값을 기준으로 테이블을 분할하여,<br>데이터를 균등하게 분산"
+            superscript: "hash partitioning"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/624_페이지"
+          - term: "키 분할"
+            description: "특정 키를 기준으로 테이블을 분할하여,<br>데이터를 효율적으로 관리"
+            superscript: "key partitioning"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/624_페이지"
+          - term: "샤딩"
+            description: "분할된 테이블을 별개의 데이터베이스 서버에 분산하여 저장하는 기술로,<br>대규모 데이터를 효율적으로 관리"
+            superscript: "sharding"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/625_페이지"
+            image: "assets/img/db/sharding.png"
+          - term: "샤드"
+            description: "샤딩을 통해 분할된 데이터베이스의 각 단위로,<br>각 샤드는 독립적인 데이터베이스로 동작"
+            superscript: "shard"
+            references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/625_페이지"

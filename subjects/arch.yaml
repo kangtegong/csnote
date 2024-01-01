@@ -1,0 +1,1471 @@
+sections:
+  - title: "컴퓨터 구조"
+    content:
+      - subtitle: "컴퓨터 구조 시작하기"
+        content:
+          - subsubtitle: "컴퓨터 구조의 큰 그림"
+            items:
+              - term: "데이터"
+                description: "컴퓨터가 이해하는 숫자, 문자, 이미지, 동영상과 같은 정적인 정보"
+                superscript: "data"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/37_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/37_페이지"
+              - term: "명령어"
+                description: "데이터를 활용하여 CPU를 작동시키는 정보"
+                superscript: "instruction"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/37_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/36_페이지"
+              - term: "메인 메모리"
+                description: "현재 실행되는 프로그램의 명령어와 데이터를 저장하는 부품 <br>사용되는 하드웨어로는 RAM(Random Access Memory)과 ROM(Read Only Memory)이 있으며, 메모리라는 용어는 보통 RAM을 지칭"
+                superscript: "main memory"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/40_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/39_페이지"
+                image: "assets/img/arch/memory.png"
+              - term: "중앙처리장치(CPU)"
+                description: "메모리에 저장된 명령어를 읽어 들이고, 읽어 들인 명령어를 해석하고, 실행하는 부품"
+                superscript: "CPU; Central Processing Unit"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/41_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/38_페이지"
+                image: "assets/img/arch/cpu.png"
+              - term: "산술논리연산장치(ALU)"
+                description: "CPU 내부 구성 요소 중 하나로, 덧셈, 뺄셈, 곱셈, 나눗셈, 논리 연산 등 계산을 위해 존재하는 부품 (계산용 회로)"
+                superscript: "ALU; Arithmetic Logic Unit"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/42_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/38_페이지"
+              - term: "레지스터"
+                description: "CPU 내부 구성 요소 중 하나로, CPU 내부의 작은 임시 저장 장치 <br>프로그램을 실행하는 데 필요한 값들을 임시로 저장하며, CPU 안에는 여러 개의 레지스터가 존재하고, 각기 다른 이름과 역할을 가지고 있음"
+                superscript: "register"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/42_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/38_페이지"
+              - term: "제어장치"
+                description: "CPU 내부 구성 요소 중 하나로, 제어 신호라는 전기 신호를 내보내고 명령어를 해석하는 장치"
+                superscript: "control unit"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/42_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/38_페이지"
+              - term: "보조기억장치"
+                description: "하드 디스크, SSD, USB 메모리, DVD, CD-ROM과 같이 메모리보다 크기가 크고 전원이 꺼져도 저장된 내용을 잃지 않는 저장 장치 <br>메모리가 현재 실행되는 프로그램을 저장한다면, 보조기억장치는 보관할 프로그램을 저장"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/45_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/40_페이지"
+                image: "assets/img/arch/storage.png"
+              - term: "입출력장치"
+                description: "마이크, 스피커, 프린터, 마우스, 키보드와 같이 컴퓨터 외부에 연결되어 컴퓨터 내부와 정보를 교환하는 장치"
+                superscript: "I/O device"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/46_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/41_페이지"
+                image: "assets/img/arch/io.png"
+              - term: "주변 장치"
+                description: "보조기억장치와 입출력장치의 통칭"
+                superscript: "peripheral device"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/41_페이지"
+              - term: "시스템 버스"
+                description: "컴퓨터의 네 가지 핵심 부품(CPU, 메모리, 보조기억장치, 입출력장치)들이 서로 정보를 주고받는 통로 <br>주소 버스, 데이터 버스, 제어 버스로 구성"
+                superscript: "system bus"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/47_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/42_페이지"
+              - term: "주소 버스"
+                description: "주소를 주고받는 통로"
+                superscript: "address bus"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/48_페이지"
+              - term: "데이터 버스"
+                description: "명령어와 데이터를 주고받는 통로"
+                superscript: "data bus"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/48_페이지"
+              - term: "제어 버스"
+                description: "제어 신호를 주고받는 통로"
+                superscript: "control bus"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/48_페이지"
+
+      - subtitle: "데이터"
+        content:
+          - subsubtitle: "0과 1로 숫자를 표현하는 방법"
+            items:
+              - term: "비트"
+                description: "0과 1을 나타내는 가장 작은 정보 단위"
+                superscript: "bit"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/55_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/45_페이지"
+              - term: "바이트"
+                description: "8비트를 묶은 단위로, 비트보다 한 단계 큰 단위"
+                superscript: "byte"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/56_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/46_페이지"
+              - term: "워드"
+                description: "CPU가 한 번에 처리할 수 있는 데이터 크기"
+                superscript: "word"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/56_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/46_페이지"
+              - term: "하프워드"
+                description: "워드의 절반 크기"
+                superscript: "half word"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/56_페이지"
+              - term: "풀 워드"
+                description: "워드의 1배 크기"
+                superscript: "full word"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/56_페이지"
+              - term: "더블 워드"
+                description: "워드의 2배 크기"
+                superscript: "double word"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/56_페이지"
+              - term: "이진법"
+                description: "1을 넘어가는 시점에 자리 올림을 하여 0과 1만으로 모든 숫자를 표현하는 방법"
+                superscript: "binary"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/57_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/46_페이지"
+              - term: "십진법"
+                description: "숫자가 9를 넘어가는 시점에 자리 올림을 하여 0부터 9까지, 열 개의 숫자만으로 모든 수를 표현하는 방법"
+                superscript: "decimal"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/57_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/46_페이지"
+              - term: "이진수"
+                description: "이진법으로 표현한 수"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/57_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/46_페이지"
+              - term: "십진수"
+                description: "십진법으로 표현한 수"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/57_페이지"
+              - term: "1의 보수"
+                description: "모든 이진수의 0과 1을 뒤집은 수"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/59_페이지"
+              - term: "2의 보수"
+                description: "어떤 수를 그보다 큰 2^n에서 뺀 값(=모든 0과 1을 뒤집고, 거기에 1을 더한 값)"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/58_페이지"
+              - term: "플래그"
+                description: "CPU가 명령어를 처리하는 과정에서 고려해야 할 부가 정보<br>(예: 부호 플래그, 제로 플래그, 캐리 플래그, 오버플로우 플래그, 인터럽트 플래그 등)"
+                superscript: "flag"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/59_페이지"
+              - term: "십육진법"
+                description: "수가 15를 넘어가는 시점에 자리 올림을 하는 숫자 표현 방식 <br>십진수 10, 11, 12, 13, 14, 15를 십육진법 체계에서는 각각 A, B, C, D, E, F로 표기"
+                superscript: "hexadecimal"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/60_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/47_페이지"
+              - term: "부동 소수점"
+                description: "컴퓨터 내부에서 실수를 표현하는 방법<br>부호 비트, 지수 부분, 가수 부분으로 구성"
+                superscript: "floating point"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/48_페이지"
+                image: "assets/img/arch/floatingpoint.png"
+
+          - subsubtitle: "0과 1로 문자를 표현하는 방법"
+            items:
+              - term: "문자 집합"
+                description: "컴퓨터가 인식하고 표현할 수 있는 문자의 모음"
+                superscript: "character set"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/67_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/51_페이지"
+              - term: "문자 인코딩"
+                description: "문자를 컴퓨터가 이해 가능한 코드로 변환하는 방법"
+                superscript: "character encoding"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/67_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/51_페이지"
+              - term: "문자 디코딩"
+                description: "0과 1로 이루어진 문자 코드를 사람이 이해할 수 있는 문자로 변환하는 방법(인코딩의 반대 과정)"
+                superscript: "character decoding"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/67_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/51_페이지"
+              - term: "아스키"
+                description: "영어 알파벳과 아라비아 숫자, 그리고 일부 특수 문자를 포함하는 초창기 문자 집합"
+                superscript: "ASCII; American Standard Code for Information Interchange"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/68_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/51_페이지"
+              - term: "아스키 문자"
+                description: "아스키 문자 집합에 속한 문자"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/68_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/52_페이지"
+              - term: "아스키 코드"
+                description: "아스키 문자에 대응된 고유한 수 <br>아스키 문자들은 0부터 127까지 총 128개의 숫자 중 하나의 고유한 수에 일대일로 대응됨"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/69_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/52_페이지"
+              - term: "코드 포인트"
+                description: "글자에 부여된 고유한 값"
+                superscript: "code point"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/69_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/53_페이지"
+              - term: "확장 아스키"
+                description: "일반 아스키 코드보다 더 다양한 문자 표현을 위해 아스키 코드에 1비트를 추가한 8비트 문자 집합"
+                superscript: "Extended ASCII"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/69_페이지"
+              - term: "EUC-KR"
+                description: "한글을 2바이트 크기로 인코딩할 수 있는 완성형 인코딩 방식"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/70_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/53_페이지"
+              - term: "한글 완성형 인코딩"
+                description: "초성, 중성, 종성의 조합으로 이루어진 완성된 하나의 글자에 고유한 코드를 부여하는 인코딩 방식"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/70_페이지"
+              - term: "한글 조합형 인코딩"
+                description: "초성을 위한 비트열, 중성을 위한 비트열, 종성을 위한 비트열을 할당하여 그것들의 조합으로 하나의 글자 코드를 완성하는 인코딩 방식"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/70_페이지"
+              - term: "CP949"
+                description: "EUC-KR의 확장된 버전으로, EUC-KR로 표현할 수 없는 더욱 다양한 문자를 표현"
+                superscript: "Code Page 949"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/71_페이지"
+              - term: "유니코드"
+                description: "여러 나라의 문자들을 광범위하게 표현할 수 있는 통일된 문자 집합으로, UTF-8, UTF-16, UTF-32는 유니코드 문자의 인코딩 방식"
+                superscript: "unicode"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/72_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/54_페이지"
+              - term: "UTF"
+                description: "유니코드를 인코딩하는 방법<br> 가변 길이 인코딩<br> 
+                              대표적으로 UTF-8, UTF-16, UTF-32가 있음"
+                superscript: "Unicode Transformation Format"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/73_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/56_페이지"
+              - term: "Base64"
+                description: "이미지와 같은 이진 데이터를 아스키 기반 문자열로 변환하는 64진법 기반 인코딩 방식"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/57_페이지"
+
+      - subtitle: "명령어"
+        content:
+          - subsubtitle: "소스 코드와 명령어"
+            items:
+              - term: "고급 언어"
+                description: "사람이 이해하고 작성하기 쉽게 만들어진 언어"
+                superscript: "high-level programming language"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/79_페이지"
+              - term: "저급 언어"
+                description: "컴퓨터가 직접 이해하고 실행할 수 있는 언어<br>(예: 기계어, 어셈블리어)"
+                superscript: "low-level programming language"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/79_페이지"
+              - term: "기계어"
+                description: "0과 1의 명령어 비트로 이루어진 언어"
+                superscript: "machine code"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/79_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/62_페이지"
+              - term: "어셈블리어"
+                description: "0과 1로 표현된 명령어(기계어)를 읽기 편한 형태로 번역한 언어"
+                superscript: "assembly language"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/80_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/62_페이지"
+              - term: "컴파일 언어"
+                description: "컴파일 방식으로 작동하는 프로그래밍 언어 컴파일러에 의해 소스 코드 전체가 저급 언어로 변환되어 실행되는 고급 언어"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/83_페이지"
+              - term: "인터프리터 언어"
+                description: "인터프리트 방식으로 작동하는 프로그래밍 언어"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/83_페이지"
+              - term: "컴파일"
+                description: "컴파일 언어로 작성된 소스코드가 저급 언어로 변환되는 과정"
+                superscript: "compile"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/84_페이지"
+              - term: "컴파일러"
+                description: "소스코드를 처음부터 끝까지 저급 언어로 컴파일해주는 도구"
+                superscript: "compiler"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/84_페이지"
+              - term: "목적 코드"
+                description: "컴파일러를 통해 저급 언어로 변환된 코드"
+                superscript: "object code"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/84_페이지"
+              - term: "인터프리터"
+                description: "소스 코드를 한 줄 씩 저급 언어로 변환하여 실행해 주는 도구"
+                superscript: "interpreter"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/84_페이지"
+              - term: "목적 파일"
+                description: "목적 코드로 이루어진 파일"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/87_페이지"
+              - term: "실행 파일"
+                description: "링킹을 거쳐 만들어진 실행 코드로 이루어진 파일"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/87_페이지"
+              - term: "링킹"
+                description: "여러 목적 파일을 결합하여 실행 파일을 생성하는 과정"
+                superscript: "linking"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/88_페이지"
+
+          - subsubtitle: "명령어의 구조"
+            items:
+              - term: "명령어의 구조"
+                description: "연산 코드와 오퍼랜드로 구성"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/91_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/59_페이지"
+                image: "assets/img/arch/instructionstructure.png"
+              - term: "연산 코드"
+                description: "명령어가 수행할 연산 (연산자라고도 부름)"
+                superscript: "operation code"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/91_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/59_페이지"
+              - term: "오퍼랜드"
+                description: "연산에 사용할 데이터 혹은 연산에 사용할 데이터가 저장될 위치 (피연산자라고도 부름)"
+                superscript: "operand"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/91_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/59_페이지"
+              - term: "연산 코드 필드"
+                description: "명령어의 연산 코드가 담기는 영역"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/91_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/60_페이지"
+              - term: "오퍼랜드 필드"
+                description: "명령어의 오퍼랜드가 담기는 영역 (주소 필드라고도 부름)"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/91_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/60_페이지"
+              - term: "0-주소 명령어"
+                description: "오퍼랜드가 하나도 없는 명령어"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/93_페이지"
+              - term: "1-주소 명령어"
+                description: "오퍼랜드가 하나인 명령어"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/93_페이지"
+              - term: "2-주소 명령어"
+                description: "오퍼랜드가 두 개인 명령어"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/93_페이지"
+              - term: "3-주소 명령어"
+                description: "오퍼랜드가 세 개인 명령어"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/93_페이지"
+              - term: "유효 주소"
+                description: "연산 코드에 사용할 데이터가 저장된 위치, 즉 연산의 대상이 되는 데이터가 저장된 위치"
+                superscript: "effective address"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/96_페이지"
+              - term: "주소 지정 방식"
+                description: "연산에 사용할 데이터 위치를 찾는 방법(=유효 주소를 찾는 방법)"
+                superscript: "addressing mode"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/97_페이지"
+              - term: "즉시 주소 지정 방식"
+                description: "연산에 사용할 데이터를 오퍼랜드 필드에 직접 명시하는 주소 지정 방식"
+                superscript: "immediate addressing mode"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/97_페이지"
+              - term: "직접 주소 지정 방식"
+                description: "오퍼랜드 필드에 유효 주소를 직접적으로 명시하는 주소 지정 방식"
+                superscript: "direct addressing mode"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/97_페이지"
+              - term: "간접 주소 지정 방식"
+                description: "유효 주소의 주소를 오퍼랜드 필드에 명시하는 주소 지정 방식"
+                superscript: "indirect addressing mode"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/98_페이지"
+              - term: "레지스터 주소 지정 방식"
+                description: "연산에 사용할 데이터를 저장한 레지스터를 오퍼랜드 필드에 직접 명시하는 주소 지정 방식"
+                superscript: "register addressing mode"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/98_페이지"
+              - term: "레지스터 간접 주소 지정 방식"
+                description: "연산에 사용할 데이터를 메모리에 저장하고, 그 주소(유효 주소)를 저장한 레지스터를 오퍼랜드 필드에 명시하는 주소 지정 방식"
+                superscript: "register indirect addressing mode"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/99_페이지"
+              - term: "스택"
+                description: "한쪽 끝이 막혀 있는 통과 같은 저장 공간과 같은 자료구조로, LIFO 자료구조라고도 불림"
+                superscript: "stack"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/100_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/61_페이지"
+              - term: "LIFO"
+                description: "나중에 저장한 데이터를 가장 먼저 빼내는 데이터 관리 방식(후입선출)"
+                superscript: "Last In First Out"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/100_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/61_페이지"
+              - term: "큐"
+                description: "한쪽으로는 데이터를 저장하고, 다른 한쪽으로는 먼저 저장한 순서대로 데이터를 뺄 수 있는 자료구조로, FIFO 자료 구조라고도 부름"
+                superscript: "queue"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/100_페이지"
+              - term: "FIFO"
+                description: "가장 먼저 저장된 데이터부터 빼내는 데이터 관리 방식(선입선출)"
+                superscript: "First In First Out"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/100_페이지"
+
+      - subtitle: "CPU의 작동 원리"
+        content:
+          - subsubtitle: "ALU와 제어장치"
+            items:
+              - term: "ALU"
+                description: "CPU의 구성 요소로, 계산을 담당하는 부품<br> 레지스터를 통해 피연산자를 받아들이고 제어장치로부터 수행할 연산을 알려주는 제어 신호를 받아들임<br>연산한 결괏값과 플래그를 내보냄"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/105_페이지"
+              - term: "플래그"
+                description: "연산 결과에 대한 추가적인 상태 정보"
+                superscript: "flag"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/106_페이지"
+              - term: "부호 플래그"
+                description: "연산한 결과의 부호를 나타내는 플래그"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/106_페이지"
+              - term: "제로 플래그"
+                description: "연산 결과가 0인지 여부를 나타내는 플래그"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/106_페이지"
+              - term: "캐리 플래그"
+                description: "연산 결과 올림수나 빌림수가 발생했는지 나타내는 플래그"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/106_페이지"
+              - term: "오버플로우 플래그"
+                description: "오버플로우가 발생했는지 나타내는 플래그"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/106_페이지"
+              - term: "인터럽트 플래그"
+                description: "인터럽트가 가능한지 여부를 나타내는 플래그"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/106_페이지"
+              - term: "슈퍼바이저 플래그"
+                description: "커널 모드로 실행 중인지, 사용자 모드로 실행중인지 나타내는 플래그"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/106_페이지"
+              - term: "오버플로우"
+                description: "연산 결과가 연산 결과를 담을 레지스터보다 큰 상황"
+                superscript: "overflow"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/106_페이지"
+              - term: "플래그 레지스터"
+                description: "플래그 값들을 저장하는 레지스터"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/106_페이지"
+              - term: "제어장치"
+                description: "CPU의 구성 요소로, 제어 신호를 내보내고, 명령어를 해석하는 부품<br>클럭, 현재 수행할 명령어, 플래그, 제어 신호를 받아들임"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/107_페이지"
+              - term: "제어 신호"
+                description: "컴퓨터 부품들을 관리하고 작동시키기 위한 일종의 전기 신호"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/107_페이지"
+              - term: "클럭"
+                description: "컴퓨터의 부품을 작동시키는 GHz 단위의 시간 단위"
+                superscript: "clock"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/108_페이지"
+
+          - subsubtitle: "레지스터"
+            items:
+              - term: "프로그램 카운터"
+                description: "메모리에서 가져올 명령어의 주소, 즉 메모리에서 읽어 들일 명령어의 주소를 저장하는 레지스터"
+                superscript: "PC; Program Counter"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/113_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/67_페이지"
+              - term: "명령어 포인터"
+                description: "프로그램 카운터와의 동의어"
+                superscript: "IP; Instruction Pointer"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/113_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/67_페이지"
+              - term: "명령어 레지스터"
+                description: "해석할 명령어, 즉 방금 메모리에서 읽어 들인 명령어를 저장하는 레지스터"
+                superscript: "IR; Instruction Register"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/113_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/68_페이지"
+              - term: "메모리 주소 레지스터"
+                description: "메모리의 주소를 저장하는 레지스터"
+                superscript: "MAR; Memory Address Register"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/114_페이지"
+              - term: "메모리 버퍼 레지스터"
+                description: "메모리와 주고받을 값(데이터와 명령어)을 저장하는 레지스터로 메모리에 쓰고 싶은 값이나 메모리로부터 전달받은 값은 메모리 버퍼 레지스터를 거침"
+                superscript: "MBR; Memory Buffer Register"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/114_페이지"
+              - term: "메모리 데이터 레지스터"
+                description: "메모리 버퍼 레지스터와 동의어"
+                superscript: "MDR; Memory Data Register"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/114_페이지"
+              - term: "범용 레지스터"
+                description: "다양하고 일반적인 상황에서 자유롭게 사용할 수 있는 레지스터"
+                superscript: "general purpose register"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/118_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/68_페이지"
+              - term: "플래그 레지스터"
+                description: "연산 결과 또는 CPU 상태에 대한 부가적인 정보(플래그)를 저장하는 레지스터"
+                superscript: "flag register"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/118_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/68_페이지"
+              - term: "스택 포인터"
+                description: "스택의 꼭대기를 가리키는 레지스터로, 스택에 마지막으로 저장한 값의 위치를 저장하는 레지스터"
+                superscript: "stack pointer"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/119_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/69_페이지"
+              - term: "스택 주소 지정 방식"
+                description: "스택과 스택 포인터를 이용한 주소 지정 방식"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/119_페이지"
+              - term: "변위 주소 지정 방식"
+                description: "오퍼랜드 필드의 값(변위)과 특정 레지스터의 값을 더하여 유효 주소를 얻어내는 주소 지정 방식"
+                superscript: "displacement addressing mode"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/120_페이지"
+              - term: "상대 주소 지정 방식"
+                description: "오퍼랜드와 프로그램 카운터의 값을 더하여 유효 주소를 얻는 주소 지정 방식"
+                superscript: "relative addressing mode"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/121_페이지"
+              - term: "베이스 레지스터 주소 지정 방식"
+                description: "오퍼랜드와 베이스 레지스터의 값을 더하여 유효 주소를 얻는 주소 지정 방식"
+                superscript: "base-register addressing mode"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/122_페이지"
+
+          - subsubtitle: "명령어 사이클과 인터럽트"
+            items:
+              - term: "명령어 사이클"
+                description: "프로그램 속 각 명령어들이 일정히 반복되며 실행되는 주기"
+                superscript: "instruction cycle"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/127_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/64_페이지"
+                image: "assets/img/arch/instructioncycle.png"
+              - term: "인출 사이클"
+                description: "메모리에 있는 명령어를 CPU로 가지고 오는 단계"
+                superscript: "fetch cycle"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/127_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/64_페이지"
+              - term: "실행 사이클"
+                description: "CPU로 가져온 명령어를 실행하는 단계"
+                superscript: "execution cycle"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/127_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/64_페이지"
+              - term: "간접 사이클"
+                description: "명령어를 실행하기 위해 추가적인 메모리 접근을 수행하는 단계"
+                superscript: "indirect cycle"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/128_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/64_페이지"
+              - term: "인터럽트"
+                description: "CPU의 정상적인 작업을 방해하는 신호"
+                superscript: "interrupt"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/129_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/70_페이지"
+              - term: "동기 인터럽트"
+                description: "CPU에 의해 발생하는 인터럽트"
+                superscript: "synchronous interrupts"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/129_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/70_페이지"
+              - term: "예외"
+                description: "동기 인터럽트의 다른 말"
+                superscript: "exception"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/129_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/70_페이지"
+              - term: "비동기 인터럽트"
+                description: "주로 입출력장치에 의해 발생하는 인터럽트<br>입출력 작업 도중 CPU가 효율적으로 명령어를 처리하기 위해 사용됨"
+                superscript: "asynchronous interrupts"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/130_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/70_페이지"
+              - term: "하드웨어 인터럽트"
+                description: "비동기 인터럽트의 다른 말"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/131_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/71_페이지"
+              - term: "인터럽트 요청 신호"
+                description: "인터럽트 가능 여부를 확인하기 위해 CPU에게 보내는 신호"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/132_페이지"
+              - term: "인터럽트 플래그"
+                description: "하드웨어 인터럽트를 받아들일지, 무시할지를 결정하는 플래그"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/133_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/72_페이지"
+              - term: "인터럽트 서비스 루틴"
+                description: "인터럽트를 처리하기 위한 프로그램"
+                superscript: "ISR; Interrupt Service Routine"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/133_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/72_페이지"
+                image: "assets/img/arch/interrupt.png"
+              - term: "인터럽트 핸들러"
+                description: "인터럽트 서비스 루틴의 다른 말"
+                superscript: "interrupt handler"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/133_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/72_페이지"
+              - term: "인터럽트 벡터"
+                description: "인터럽트 서비스 루틴을 식별하기 위한 정보"
+                superscript: "interrupt vector"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/134_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/74_페이지"
+              - term: "폴트"
+                description: "예외의 일종으로, 예외 처리 직후 예외가 발생한 명령어부터 실행을 재개하는 예외 (예: 페이지 폴트)"
+                superscript: "fault"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/138_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/77_페이지"
+              - term: "트랩"
+                description: "예외의 일종으로, 예외 처리 직후 예외가 발생한 명령어의 다음 명령어부터 실행을 재개하는 예외 (예: 디버깅 브레이크 포인트)"
+                superscript: "trap"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/139_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/77_페이지"
+              - term: "디버깅"
+                description: "프로그램 개발 중에 발생한 문제를 진단하고 해결하기 위한 작업"
+                superscript: "debugging"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/139_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/77_페이지"
+              - term: "중단"
+                description: "예외의 일종으로, CPU가 실행 중인 프로그램을 강제로 중단시킬 수밖에 없는 심각한 오류를 발견했을 때 발생하는 예외"
+                superscript: "abort"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/139_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/78_페이지"
+              - term: "소프트웨어 인터럽트"
+                description: "시스템 콜이 호출되었을 때 발생하는 소프트웨어적인 인터럽트의 일종"
+                superscript: "software interrupt"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/139_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/78_페이지"
+
+      - subtitle: "CPU 성능 향상 기법"
+        content:
+          - subsubtitle: "빠른 CPU를 위한 설계 기법"
+            items:
+              - term: "클럭"
+                description: "컴퓨터의 부품을 동기화하는 GHz 단위의 시간 단위"
+                superscript: "clock"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/146_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/78_페이지"
+              - term: "오버클럭킹"
+                description: "최대 클럭 속도를 강제로 더 끌어올릴 수 있는 기법"
+                superscript: "overclocking"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/146_페이지"
+              - term: "코어"
+                description: "명령어를 실행하는 부품을 여러 개 포함하는 부품"
+                superscript: "core"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/147_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/79_페이지"
+              - term: "멀티코어 CPU"
+                description: "코어를 여러 개 포함하는 CPU"
+                superscript: "multi-core"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/147_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/80_페이지"
+              - term: "멀티코어 프로세서"
+                description: "여러 개의 코어를 포함하는 CPU"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/147_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/80_페이지"
+              - term: "스레드"
+                description: "실행 흐름의 단위<br>하드웨어적 스레드와 소프트웨어적 스레드가 있음"
+                superscript: "thread"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/148_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/80_페이지"
+              - term: "하드웨어적 스레드"
+                description: "하나의 코어가 동시에 처리하는 명령어 단위"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/149_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/80_페이지"
+              - term: "멀티스레드 프로세서"
+                description: "하나의 코어로 여러 명령어를 동시에 처리하는 CPU"
+                superscript: "multithread"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/149_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/80_페이지"
+              - term: "멀티스레드 CPU"
+                description: "여러 개의 하드웨어적 스레드를 지원하는 CPU"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/149_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/80_페이지"
+              - term: "하이퍼스레딩"
+                description: "인텔의 멀티스레드 기술"
+                superscript: "hyper-threading"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/149_페이지"
+              - term: "소프트웨어적 스레드"
+                description: "하나의 프로그램에서 독립적으로 실행되는 단위"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/150_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/81_페이지"
+              - term: "논리 프로세서"
+                description: "하드웨어 스레드의 다른 말"
+                superscript: "logical processor"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/152_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/81_페이지"
+              - term: "병렬성"
+                description: "작업을 물리적으로 동시에 처리하는 성질"
+                superscript: "parallelism"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/84_페이지"
+                image: "assets/img/arch/parallelism.png"
+              - term: "동시성"
+                description: "동시에 작업을 처리하는 것처럼 보이는 성질"
+                superscript: "concurrency"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/84_페이지"
+                image: "assets/img/arch/concurrency.png"
+          - subsubtitle: "명령어 병렬 처리 기법"
+            items:
+              - term: "명령어 병렬 처리 기법"
+                description: "CPU를 쉬지 않고 작동시키기 위해 명령어를 동시에 처리하는 기술"
+                superscript: "ILP; Instruction-Level Parallelism"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/156_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/85_페이지"
+              - term: "명령어 파이프라이닝"
+                description: "여러 명령어들을 명령어 파이프라인에 넣고 겹쳐서 동시 실행함으로써 명령어 처리 속도를 높이는 명령어 병렬 처리 기법"
+                superscript: "instruction pipelining"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/158_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/85_페이지"
+                image: "assets/img/arch/pipeline.png"
+              - term: "파이프라인 위험"
+                description: "파이프라이닝이 성능 향상에 실패하는 경우"
+                superscript: "pipeline hazard"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/158_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/88_페이지"
+              - term: "데이터 위험"
+                description: "명령어 간 데이터 의존성에 의해 발생하는 파이프라인 위험"
+                superscript: "data hazard"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/159_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/88_페이지"
+              - term: "제어 위험"
+                description: "분기 등으로 인한 프로그램 카운터의 갑작스러운 변화에 의해 발생하는 파이프라인 위험"
+                superscript: "control hazard"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/159_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/88_페이지"
+              - term: "분기 예측"
+                description: "프로그램이 어디로 분기할지 미리 예측한 후 그 주소를 인출하는 기술"
+                superscript: "branch prediction"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/160_페이지"
+              - term: "구조적 위험"
+                description: "명령어들을 겹쳐 실행하는 과정에서 서로 다른 명령어가 동시에 ALU, 레지스터 등과 같은 CPU 부품을 사용하려고 할 때 발생하는 파이프라인 위험"
+                superscript: "structural hazard"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/160_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/88_페이지"
+              - term: "자원 위험"
+                description: "구조적 위험의 다른 말"
+                superscript: "resource hazard"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/160_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/89_페이지"
+              - term: "슈퍼스칼라"
+                description: "CPU 내부에 여러 개의 명령어 파이프라인을 포함한 구조"
+                superscript: "superscalar"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/160_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/86_페이지"
+              - term: "슈퍼스칼라 프로세서"
+                description: "슈퍼스칼라 구조로 명령어 처리가 가능한 CPU"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/161_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/86_페이지"
+              - term: "슈퍼스칼라 CPU"
+                description: "슈퍼스칼라 구조로 명령어 처리가 가능한 CPU"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/161_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/86_페이지"
+              - term: "비순차적 명령어 처리 기법"
+                description: "명령어를 순차적으로만 실행하지 않고 순서를 바꿔 실행해도 무방한 명령어를 먼저 실행하여 명령어 파이프라인이 멈추는 것을 방지하는 기법"
+                superscript: "OoOE; Out-of-order execution"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/163_페이지"
+
+          - subsubtitle: "CISC와 RISC"
+            items:
+              - term: "명령어 집합 구조"
+                description: "CPU가 이해할 수 있는 명령어들의 모음"
+                superscript: "ISA; Instruction Set Architecture"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/167_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/87_페이지"
+              - term: "CISC"
+                description: "복잡한 명령어 집합을 활용하는 명령어 집합<br>복잡하고 다양한 수의 가변 길이 명령어 집합을 활용함"
+                superscript: "Complex Instruction Set Computer"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/170_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/87_페이지"
+              - term: "가변 길이 명령어"
+                description: "형태와 크기가 다양한 명령어"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/170_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/87_페이지"
+              - term: "RISC"
+                description: "규격화되어 있고, 하나의 명령어가 1클럭 내외로 실행되는 명령어 집합<br>짧고 규격화된 명령어 집합을 활용함<br>명령어 파이프라이닝에 유리함<br>load-store 구조라고 부르기도 함"
+                superscript: "Reduced Instruction Set Computer"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/172_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/87_페이지"
+
+      - subtitle: "메모리와 캐시 메모리"
+        content:
+          - subsubtitle: "RAM의 특징과 종류"
+            items:
+              - term: "RAM"
+                description: "메인 메모리로써 사용되는 휘발성 저장 장치"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/179_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/90_페이지"
+              - term: "휘발성 저장 장치"
+                description: "전원을 끄면 저장된 내용이 사라지는 저장 장치"
+                superscript: "volatile memory"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/179_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/90_페이지"
+              - term: "비휘발성 저장 장치"
+                description: "전원이 꺼져도 저장된 내용이 유지되는 저장 장치<br>보조기억장치는 대표적인 비휘발성 저장장치"
+                superscript: "non-volatile memory"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/179_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/90_페이지"
+              - term: "임의 접근"
+                description: "저장된 요소에 순차적으로 접근하지 않고 임의의 위치에 직접 접근하는 방식"
+                superscript: "random access"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/90_페이지"
+              - term: "순차 접근"
+                description: "저장된 요소에 순차적으로 접근하는 방식"
+                superscript: "sequential access"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/91_페이지"
+              - term: "직접 접근"
+                description: "임의 접근의 다른 이름"
+                superscript: "direct access"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/90_페이지"
+              - term: "DRAM"
+                description: "저장된 데이터가 동적으로 변하는(사라지는) RAM"
+                superscript: "Dynamic RAM"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/181_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/91_페이지"
+              - term: "SRAM"
+                description: "저장된 데이터가 변하지 않는 RAM"
+                superscript: "Static RAM"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/182_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/91_페이지"
+              - term: "SDRAM"
+                description: "클럭 신호와 동기화된 DRAM"
+                superscript: "Synchronous Dynamic RAM"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/182_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/92_페이지"
+              - term: "DDR SDRAM"
+                description: "대역폭을 넓혀 속도를 빠르게 만든 SDRAM"
+                superscript: "Double Data Rate SDRAM"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/183_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/92_페이지"
+              - term: "대역폭"
+                description: "데이터를 주고받는 전송로의 너비"
+                superscript: "data rate"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/183_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/92_페이지"
+              - term: "SDR SDRAM"
+                description: "한 클럭당 하나씩 데이터를 주고받을 수 있는 SDRAM"
+                superscript: "Single Data Rate SDRAM"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/183_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/92_페이지"
+              - term: "DDR2 SDRAM"
+                description: "DDR SDRAM보다 대역폭을 두 배 넓힌 SDRAM"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/183_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/92_페이지"
+              - term: "DDR3 SDRAM"
+                description: "DDR2 SDRAM보다 대역폭을 두 배 넓힌 SDRAM"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/183_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/92_페이지"
+              - term: "빅 엔디안"
+                description: "낮은 번지의 수조에 상위 바이트부터 저장하는 메모리 저장 방식"
+                superscript: "big-endian"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/93_페이지"
+                image: "assets/img/arch/bigendian.png"
+              - term: "리틀 엔디안"
+                description: "낮은 번지의 수조에 하위 바이트부터 저장하는 메모리 저장 방식"
+                superscript: "little-endian"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/91_페이지"
+                image: "assets/img/arch/littleendian.png"
+              - term: "바이 엔디안"
+                description: "빅 엔디안과 리틀 엔디안 중 하나를 선택하여 사용하는 방식"
+                superscript: "bi-endian"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/95_페이지"
+              - term: "MSB"
+                description: "가장 높은 자리의 비트로, 숫자의 크기에 가장 큰 영향을 미치는 숫자"
+                superscript: "Most Significant Bit"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/95_페이지"
+              - term: "LSB"
+                description: "가장 낮은 자리의 비트로, 숫자의 크기에 가장 작은 영향을 미치는 숫자"
+                superscript: "Least Significant Bit"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/95_페이지"
+
+          - subsubtitle: "메모리의 주소 공간"
+            items:
+              - term: "물리 주소"
+                description: "정보가 실제로 저장된 메모리 하드웨어상의 주소"
+                superscript: "physical address"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/187_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/205_페이지"
+              - term: "논리 주소"
+                description: "실행 중인 프로그램 각각에 부여된 0번지부터 시작되는 주소로, CPU와 실행 중인 프로그램이 사용하는 주소"
+                superscript: "logical address"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/187_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/205_페이지"
+                image: "assets/img/os/logical_address.png"
+              - term: "메모리 관리 장치 (MMU)"
+                description: "논리 주소와 물리 주소 간의 변환을 수행하는 하드웨어"
+                superscript: "MMU; Memory Management Unit"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/189_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/205_페이지"
+                image: "assets/img/os/mmu.png"
+              - term: "베이스 레지스터"
+                description: "프로그램의 가장 작은 물리 주소를 저장하는 레지스터"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/190_페이지"
+              - term: "한계 레지스터"
+                description: "논리 주소 범위를 벗어나는 명령어 실행을 방지하기 위해 논리 주소의 최대 크기를 저장하는 레지스터"
+                superscript: "limit register"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/191_페이지"
+
+          - subsubtitle: "캐시 메모리"
+            items:
+              - term: "저장 장치 계층 구조"
+                description: "CPU와의 거리를 기준으로 저장 장치를 계층적으로 나타낸 구조<br> 각기 다른 용량과 성능의 저장 장치들을 계층화하여 표현한 구조"
+                superscript: "memory hierarchy"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/197_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/43_페이지"
+                image: "assets/img/arch/memoryhierarchy.png"
+              - term: "캐시 메모리"
+                description: "CPU와 메모리 사이에 위치하고, 레지스터보다 용량이 크고 메모리보다 빠른 SRAM기반의 저장 장치<br>CPU의 메모리 접근 속도를 줄이기 위해 존재"
+                superscript: "cache memory"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/198_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/97_페이지"
+              - term: "L1 캐시"
+                description: "코어와 가장 가까운 캐시 메모리"
+                superscript: "level 1"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/199_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/97_페이지"
+              - term: "L2 캐시"
+                description: "코어에서 L1 캐시 그 다음으로 가까운 캐시 메모리"
+                superscript: "level 2"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/199_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/97_페이지"
+              - term: "L3 캐시"
+                description: "코어에서 L2 캐시 그 다음으로 가까운 캐시 메모리"
+                superscript: "level 3"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/199_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/98_페이지"
+              - term: "분리형 캐시"
+                description: "명령어만을 저장하는 L1I 캐시와 데이터만을 저장하는 L1D 캐시로 분리한 L1 캐시 메모리"
+                superscript: "split cache"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/200_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/99_페이지"
+              - term: "캐시 히트"
+                description: "자주 사용될 것으로 예측한 데이터가 실제로 들어맞아 캐시 메모리 내 데이터가 CPU에서 활용되는 상황"
+                superscript: "cache hit"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/201_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/99_페이지"
+              - term: "캐시 미스"
+                description: "자주 사용될 것으로 예측하여 캐시 메모리에 저장했지만, 예측이 틀려 메모리에서 필요한 데이터를 직접 가져와야 하는 상황"
+                superscript: "cache miss"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/202_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/99_페이지"
+              - term: "캐시 적중률"
+                description: "캐시가 히트되는 비율로 캐시 적중률이 높으면 CPU의 메모리 접근 횟수를 줄일 수 있음<br><br>캐시 히트 횟수 / (캐시 히트 횟수 + 캐시 미스 횟수)"
+                superscript: "cache hit rate"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/202_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/100_페이지"
+              - term: "참조 지역성의 원리"
+                description: "CPU가 메모리에 접근할 때의 주된 경향을 바탕으로 만들어진 원리 <br>1) CPU는 최근에 접근했던 메모리 공간에 다시 접근하려는 경향이 있음 <br>2) CPU는 접근한 메모리 공간 근처를 접근하려는 경향이 있음"
+                superscript: "locality of reference, principle of locality"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/202_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/100_페이지"
+              - term: "시간 지역성"
+                description: "최근에 접근했던 메모리 공간에 다시 접근하려는 경향 (예: 변수)"
+                superscript: "temporal locality"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/203_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/100_페이지"
+              - term: "공간 지역성"
+                description: "접근한 메모리 공간 근처를 접근하려는 경향 (예: 배열)"
+                superscript: "spatial locality"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/204_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/101_페이지"
+              - term: "즉시 쓰기"
+                description: "캐시 메모리에 값을 쓰자마자 메모리에도 즉시 쓰는 캐시 메모리 쓰기 정책"
+                superscript: "write-through"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/104_페이지"
+                image: "assets/img/arch/writeback.png"
+              - term: "지연 쓰기"
+                description: "캐시 메모리에만 값을 써 두었다가 추후 데이터를 한 번에 메모리에 반영하는 캐시 메모리 쓰기 정책"
+                superscript: "write-back"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/104_페이지"
+                image: "assets/img/arch/writethrough.png"
+
+      - subtitle: "보조기억장치"
+        content:
+          - subsubtitle: "다양한 보조기억장치"
+            items:
+              - term: "하드 디스크"
+                description: "자기적인 방식으로 데이터를 저장하는 보조기억장치"
+                superscript: "HDD; Hard Disk Drive"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/209_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/107_페이지"
+                image: "assets/img/arch/harddisk.png"
+              - term: "플래터"
+                description: "하드 디스크에서 실질적으로 데이터가 저장되는 동그란 원판"
+                superscript: "platter"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/209_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/107_페이지"
+              - term: "스핀들"
+                description: "플래터를 회전시키는 구성 요소"
+                superscript: "spindle"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/209_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/107_페이지"
+              - term: "RPM"
+                description: "분당 회전수로, 스핀들이 플래터를 돌리는 속도를 표현하는 단위 활용됨"
+                superscript: "Revolution Per Minute"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/209_페이지"
+              - term: "헤드"
+                description: "플래터를 대상으로 데이터를 읽고 쓰는 구성 요소"
+                superscript: "head"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/210_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/107_페이지"
+              - term: "디스크 암"
+                description: "헤드를 원하는 위치로 이동시키는 구성 요소"
+                superscript: "disk arm"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/210_페이지"
+              - term: "트랙"
+                description: "플래터를 여러 동심원으로 나누었을 때 그중 하나의 원을 의미"
+                superscript: "track"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/210_페이지"
+              - term: "섹터"
+                description: "트랙 내에 정보가 저장되는 최소의 단위"
+                superscript: "sector"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/210_페이지"
+              - term: "블록"
+                description: "하나 이상의 섹터를 묶은 단위"
+                superscript: "block"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/210_페이지"
+              - term: "실린더"
+                description: "여러 겹의 플래터 상에서 같은 트랙이 위치한 곳을 모아 연결한 논리적 단위"
+                superscript: "cylinder"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/210_페이지"
+              - term: "탐색 시간"
+                description: "접근하려는 데이터가 저장된 트랙까지 헤드를 이동시키는 시간"
+                superscript: "seek time"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/211_페이지"
+              - term: "회전 지연"
+                description: "헤드가 있는 곳으로 플래터를 회전시키는 시간"
+                superscript: "rotational latency"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/212_페이지"
+              - term: "전송 시간"
+                description: "하드 디스크와 컴퓨터 간에 데이터를 전송하는 시간"
+                superscript: "transfer time"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/212_페이지"
+              - term: "패킷"
+                description: "네트워크의 기본적인 전송 단위"
+                superscript: "packet"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/212_페이지"
+              - term: "단일 헤드 디스크"
+                description: "플래터의 한 면당 헤드가 하나씩 달려 있는 하드 디스크"
+                superscript: "single-head disk"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/213_페이지"
+              - term: "다중 헤드 디스크"
+                description: "헤드가 트랙별로 여러 개 달려 있는 하드 디스크"
+                superscript: "multiple-head disk"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/213_페이지"
+              - term: "고정 헤드 디스크"
+                description: "헤드를 움직일 필요가 없는 다중 헤드 디스크"
+                superscript: "fixed-head disk"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/213_페이지"
+              - term: "이동 헤드 디스크"
+                description: "헤드를 데이터가 있는 곳까지 움직여야 하는 단일 헤드 디스크"
+                superscript: "movable-head disk"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/213_페이지"
+              - term: "플래시 메모리"
+                description: "전기적으로 데이터를 읽고 쓸 수 있는 반도체 기반의 보조기억장치"
+                superscript: "flash memory"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/214_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/107_페이지"
+                image: "assets/img/arch/ssd.png"
+              - term: "NAND 플래시 메모리"
+                description: "NAND 연산을 수행하는 회로(NAND 게이트)를 기반으로 만들어진 저장 장치"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/214_페이지"
+              - term: "NOR 플래시 메모리"
+                description: "NOR 연산을 수행하는 회로(NOR 게이트)를 기반으로 만들어진 저장 장치"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/214_페이지"
+              - term: "셀"
+                description: "플래시 메모리에서 데이터를 저장하는 가장 작은 단위"
+                superscript: "cell"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/214_페이지"
+              - term: "SLC 타입"
+                description: "한 셀에 1비트를 저장할 수 있는 플래시 메모리 유형<br>한 셀로 두 개의 정보를 표현할 수 있음"
+                superscript: "Single Level Cell"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/214_페이지"
+              - term: "MLC 타입"
+                description: "한 셀에 2비트를 저장할 수 있는 플래시 메모리 유형<br> 한 셀로 네 개의 정보를 표현할 수 있음"
+                superscript: "Multiple Level Cell"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/214_페이지"
+              - term: "TLC 타입"
+                description: "한 셀에 3비트를 저장할 수 있는 플래시 메모리 유형<br> 한 셀로 여덟 개의 정보를 표현할 수 있음"
+                superscript: "Triple-Level Cell"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/214_페이지"
+              - term: "QLC 타입"
+                description: "한 셀에 4비트를 저장할 수 있는 플래시 메모리 유형"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/214_페이지"
+              - term: "페이지"
+                description: "플래시 메모리에서 여러 셀들을 묶은 단위"
+                superscript: "page"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/217_페이지"
+              - term: "블록"
+                description: "플래시 메모리에서 여러 페이지들을 묶은 단위"
+                superscript: "block"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/217_페이지"
+              - term: "플레인"
+                description: "플래시 메모리에서 여러 블록들을 묶은 단위"
+                superscript: "plane"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/217_페이지"
+              - term: "다이"
+                description: "플래시 메모리에서 여러 플레인을 묶은 단위"
+                superscript: "die"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/217_페이지"
+              - term: "Free 상태"
+                description: "플래시 메모리에서 어떠한 데이터도 저장하고 있지 않아 새로운 데이터를 저장할 수 있는 상태"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/217_페이지"
+              - term: "Valid 상태"
+                description: "플래시 메모리에서 이미 유효한 데이터를 저장하고 있는 상태"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/217_페이지"
+              - term: "Invalid 상태"
+                description: "플래시 메모리에서 쓰레기값이라 부르는 유효하지 않은 데이터를 저장하고 있는 상태"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/217_페이지"
+              - term: "가비지 컬렉션"
+                description: "플래시 메모리에서 SSD를 비롯한 플래시 메모리가 쓰레기값을 정리하기 위해 제공하는 기능<br>유효한 페이지들만을 새로운 블록으로 복사한 뒤, 기존의 블록을 삭제하여 공간을 정리하는 기능"
+                superscript: "garbage collection"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/218_페이지"
+          - subsubtitle: "RAID의 정의와 종류"
+            items:
+              - term: "RAID"
+                description: "데이터의 안전성 혹은 높은 성능을 위해 여러 개의 물리적 보조기억장치(하드 디스크와 SSD)를 마치 하나의 논리적 보조기억장치처럼 사용하는 기술"
+                superscript: "Redundant Array of Independent Disks"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/221_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/108_페이지"
+              - term: "RAID 레벨"
+                description: "RAID 구성 방법"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/221_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/108_페이지"
+              - term: "RAID 0"
+                description: "여러 개의 보조기억장치에 데이터를 단순히 나누어 저장하는 RAID 구성 방식"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/222_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/109_페이지"
+                image: "assets/img/arch/raid0.png"
+              - term: "RAID 1"
+                description: "복사본을 만드는 RAID 구성 방식"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/224_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/109_페이지"
+                image: "assets/img/arch/raid1.png"
+              - term: "미러링"
+                description: "RAID 1의 다른 말"
+                superscript: "mirroring"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/224_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/109_페이지"
+              - term: "RAID 4"
+                description: "RAID 1처럼 완전한 복사본을 만드는 대신 오류를 검출하고 복구하기 위한 정보(패리티)를 저장한 장치를 두는 RAID 구성 방식"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/225_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/110_페이지"
+                image: "assets/img/arch/raid4.png"
+              - term: "패리티"
+                description: "오류를 검출용 정보"
+                superscript: "parity bit"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/225_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/110_페이지"
+              - term: "RAID 5"
+                description: "패리티 정보를 분산하여 저장해 RAID 4의 병목현상 문제를 해소한 RAID 구성 방식"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/226_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/111_페이지"
+                image: "assets/img/arch/raid5.png"
+              - term: "RAID 6"
+                description: "서로 다른 두 개의 패리티를 두는 RAID 구성 방식"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/227_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/111_페이지"
+                image: "assets/img/arch/raid6.png"
+              - term: "Nested RAID"
+                description: "여러 RAID 레벨을 혼합한 RAID 구성 방식"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/227_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/112_페이지"
+
+      - subtitle: "입출력장치"
+        content:
+          - subsubtitle: "장치 컨트롤러와 장치 드라이버"
+            items:
+              - term: "전송률"
+                description: "데이터 교환 속도를 나타내는 지표"
+                superscript: "transfer rate"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/233_페이지"
+              - term: "장치 컨트롤러"
+                description: "입출력장치와 CPU의 연결 및 통신을 중개하는 장치"
+                superscript: "device controller"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/234_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/113_페이지"
+              - term: "입출력 제어기"
+                description: "장치 컨트롤러의 다른 말"
+                superscript: "I/O controller"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/234_페이지"
+              - term: "입출력 모듈"
+                description: "장치 컨트롤러의 다른 말"
+                superscript: "I/O module"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/234_페이지"
+              - term: "데이터 버퍼링"
+              - term: "버퍼링"
+                description: "전송률이 높은 장치와 낮은 장치 사이에 주고받는 데이터를 버퍼에 저장하여 전송률을 비슷하게 맞추기 위한 방법<br>버퍼에 데이터를 조금씩 모았다가 한꺼번에 내보내거나, 데이터를 한 번에 많이 받아 조금씩 내보내는 방법"
+                superscript: "buffering"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/234_페이지"
+              - term: "버퍼"
+                description: "데이터를 임시로 저장할 공간"
+                superscript: "buffer"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/234_페이지"
+              - term: "데이터 레지스터"
+                description: "장치 컨트롤러에서 CPU와 입출력장치 사이에 주고받을 데이터가 담기는 레지스터"
+                superscript: "data register"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/236_페이지"
+              - term: "상태 레지스터"
+                description: "장치 컨트롤러에서 입출력장치가 입출력 작업을 할 준비가 되었는지, 입출력 작업이 완료되었는지, 입출력장치에 오류는 없는지 등의 상태 정보가 저장되는 레지스터"
+                superscript: "status register"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/236_페이지"
+              - term: "제어 레지스터"
+                description: "장치 컨트롤러에서 입출력장치가 수행할 내용에 대한 제어 정보와 명령이 저장되는 레지스터"
+                superscript: "control register"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/236_페이지"
+              - term: "장치 드라이버"
+                description: "장치 컨트롤러의 동작을 감지하고 제어함으로써 장치 컨트롤러가 컴퓨터 내부와 정보를 주고받을 수 있게 하는 프로그램"
+                superscript: "device driver"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/236_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/114_페이지"
+
+          - subsubtitle: "다양한 입출력 방법"
+            items:
+              - term: "프로그램 입출력"
+                description: "프로그램 속 명령어로 입출력장치를 제어하는 입출력 방법"
+                superscript: "programmed I/O"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/241_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/114_페이지"
+              - term: "메모리 맵 입출력"
+                description: "메모리에 접근하기 위한 주소 공간과 입출력장치에 접근하기 위한 주소 공간을 하나의 주소 공간으로 간주하는 프로그램 입출력의 일종"
+                superscript: "memory-mapped I/O"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/242_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/114_페이지"
+              - term: "고립형 입출력"
+                description: "메모리를 위한 주소 공간과 입출력장치를 위한 주소 공간을 분리하는 프로그램 입출력의 일종"
+                superscript: "isolated I/O"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/243_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/114_페이지"
+              - term: "인터럽트 기반 입출력"
+                description: "인터럽트를 기반으로 하는 입출력 방법"
+                superscript: "interrupt-Driven I/O"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/245_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/115_페이지"
+              - term: "폴링"
+                description: "입출력 과정에서, 입출력장치의 상태는 어떤지, 처리할 데이터가 있는지를 주기적으로 확인하는 방식"
+                superscript: "polling"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/245_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/71_페이지"
+              - term: "NMI"
+                description: "인터럽트 비트를 비활성화해도 무시할 수 없는 인터럽트"
+                superscript: "Non-Maskable Interrupt"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/247_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/72_페이지"
+              - term: "프로그래머블 인터럽트 컨트롤러"
+                description: "장치 컨트롤러에서 보낸 하드웨어 인터럽트 요청들의 우선순위를 판별한 뒤 CPU에 지금 처리해야 할 하드웨어 인터럽트는 무엇인지 알려주는 장치"
+                superscript: "PIC; Programmable Interrupt Controller"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/247_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/117_페이지"
+              - term: "DMA"
+                description: "입출력장치와 메모리가 CPU를 거치지 않고도 상호작용할 수 있는 입출력 방식"
+                superscript: "Direct Memory Access"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/249_페이지"
+              - term: "DMA 컨트롤러"
+                description: "DMA 입출력을 하기 위해서 필요한 시스템 버스에 연결된 하드웨어"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/249_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/119_페이지"
+              - term: "사이클 스틸링"
+                description: "DMA의 시스템 버스 이용 양상을 의미"
+                superscript: "cycle stealing"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/252_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/120_페이지"
+              - term: "PCIe"
+                description: "대표적인 입출력 버스"
+                superscript: "Peripheral Component Interconnect"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/121_페이지"
+                image: "assets/img/arch/pcie.png"
+              - term: "PCIe 슬롯"
+                description: "여러 입출력장치들을 PCIe 버스와 연결해 주는 통로"
+                superscript: "Peripheral Component Interconnect"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/253_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/121_페이지"
+              - term: "입출력 프로세서"
+                description: "메모리에 직접 접근할 뿐만 아니라 입출력 명령어를 직접 인출하고, 해석하고, 실행까지 하는 일종의 입출력 전용 CPU"
+                superscript: "IOP; Input/Output Processor"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/254_페이지"
+              - term: "입출력 채널"
+                description: "입출력 프로세서의 다른 말"
+                superscript: "Input/Output Channel"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/254_페이지"
+              - term: "GPU"
+                description: "그래픽 처리와 같은 다량의 코어 연산을 위해 만들어진 입출력 프로세서<br> 
+                            CPU에 비해 코어 수가 많지만 CPU의 코어만큼 복잡한 연산을 수행하지는 못함"
+                superscript: "Graphics Processing Unit"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/123_페이지"
+                image: "assets/img/arch/gpu.png"

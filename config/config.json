@@ -1,0 +1,10 @@
+{
+  "version": "1.0.1",
+  "subjects": [
+    {"name_ko": "컴퓨터 구조", "name_en": "Computer Architecture", "file": "arch.yaml"},
+    {"name_ko": "운영체제", "name_en": "Operating System", "file": "os.yaml"},
+    {"name_ko": "네트워크", "name_en": "Network", "file": "net.yaml"},
+    {"name_ko": "데이터베이스", "name_en": "Database", "file": "db.yaml"},
+    {"name_ko": "자료구조", "name_en": "Data Structures", "file": "ds.yaml"}
+  ]
+}

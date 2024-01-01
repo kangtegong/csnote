@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSnote</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
+        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+        body {
+          font-family: 'Short Stack', cursive;
+        }
+        
+        body:lang(ko) {
+          font-family: 'GmarketSans', sans-serif; /* 한글 폰트 설정 */
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <a id="githubRibbon" class="github-fork-ribbon fixed" href="https://github.com/kangtegong/csnote" data-ribbon="Star me on GitHub" title="Star me on GitHub">Star me on GitHub</a>
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <a href="/" id="homeLink" onclick="resetPage()">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn" id="subjectsLink">과목
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <!-- 동적으로 생성될 링크 -->
+            </div>
+        </div>
+        <div class="dropdown" id="referenceFilter" style="display: none;">
+            <button class="dropbtn" id="referenceFilterLink">참조
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="referenceDropdown">
+            </div>
+        </div>
+        <div>
+        <input type="text" id="searchInput" placeholder="용어 검색..." oninput="searchTerms()" style="display: none;">
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div id="content"></div>
+
+    <br>
+    <footer>
+        <a href="#" id="lastModified" onclick="showDiff()">최종 수정일:</a>
+    </footer>
+
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>

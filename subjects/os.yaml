@@ -1,0 +1,1304 @@
+sections:
+  - title: "운영체제"
+    content:
+      - subtitle: "운영체제 시작하기"
+        content:
+          - subsubtitle: "운영체제를 알아야 하는 이유"
+            items:
+              - term: "시스템 자원"
+                description: "프로그램 실행에 마땅히 필요한 요소"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/261_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/135_페이지"
+              - term: "운영체제"
+                description: "실행할 프로그램에 필요한 자원을 할당하고, 프로그램이 올바르게 실행되도록 돕는 특별한 프로그램"
+                superscript: "operation system"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/261_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/134_페이지"
+                image: "assets/img/os/os.png"
+              - term: "커널"
+                description: "운영체제의 핵심 부분으로, 하드웨어를 비롯한 자원과 프로세스 및 스레드를 관리"
+                superscript: "kernel"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/261_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/138_페이지"
+              - term: "커널 영역"
+                description: "메모리 상에서 커널이 적재된 영역"
+                superscript: "kernel space"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/261_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/138_페이지"
+                image: "assets/img/os/kernel_space.png"
+              - term: "사용자 영역"
+                description: "커널 영역을 제외한 나머지 영역, 사용자가 이용하는 응용프로그램이 적재되는 영역"
+                superscript: "user space"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/261_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/138_페이지"
+                image: "assets/img/os/kernel_space.png"
+              - term: "응용 프로그램"
+                description: "사용자가 특정 목적을 위해 사용하는 일반적인 프로그램을 의미"
+                superscript: "application software"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/262_페이지"
+
+          - subsubtitle: "운영체제의 큰 그림"
+            items:
+              - term: "커널"
+                description: "자원에 접근하고 조작하는 기능과 프로그램이 올바르고 안전하게 실행되게 하는 기능이 있는 운영체제의 핵심 부분"
+                superscript: "kernel"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/269_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/134_페이지"
+              - term: "사용자 인터페이스"
+                description: "윈도우의 바탕화면과 같이 사용자가 컴퓨터와 상호작용할 수 있는 통로"
+                superscript: "UI; User Interface"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/269_페이지"
+              - term: "그래픽 유저 인터페이스"
+                description: "그래픽을 기반으로 컴퓨터와 상호작용할 수 있는 사용자 인터페이스"
+                superscript: "GUI; Graphic User Interface"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/269_페이지"
+              - term: "커맨드 라인 인터페이스"
+                description: "명령어를 기반으로 컴퓨터와 상호작용할 수 있는 사용자 인터페이스"
+                superscript: "CLI; Command Line Interface"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/269_페이지"
+              - term: "이중 모드"
+                description: "CPU가 명령어를 실행하는 모드를 크게 사용자 모드와 커널 모드로 구분하는 방식"
+                superscript: "dual mode"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/272_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/141_페이지"
+              - term: "사용자 모드"
+                description: "커널 영역의 코드를 실행할 수 없어 운영체제 서비스를 제공받을 수 없는 실행 모드"
+                superscript: "user mode"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/272_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/141_페이지"
+              - term: "커널 모드"
+                description: "커널 영역의 코드를 실행할 수 있어 운영체제 서비스를 제공받을 수 있는 실행 모드"
+                superscript: "kernel mode"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/273_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/141_페이지"
+              - term: "시스템 호출 (시스템 콜)"
+                description: "사용자 모드로 실행되는 응용 프로그램이 운영체제의 서비스를 받기 위해 커널 모드로 전환하는 방법"
+                superscript: "system call"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/273_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/139_페이지"
+                image: "assets/img/os/syscall.png"
+              - term: "소프트웨어 인터럽트"
+                description: "인터럽트를 발생시키는 특정 명령어에 의해 발생하는 인터럽트"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/273_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/141_페이지"
+              - term: "프로세스"
+                description: "실행 중인 프로그램"
+                superscript: "process"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/275_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/137_페이지"
+              - term: "CPU 스케줄링"
+                description: "프로세스들에 공정하게 CPU를 할당하는 작업<br>어떤 프로세스부터 CPU를 이용하게 할 것인지, 얼마나 오래 CPU를 이용하게 할지를 결정"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/276_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/135_페이지"
+              - term: "파일 시스템"
+                description: "파일을 저장하고 관리하는 운영체제 내부의 프로그램"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/277_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/136_페이지"
+              - term: "가상 머신"
+                description: "소프트웨어적으로 만들어낸 가상 컴퓨터"
+                superscript: "virtual machine"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/278_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/241_페이지"
+              - term: "하이퍼바이저"
+                description: "하드웨어를 가상화하는 소프트웨어"
+                superscript: "hypervisor"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/241_페이지"
+              - term: "컨테이너"
+                description: "가상 머신과 유사하게 동작하지만, 가상 머신보다 가볍고 빠르게 동작하는 가상화 기술"
+                superscript: "container"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/241_페이지"
+              - term: "컨테이너 오케스트레이션"
+                description: "여러 개의 컨테이너를 자동으로 배포하고 관리하는 기술"
+                superscript: "container orchestration"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/243_페이지"
+
+      - subtitle: "프로세스와 스레드"
+        content:
+          - subsubtitle: "프로세스 개요"
+            items:
+              - term: "포그라운드 프로세스"
+                description: "사용자가 볼 수 있는 공간에서 실행되는 프로세스"
+                superscript: "foreground process"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/285_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/144_페이지"
+              - term: "백그라운드 프로세스"
+                description: "사용자가 볼 수 없는 공간에서 실행되는 프로세스"
+                superscript: "background process"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/286_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/144_페이지"
+              - term: "데몬"
+                description: "유닉스 체계의 운영체제에서 사용자와 상호작용하지 않고 정해진 일만 수행하는 백그라운드 프로세스"
+                superscript: "daemon"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/286_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/144_페이지"
+              - term: "서비스"
+                description: "윈도우 운영체제에서 사용자와 상호작용하지 않고 정해진 일만 수행하는 백그라운드 프로세스"
+                superscript: "service"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/286_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/144_페이지"
+              - term: "프로세스 제어 블록"
+                description: "프로세스와 관련된 식별 정보를 저장하는 자료 구조"
+                superscript: "PCB; Process Control Block"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/287_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/146_페이지"
+              - term: "프로세스 테이블"
+                description: "PCB의 모음"
+                superscript: "Process Table"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/147_페이지"
+                image: "assets/img/os/process_table.png"
+              - term: "프로세스 ID (PID)"
+                description: "프로세스를 식별하기 위해 부여하는 고유한 번호"
+                superscript: "PID; Process ID"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/288_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/146_페이지"
+              - term: "문맥"
+                description: "프로세스 수행을 재개하기 위해 기억해야 할 정보"
+                superscript: "context"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/290_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/149_페이지"
+              - term: "문맥 교환"
+                description: "기존 프로세스의 문맥을 PCB에 백업하고, 새로운 프로세스 문맥을 PCB로부터 복구하여 새로운 프로세스를 실행하는 과정"
+                superscript: "context switching"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/291_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/149_페이지"
+                image: "assets/img/os/context_switch.png"
+              - term: "코드 영역"
+                description: "기계어(실행할 수 있는 코드)로 이루어진 명령어가 저장되는 메모리 영역"
+                superscript: "code segment"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/292_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/145_페이지"
+              - term: "데이터 영역"
+                description: "프로그램이 실행되는 동안 유지할 데이터가 저장되는 메모리 영역"
+                superscript: "data segment"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/292_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/145_페이지"
+              - term: "BSS 영역"
+                description: "프로그램이 실행되는 동안 유지할 데이터가 저장되는 메모리 영역<br>초기화되지 않은 전역 변수가 저장되는 영역"
+                superscript: "BSS segment"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/145_페이지"
+              - term: "전역 변수"
+                description: "프로그램이 실행되는 동안 유지되며, 프로그램 전체에서 접근할 수 있는 변수"
+                superscript: "global variable"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/293_페이지"
+              - term: "정적 할당 영역"
+                description: "프로세스 메모리 구조에서 크기가 고정된 영역"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/293_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/145_페이지"
+              - term: "동적 할당 영역"
+                description: "프로세스 메모리 구조에서 크기가 가변적인 영역"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/293_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/145_페이지"
+              - term: "힙 영역"
+                description: "프로그램을 만드는 사용자가 직접 할당할 수 있는 저장 공간<br>동적 할당 영역의 일종"
+                superscript: "heap segment"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/293_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/145_페이지"
+              - term: "메모리 누수"
+                description: "메모리 공간을 할당했지만 반환하지 않아 사용하지 않는 메모리 공간이 계속 남아 메모리 낭비를 초래하는 현상"
+                superscript: "memory leak"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/293_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/145_페이지"
+              - term: "스택 영역"
+                description: "데이터를 일시적으로 저장하는 공간<br>
+                            매개 변수와 지역 변수가 저장되는 영역<br>동적 할당 영역의 일종"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/294_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/145_페이지"
+              - term: "스택 트레이스"
+                description: "스택 영역에 저장된 함수 호출 정보"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/146_페이지"
+
+          - subsubtitle: "프로세스 상태와 계층 구조"
+            items:
+              - term: "생성 상태"
+                description: "프로세스를 생성 중인 상태"
+                superscript: "new"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/297_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/151_페이지"
+                image: "assets/img/os/process_state.png"
+              - term: "준비 상태"
+                description: "CPU를 할당받아 실행할 수 있지만, 아직 자신의 차례가 아니기에 기다리고 있는 상태"
+                superscript: "ready"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/297_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/151_페이지"
+                image: "assets/img/os/process_state.png"
+              - term: "디스패치"
+                description: "준비 상태인 프로세스가 실행 상태로 전환되는 것"
+                superscript: "dispatch"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/297_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/151_페이지"
+              - term: "실행 상태"
+                description: "CPU를 할당 받아 실행 중인 상태"
+                superscript: "running"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/297_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/151_페이지"
+                image: "assets/img/os/process_state.png"
+              - term: "대기 상태"
+                description: "입출력장치의 작업을 기다리는 등 실행이 잠시 중단된 상태"
+                superscript: "blocked"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/297_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/151_페이지"
+                image: "assets/img/os/process_state.png"
+              - term: "종료 상태"
+                description: "프로세스가 종료된 상태"
+                superscript: "terminated"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/297_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/151_페이지"
+                image: "assets/img/os/process_state.png"
+              - term: "부모 프로세스"
+                description: "실행 도중 시스템 호출을 통해 다른 프로세스를 생성한 프로세스"
+                superscript: "parent process"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/298_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/140_페이지"
+              - term: "자식 프로세스"
+                description: "부모 프로세스에 의해 생성된 프로세스"
+                superscript: "child process"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/298_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/140_페이지"
+              - term: "PPID"
+                description: "부모 프로세스의 PID"
+                superscript: "Parent PID"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/298_페이지"
+              - term: "프로세스 계층 구조"
+                description: "프로세스들이 계층적으로 구성된 구조"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/299_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/140_페이지"
+              - term: "fork"
+                description: "자기 자신 프로세스의 복사본을 자식 프로세스로 생성하는 시스템 호출"
+                superscript: "fork"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/301_페이지"
+              - term: "exec"
+                description: "자신의 메모리 공간을 새로운 프로그램으로 덮어쓰는 시스템 호출"
+                superscript: "exec"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/302_페이지"
+              - term: "타임아웃 인터럽트"
+                description: "프로세스가 정해진 시간 동안 CPU를 사용할 경우 발생하는 인터럽트<br>타이머 인터럽트라고도 함"
+                superscript: "timeout interrupt"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/148_페이지"
+              - term: "블로킹 입출력"
+                description: "프로세스가 입출력 작업이 완료될 때까지 대기 상태로 머무는 방식"
+                superscript: "blocking I/O"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/152_페이지"
+                image: "assets/img/os/blocking_io.png"
+              - term: "논블로킹 입출력"
+                description: "프로세스가 입출력 작업을 요청한 후 완료 여부와 상관없이 즉시 실행을 계속하는 방식"
+                superscript: "non-blocking I/O"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/152_페이지"
+                image: "assets/img/os/nonblocking_io.png"
+
+          - subsubtitle: "스레드"
+            items:
+              - term: "스레드"
+                description: "프로세스를 구성하는 실행의 흐름 단위"
+                superscript: "thread"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/306_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/137_페이지"
+                image: "assets/img/os/thread.png"
+              - term: "단일 스레드 프로세스"
+                description: "하나의 스레드로 구성된 프로세스"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/307_페이지"
+              - term: "테스크"
+                description: "리눅스에서 프로세스와 스레드를 포함하는 개념"
+                superscript: "task"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/309_페이지"
+              - term: "멀티프로세스"
+                description: "여러 개의 프로세스를 동시에 실행하는 실행 방식"
+                superscript: "multiprocess"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/309_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/153_페이지"
+              - term: "멀티스레드"
+                description: "여러 개의 스레드로 프로세스를 동시에 실행하는 실행 방식"
+                superscript: "multithread"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/309_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/155_페이지"
+              - term: "스레드 조인"
+                description: "하나의 스레드가 다른 스레드가 종료될 때까지 기다리는 기능"
+                superscript: "thread join"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/158_페이지"
+              - term: "프로세스 간 통신"
+                description: "프로세스 간에 자원을 공유하고 데이터를 주고받는 방법"
+                superscript: "IPC; Inter-Process Communication"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/312_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/158_페이지"
+              - term: "공유 메모리"
+                description: "프로세스들이 공유할 수 있는 메모리 영역"
+                superscript: "shared memory"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/312_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/159_페이지"
+                image: "assets/img/os/shared_memory.png"
+              - term: "메시지 전달"
+                description: "프로세스 간에 메시지를 주고받는 IPC의 한 방법"
+                superscript: "message passing"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/161_페이지"
+                image: "assets/img/os/message_passing.png"
+              - term: "익명 파이프"
+                description: "단방향 통신을 위한 IPC의 한 방법<br>부모 프로세스와 자식 프로세스 간에 통신만 가능"
+                superscript: "anonymous pipe"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/161_페이지"
+                image: "assets/img/os/unnamed_pipe.png"
+              - term: "지명 파이프"
+                description: "IPC의 한 방법<br>부모-자식 이외의 프로세스 간에도 통신 가능"
+                superscript: "named pipe"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/161_페이지"
+              - term: "시그널"
+                description: "프로세스 간에 특정 이벤트를 전달하는 IPC의 한 방법"
+                superscript: "signal"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/162_페이지"
+              - term: "시그널 핸들러"
+                description: "시그널을 처리하는 함수"
+                superscript: "signal handler"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/162_페이지"
+              - term: "코어 덤프"
+                description: "프로세스가 비정상적으로 종료될 때, 프로세스의 메모리 정보를 파일로 저장하는 기능"
+                superscript: "core dump"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/163_페이지"
+              - term: "원격 프로시저 호출(RPC)"
+                description: "원격지에 있는 프로시저를 호출하는 기술"
+                superscript: "Remote Procedure Call"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/164_페이지"
+
+      - subtitle: "CPU 스케줄링"
+        content:
+          - subsubtitle: "CPU 스케줄링 개요"
+            items:
+              - term: "CPU 스케줄링"
+                description: "운영체제가 프로세스들에게 공정하고 합리적으로 CPU 자원을 배분하는 과정"
+                superscript: "CPU scheduling"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/316_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/193_페이지"
+              - term: "CPU 활용률"
+                description: "CPU가 일정 시간 동안 얼마나 사용되었는지를 나타내는 비율"
+                superscript: "CPU utilization"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/194_페이지"
+              - term: "입출력 집중 프로세스"
+                description: "CPU를 거의 사용하지 않고, 대부분의 시간을 입출력 작업에 사용하는 프로세스"
+                superscript: "I/O bound process"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/317_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/195_페이지"
+              - term: "CPU 집중 프로세스"
+                description: "CPU 작업이 많은 프로세스"
+                superscript: "CPU bound process"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/317_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/195_페이지"
+              - term: "CPU 버스트"
+                description: "CPU를 이용하는 작업"
+                superscript: "CPU burst"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/318_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/194_페이지"
+              - term: "입출력 버스트"
+                description: "입출력장치를 기다리는 작업"
+                superscript: "I/O burst"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/318_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/194_페이지"
+              - term: "우선순위"
+                description: "프로세스들에게 CPU 자원을 할당할 때, 어떤 프로세스에게 먼저 CPU를 할당할 것인지 결정하는 기준"
+                superscript: "priority"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/319_페이지"
+              - term: "스케줄링 큐"
+                description: "CPU를 사용하고 싶은 프로세스들, 메모리에 적재되고 싶은 프로세스들, 특정 입출력장치를 사용하고 싶은 프로세스 등을 줄세워 놓은 큐"
+                superscript: "scheduling queue"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/320_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/195_페이지"
+              - term: "준비 큐"
+                description: "CPU를 사용하고 싶은 프로세스들이 기다리는 큐"
+                superscript: "ready queue"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/321_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/196_페이지"
+              - term: "대기 큐"
+                description: "입출력장치를 이용하기 위해 대기 상태에 접어든 프로세스들이 기다리는 큐"
+                superscript: "waiting queue"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/321_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/196_페이지"
+              - term: "선점형 스케줄링"
+                description: "프로세스가 CPU를 비롯한 자원을 사용하고 있더라도 운영체제가 프로세스로부터 자원을 강제로 빼앗아 다른 프로세스에 할당할 수 있는 스케줄링 방식"
+                superscript: "preemptive scheduling"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/324_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/198_페이지"
+              - term: "비선점형 스케줄링"
+                description: "하나의 프로세스가 자원을 사용하고 있다면 그 프로세스가 종료되거나 스스로 대기 상태에 접어들기 전까진 다른 프로세스가 끼어들 수 없는 스케줄링 방식"
+                superscript: "non-preemptive scheduling"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/324_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/198_페이지"
+
+          - subsubtitle: "CPU 스케줄링 알고리즘"
+            items:
+              - term: "선입 선처리 스케줄링"
+                description: "준비 큐에 삽입된 순서대로 프로세스들을 처리하는 비선점형 스케줄링 알고리즘"
+                superscript: "FCFS Scheduling"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/329_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/199_페이지"
+              - term: "호위 효과"
+                description: "CPU를 사용하는 시간이 긴 프로세스가 준비 큐에 먼저 도착하면, 그 프로세스를 기다리는 프로세스들이 뒤로 밀리는 현상"
+                superscript: "convoy effect"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/329_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/199_페이지"
+              - term: "최단 작업 우선 스케줄링"
+                description: "준비 큐에 삽입된 프로세스들 중 CPU 이용 시간의 길이가 가장 짧은 프로세스부터 실행하는 스케줄링 알고리즘"
+                superscript: "SJF Scheduling"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/330_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/199_페이지"
+              - term: "라운드 로빈 스케줄링"
+                description: "선입 선처리 스케줄링에 타임 슬라이스라는 개념이 더해진 스케줄링 알고리즘"
+                superscript: "round robin scheduling"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/330_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/199_페이지"
+              - term: "타임 슬라이스"
+                description: "각 프로세스가 CPU를 사용할 수 있는 정해진 시간"
+                superscript: "time slice"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/330_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/199_페이지"
+              - term: "최소 잔여 시간 우선 스케줄링"
+                description: "프로세스들은 정해진 타임 슬라이스만큼 CPU를 사용하되, 남아있는 작업 시간이 가장 적은 프로세스를 다음으로 CPU를 사용할 다음 프로세스로 선택하는 스케줄링 알고리즘"
+                superscript: "SRT Scheduling"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/331_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/200_페이지"
+              - term: "우선순위 스케줄링"
+                description: "프로세스들에게 우선순위를 부여하고, 가장 높은 우선순위를 가진 프로세스부터 실행하는 스케줄링 알고리즘"
+                superscript: "priority scheduling"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/332_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/200_페이지"
+              - term: "기아 현상"
+                description: "우선순위가 낮은 프로세스가 우선순위가 높은 프로세스들에 의해 실행이 계속해서 연기되는 현상"
+                superscript: "starvation"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/332_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/200_페이지"
+              - term: "아사 현상"
+                description: "기아 현상의 다른 말"
+                superscript: "starvation"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/332_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/200_페이지"
+              - term: "에이징"
+                description: "기아 현상을 방지하기 위해 오랫동안 대기한 프로세스의 우선순위를 점차 높이는 방식"
+                superscript: "aging"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/332_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/200_페이지"
+              - term: "다단계 큐 스케줄링"
+                description: "우선순위별로 준비 큐를 여러 개 사용하는 스케줄링 알고리즘"
+                superscript: "multilevel queue scheduling"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/333_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/200_페이지"
+                image: "assets/img/os/multi_level_queue.png"
+              - term: "다단계 피드백 큐 스케줄링"
+                description: "다단계 큐 스케줄링에서 프로세스가 다른 큐로 이동할 수 있는 스케줄링 알고리즘"
+                superscript: "multilevel feedback queue scheduling"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/334_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/201_페이지"
+                image: "assets/img/os/multi_level_feedback_queue.png"
+              - term: "리눅스 CPU 스케줄링"
+                description: "리눅스에서 사용되는 CPU 스케줄링 방식<br>다양한 스케줄링 정책이 존재"
+                superscript: "Linux CPU scheduling"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/202_페이지"
+              - term: "CFS 스케줄러"
+                description: "리눅스에서 사용되는 일반적인 사용자 프로세스의 CPU 스케줄러 중 하나<br>프로세스의 가중치를 기반으로 CPU를 할당하는 방식"
+                superscript: "Completely Fair Scheduler"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/203_페이지"
+
+      - subtitle: "프로세스 동기화"
+        content:
+          - subsubtitle: "동기화란"
+            items:
+              - term: "동기화"
+                description: "특정 자원에 접근할 때 한 개의 프로세스만 접근하게 하거나, 프로세스를 올바른 순서대로 실행하게 하는 것"
+                superscript: "synchronization"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/340_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/169_페이지"
+              - term: "상호 배제"
+                description: "한 프로세스가 사용하는 자원을 다른 프로세스가 사용할 수 없는 상태로, 공유가 불가능한 자원에 동시 접근하지 않는 것 "
+                superscript: "mutual exclusion"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/342_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/169_페이지"
+              - term: "상호 배제를 위한 동기화"
+                description: "동시에 접근해서는 안 되는 자원에 동시에 접근하지 못하게 하는 동기화"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/343_페이지"
+              - term: "공유 자원"
+                description: "동시에 실행되는 프로세스들이 공유하는 자원"
+                superscript: "shared resource"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/345_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/165_페이지"
+              - term: "임계 구역"
+                description: "동시에 실행하면 문제가 발생하는 자원에 접근하는 코드 영역"
+                superscript: "critical section"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/346_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/165_페이지"
+              - term: "레이스 컨디션"
+                description: "잘못된 실행으로 인해 여러 프로세스가 동시 다발적으로 임계 구역의 코드를 실행하여 발생하는 문제"
+                superscript: "race condition"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/346_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/167_페이지"
+                image: "assets/img/os/race_condition.png"
+              - term: "유한 대기"
+                description: "상호 배제를 위한 동기화 원칙 중 임계 구역에 진입하려는 프로세스가 있으면 임계 구역을 빠져나가기 위해 기다리는 프로세스는 반드시 한정된 횟수 내에 진입해야 한다는 원칙"
+                superscript: "bounded waiting"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/348_페이지"
+
+          - subsubtitle: "동기화 기법"
+            items:
+              - term: "뮤텍스 락"
+                description: "동시에 접근해서는 안 되는 자원에 동시에 접근하지 않도록 만드는 도구"
+                superscript: "Mutex lock; MUTual EXclusion lock"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/351_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/170_페이지"
+              - term: "바쁜 대기"
+                description: "임계 구역이 잠겨 있을 경우 프로세스가 계속해서 임계 구역에 접근 가능할 때까지 반복적으로 접근 가능 여부를 확인하는 대기 방식"
+                superscript: "busy wait"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/353_페이지"
+              - term: "세마포어"
+                description: "공유 자원이 여러 개 있는 상황에서도 적용이 가능한 동기화 도구"
+                superscript: "semaphore"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/353_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/174_페이지"
+              - term: "모니터"
+                description: "동기화 도구 중 하나로, 공유 자원을 다루는 인터페이스에 접근하기 위한 큐(모니터에 진입하기 위한 큐)를 통해 오직 하나의 프로세스만 모니터 내에 진입 가능한 동기화 도구"
+                superscript: "monitor"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/358_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/183_페이지"
+              - term: "조건 변수"
+                description: "모니터 내부에서 프로세스나 스레드의 실행 순서를 제어하기 위해 사용하는 변수"
+                superscript: "condition variable"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/359_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/186_페이지"
+              - term: "스레드 안전"
+                description: "여러 스레드가 동시에 실행되어도 프로그램의 실행에 문제가 없는 상태"
+                superscript: "thread-safe"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/186_페이지"
+
+      - subtitle: "교착 상태"
+        content:
+          - subsubtitle: "교착 상태란"
+            items:
+              - term: "교착 상태"
+                description: "일어나지 않을 사건을 기다리며 진행이 멈춰 버리는 현상"
+                superscript: "deadlock"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/368_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/189_페이지"
+                image: "assets/img/os/deadlock.png"
+              - term: "자원 할당 그래프"
+                description: "어떤 프로세스가 어떤 자원을 사용하고 있고, 또 어떤 프로세스가 어떤 자원을 기다리고 있는지 표현하는 간단한 그래프"
+                superscript: "resource-allocation graph"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/369_페이지"
+              - term: "교착 상태 발생 조건"
+                description: "1) 상호 배제 2) 점유와 대기 3) 비선점 4) 원형 대기의 네 가지 조건이 모두 성립할 때 교착 상태가 발생 가능성이 생김"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/372_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/190_페이지"
+              - term: "점유와 대기"
+                description: "자원을 할당받은 상태에서 다른 자원을 할당받기를 기다리는 상태"
+                superscript: "hold and wait"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/373_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/190_페이지"
+              - term: "원형 대기"
+                description: "프로세스들이 원의 형태로 자원을 대기하는 것"
+                superscript: "circular wait"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/373_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/190_페이지"
+
+          - subsubtitle: "교착 상태 해결 방법"
+            items:
+              - term: "교착 상태 예방"
+                description: "교착 상태 발생 조건 중 하나를 제거하여 교착 상태를 예방하는 방법"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/377_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/191_페이지"
+              - term: "교착 상태 회피"
+                description: "교착 상태가 발생하지 않을 정도로만 조심스럽게 자원을 할당하는 방식"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/380_페이지"
+              - term: "안전 상태"
+                description: "교착 상태가 발생하지 않고 모든 프로세스가 정상적으로 자원을 할당받고 종료될 수 있는 상태"
+                superscript: "safe state"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/380_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/192_페이지"
+              - term: "불안전 상태"
+                description: "교착 상태가 발생할 수도 있는 상태"
+                superscript: "unsafe state"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/380_페이지"
+              - term: "교착 상태 검출 후 회복"
+                description: "교착 상태 발생을 인정하고 사후에 조치하는 방식"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/384_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/192_페이지"
+              - term: "선점을 통한 교착 상태 회복"
+                description: "교착 상태가 해결될 때까지 한 프로세스씩 자원을 몰아주는 방식"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/384_페이지"
+              - term: "프로세스 강제 종료를 통한 교착 상태 회복"
+                description: "교착 상태가 해결될 때까지 프로세스를 강제로 종료하는 방식"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/385_페이지"
+              - term: "타조 알고리즘"
+                description: "드물게 발생하는 잠재적 문제를 무시로 대처하는 방식"
+                superscript: "ostrich algorithm"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/386_페이지"
+
+      - subtitle: "가상 메모리"
+        content:
+          - subsubtitle: "연속 메모리 할당"
+            items:
+              - term: "연속 메모리 할당"
+                description: "프로세스에 연속적인 메모리 공간을 할당하는 방식"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/390_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/208_페이지"
+              - term: "스와핑"
+                description: "프로세스들을 임시로 보조기억장치 일부 영역으로 쫓아내고, 그렇게 해서 생긴 메모리상의 빈 공간에 또 다른 프로세스를 적재하여 실행하는 방식"
+                superscript: "swapping"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/391_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/207_페이지"
+                image: "assets/img/os/swapping.png"
+              - term: "스왑 영역"
+                description: "사용되지 않아 스왑 아웃되는 프로세스들이 저장되는 보조기억장치의 일부 영역"
+                superscript: "swap space"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/391_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/207_페이지"
+              - term: "스왑 아웃"
+                description: "현재 실행되지 않는 프로세스가 메모리에서 스왑 영역으로 옮겨지는 것"
+                superscript: "swap-out"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/391_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/207_페이지"
+              - term: "스왑 인"
+                description: "스왑 영역에 있던 프로세스가 다시 메모리로 옮겨오는 것"
+                superscript: "swap-in"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/391_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/207_페이지"
+              - term: "최초 적합"
+                description: "운영체제가 메모리 내의 빈 공간을 순서대로 검색하다가 적재할 수 있는 공간을 발견하면 그 공간에 프로세스를 배치하는 방식"
+                superscript: "first fit"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/393_페이지"
+              - term: "최적 적합"
+                description: "운영체제가 빈 공간을 모두 검색해 본 후, 프로세스가 적재될 수 있는 공간 중 가장 작은 공간에 프로세스를 배치하는 방식"
+                superscript: "best fit"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/394_페이지"
+              - term: "최악 적합"
+                description: "운영체제가 빈 공간을 모두 검색해 본 후, 프로세스가 적재될 수 있는 공간 중 가장 큰 공간에 프로세스를 배치하는 방식"
+                superscript: "worst fit"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/395_페이지"
+              - term: "외부 단편화"
+                description: "프로세스 외부에 생긴 프로세스를 할당하기 어려울 만큼 작은 메모리 공간들로 인해 메모리가 낭비되는 현상"
+                superscript: "external fragmentation"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/396_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/209_페이지"
+                image: "assets/img/os/external_fragmentation.png"
+              - term: "압축"
+                description: "메모리 내에 저장된 프로세스를  재배치시켜  흩어져 있는 작은 빈 공간들을 하나의 큰 빈 공간으로 만드는 메모리 관리 방법"
+                superscript: "compaction"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/399_페이지"
+
+          - subsubtitle: "페이징을 통한 가상 메모리 관리"
+            items:
+              - term: "가상 메모리"
+                description: "실행하고자 하는 프로그램을 일부만 메모리에 적재하여 실제 물리 메모리 크기보다 더 큰 프로세스를 실행할 수 있게 하는 기술"
+                superscript: "virtual memory"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/402_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/210_페이지"
+                image: "assets/img/os/virtual_memory.png"
+              - term: "페이징"
+                description: "프로세스의 논리 주소 공간을 페이지라는 일정한 단위로 자르고, <br>
+                              메모리 물리 주소 공간을 프레임이라는 페이지와 동일한 크기의 일정한 단위로 자른 뒤 <br>
+                              페이지를 프레임에 할당하는 가상 메모리 관리 기법"
+                superscript: "paging"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/403_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/210_페이지"
+                image: "assets/img/os/paging.png"
+              - term: "세그멘테이션"
+                description: "프로세스의 논리 주소 공간을 세그먼트라는 일정한 단위로 자르고, <br>
+                              메모리 물리 주소 공간을 세그먼트와 동일한 크기의 일정한 단위로 자른 뒤 <br>
+                              세그먼트를 메모리에 할당하는 가상 메모리 관리 기법"
+                superscript: "segmentation"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/211_페이지"
+              - term: "페이지 아웃"
+                description: "페이징 시스템에서의 스왑 아웃"
+                superscript: "page out"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/404_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/212_페이지"
+              - term: "페이지 인"
+                description: "페이징 시스템에서의 스왑 인"
+                superscript: "page in"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/404_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/212_페이지"
+              - term: "페이지 테이블"
+                description: "현재 어떤 페이지가 어떤 프레임에 할당되었는지 알기 위해 페이지 번호와 프레임 번호를 짝지어 주는 표 형태의 정보"
+                superscript: "page table"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/405_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/213_페이지"
+                image: "assets/img/os/page_table.png"
+              - term: "내부 단편화"
+                description: "모든 프로세스가 페이지 크기에 딱 맞게 잘리지 않아 발생하는 메모리의 낭비 현상"
+                superscript: "internal fragmentation"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/396_페이지"
+                image: "assets/img/os/internal_fragmentation.png"
+              - term: "페이지 테이블 베이스 레지스터 (PTBR)"
+                description: "각 프로세스의 페이지 테이블이 적재된 주소를 가지고 있는 레지스터"
+                superscript: "PTBR; Page Table Base Register"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/407_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/217_페이지"
+              - term: "TLB"
+                description: "페이지 테이블의 캐시 메모리 역할을 수행하기 위해 페이지 테이블의 일부를 저장하는 메모리"
+                superscript: "Translation Lookaside Buffer"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/409_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/215_페이지"
+                image: "assets/img/os/tlb.png"
+              - term: "TLB 히트"
+                description: "CPU가 발생한 논리 주소에 대한 페이지 번호가 TLB에 있는 경우"
+                superscript: "TLB hit"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/409_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/215_페이지"
+              - term: "TLB 미스"
+                description: "CPU가 발생한 논리 주소에 대한 페이지 번호가 TLB에 없는 경우"
+                superscript: "TLB miss"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/409_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/215_페이지"
+              - term: "페이지 테이블 엔트리"
+                description: "페이지 테이블의 각 행들"
+                superscript: "PTE; Page Table Entry"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/412_페이지"
+              - term: "유효 비트"
+                description: "현재 해당 페이지에 접근 가능한지 여부를 나타내는 비트"
+                superscript: "valid bit"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/412_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/214_페이지"
+              - term: "페이지 폴트"
+                description: "CPU가 유효 비트가 0인 메모리에 적재되어 있지 않은 페이지로 접근하려고 할 때 발생하는 예외(Exception)"
+                superscript: "page fault"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/413_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/215_페이지"
+              - term: "보호 비트"
+                description: "페이지 보호 기능을 위해 존재하는 비트로, 해당 페이지가 읽고 쓰기가 모두 가능한 페이지인지, 혹은 읽기만 가능한 페이지인지를 나타내는 비트"
+                superscript: "protection bit"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/413_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/215_페이지"
+              - term: "참조 비트"
+                description: "CPU가 이 페이지에 접근한 적이 있는지 여부를 나타내는 비트"
+                superscript: "reference bit"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/414_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/215_페이지"
+              - term: "수정 비트"
+                description: "해당 페이지에 데이터를 쓴 적이 있는지 없는지 수정 여부를 나타내는 비트로 더티 비트(dirty bit)라고도 부름"
+                superscript: "modified bit"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/415_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/215_페이지"
+              - term: "쓰기 시 복사"
+                description: "부모 프로세스의 자식 프로세스 생성 직후,<br>  
+                            부모 프로세스 혹은 자식 프로세스 둘 중 하나가 페이지에 쓰기 작업을 하면<br> 
+                            해당 페이지가 별도의 공간으로 복제되고 <br> 
+                            각 프로세스는 자신의 고유한 페이지가 할당된 프레임을 가리키게 되는 방식<br> "
+                superscript: "copy on write"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/417_페이지"
+              - term: "계층적 페이징"
+                description: "프로세스를 이루는 모든 페이지 테이블 엔트리를 항상 메모리에 유지하지 않을 수 있는 방법으로 다단계 페이지 테이블이라고도 부름"
+                superscript: "hierarchical paging"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/419_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/218_페이지"
+          - subsubtitle: "페이지 교체와 프레임 할당"
+            items:
+              - term: "요구 페이징"
+                description: "프로세스를 메모리에 적재할 때 처음부터 모든 페이지를 적재하지 않고 필요한 페이지만을 메모리에 적재하는 기법"
+                superscript: "demand paging"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/425_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/221_페이지"
+              - term: "순수 요구 페이징"
+                description: "아무런 페이지도 메모리에 적재하지 않은 상태에서 프로세스를 실행하는 방식"
+                superscript: "pure demand paging"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/425_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/221_페이지"
+              - term: "페이지 교체 알고리즘"
+                description: "당장 실행에 필요한 페이지를 적재하기 위해 메모리에 적재된 페이지를 내보내야 할 때, <br>
+                              어떤 페이지를 내보낼지 결정하는 알고리즘"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/425_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/221_페이지"
+              - term: "페이지 참조열"
+                description: "CPU가 참조하는 페이지들 중 연속된 페이지를 생략한 페이지열"
+                superscript: "page reference string"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/426_페이지"
+              - term: "FIFO 페이지 교체 알고리즘"
+                description: "메모리에 가장 먼저 올라온 페이지부터 내쫓는, 적재된 페이지 순서대로 교체하는 페이지 교체 알고리즘"
+                superscript: "FIFO page replacement algorithm"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/426_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/222_페이지"
+              - term: "2차 기회 페이지 교체 알고리즘"
+                description: "FIFO 페이지 교체 알고리즘과 같이 기본적으로 메모리에서 가장 오래 머물렀던 페이지를 내보낼 페이지로 선별하지만, <br>
+                              참조 비트가 1이면 페이지를 내보내지 않고 참조 비트를 0으로 만든 후 현재 시간을 적재 시간으로 설정하는 페이지 교체 알고리즘"
+                superscript: "second chance replacement algorithm"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/428_페이지"
+              - term: "최적 페이지 교체 알고리즘"
+                description: "앞으로의 사용 빈도가 가장 낮은 페이지를 교체하는 페이지 교체 알고리즘"
+                superscript: "optimal page replacement algorithm"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/429_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/222_페이지"
+              - term: "LRU 페이지 교체 알고리즘"
+                description: "가장 오랫동안 사용되지 않은 페이지를 교체하는 페이지 교체 알고리즘"
+                superscript: "LRU; Least Recently Used Page Algorithm"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/430_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/222_페이지"
+              - term: "스레싱"
+                description: "프로세스가 실제 실행되는 시간보다 페이징에 더 많은 시간을 소요하여 성능이 저해되는 문제"
+                superscript: "thrashing"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/431_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/221_페이지"
+              - term: "메이저 페이지 폴트"
+                description: "보조기억장치에서 CPU가 원하는 페이지를 읽어 들이기 위해 입출력 작업이 필요한 페이지 폴트<br>
+                            CPU가 접근하려는 페이지 가 물리 메모리에 없을 때 발생"
+                superscript: "major page fault"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/222_페이지"
+              - term: "마이너 페이지 폴트"
+                description: "보조기억장치와의 입출력이 필요하지 않은 페이지 폴트<br> 
+                        CPU가 요청한 페이지가 물리 메모리에는 존재하지만, 페이지 테이블 상에는 반영되지 않은 경우 발생"
+                superscript: "minor page fault"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/222_페이지"
+              - term: "멀티프로그래밍의 정도"
+                description: "메모리에 동시 실행되는 프로세스의 수"
+                superscript: "degree of multiprogramming"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/432_페이지"
+              - term: "균등 할당"
+                description: "모든 프로세스에 균등하게 프레임을 할당하는 방식"
+                superscript: "equal allocation"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/433_페이지"
+              - term: "비례 할당"
+                description: "프로세스의 크기에 따라 프레임을 배분하는 방식"
+                superscript: "proportional allocation"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/433_페이지"
+              - term: "정적 할당 방식 (프레임 할당)"
+                description: "프로세스의 실행 과정을 고려하지 않고 단순히 프로세스의 크기와 물리 메모리의 크기만을 고려하여 프레임을 할당하는 방식"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/433_페이지"
+              - term: "작업 집합"
+                description: "프로세스가 실행 중에 일정 시간 동안 참조한 페이지의 집합"
+                superscript: "working set"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/434_페이지"
+              - term: "페이지 폴트 빈도"
+                description: "프로세스가 실행 중에 발생하는 페이지 폴트의 빈도"
+                superscript: "Page-Fault Frequency (PFF)"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/434_페이지"
+              - term: "동적 할당 방식 (프레임 할당)"
+                description: "프로세스의 실행 과정을 고려하여 프레임 수를 결정하는 방식"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/434_페이지"
+              - term: "작업 집합 모델 기반 프레임 할당"
+                description: "작업 집합의 크기만큼만 프레임을 할당하는 프레임 할당 방식"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/434_페이지"
+              - term: "페이지 폴트율 기반 프레임 할당"
+                description: "페이지 폴트율에 상한선과 하한선을 정하고, 그 내부 범위 안에서만 프레임을 할당하는 프레임 할당 방식"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/436_페이지"
+
+      - subtitle: "파일 시스템"
+        content:
+          - subsubtitle: "파일과 디렉터리"
+            items:
+              - term: "파일"
+                description: "하드 디스크나 SSD와 같은 보조기억장치에 저장된 관련 정보의 집합"
+                superscript: "file"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/441_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/223_페이지"
+              - term: "속성"
+                description: "파일 관련 부가 정보로 메타데이터(metadata)라고도 함"
+                superscript: "attribute"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/441_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/223_페이지"
+              - term: "파일 속성"
+                description: "파일 형식, 위치, 크기 등 파일과 관련된 다양한 정보"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/441_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/223_페이지"
+              - term: "파일 디스크립터"
+                description: "파일을 식별하기 위해 운영체제가 할당하는 번호"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/225_페이지"
+              - term: "파일 유형"
+                description: "운영체제가 인식하는 파일의 종류로, 확장자로 식별 가능함"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/442_페이지"
+              - term: "파일 위치"
+                description: "파일의 보조기억장치상의 현재 위치"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/442_페이지"
+              - term: "디렉터리"
+                description: "파일을 저장하는 공간으로 윈도우 운영체제에서는 폴더(folder)라고 부름"
+                superscript: "directory"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/443_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/226_페이지"
+              - term: "트리 구조 디렉터리"
+                description: "디렉터리가 여러 계층을 가진 트리 구조로 연결된 방식"
+                superscript: "tree-structured directory"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/443_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/227_페이지"
+                image: "assets/img/os/tree_directory.png"
+              - term: "루트 디렉터리"
+                description: "트리 구조 디렉터리의 최상위 디렉터리"
+                superscript: "root directory"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/444_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/227_페이지"
+              - term: "경로"
+                description: "디렉터리를 이용해 파일 위치이자, 파일 이름을 특정 짓는 정보"
+                superscript: "path"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/444_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/227_페이지"
+              - term: "절대 경로"
+                description: "루트 디렉터리에서 자기 자신까지 이르는 고유한 경로"
+                superscript: "absolute path"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/444_페이지"
+              - term: "상대 경로"
+                description: "현재 디렉터리에서 자기 자신까지 이르는 경로"
+                superscript: "relative path"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/445_페이지"
+              - term: "디렉터리 엔트리"
+                description: "디렉터리에 저장된 파일과 디렉터리의 정보"
+                superscript: "directory entry"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/227_페이지"
+
+          - subsubtitle: "파일 시스템"
+            items:
+              - term: "파일 시스템"
+                description: "파일과 디렉터리를 보조기억장치에 일목요연하게 저장하고 접근할 수 있게 하는 운영체제 내부 프로그램"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/452_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/223_페이지"
+                superscript: "file system"
+              - term: "파티셔닝"
+                description: "저장 장치의 논리적인 영역을 구획하는 작업"
+                superscript: "partitioning"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/453_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/231_페이지"
+              - term: "파티션"
+                description: "파티셔닝 작업을 통해 나누어진 영역"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/453_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/231_페이지"
+              - term: "포맷팅"
+                description: "파일 시스템을 설정하는 작업이자, 새로운 데이터를 쓸 준비를 하는 작업"
+                superscript: "formatting"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/454_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/232_페이지"
+              - term: "저수준 포매팅"
+                description: "저장 장치를 생성할 당시 공장에서 수행되는 물리적인 포매팅"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/454_페이지"
+              - term: "논리적 포매팅"
+                description: "파일 시스템을 생성하는 포매팅"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/454_페이지"
+              - term: "블록"
+                description: "파일 시스템(운영체제)에서 파일을 저장하는 최소 단위"
+                superscript: "block"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/456_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/229_페이지"
+              - term: "연속 할당"
+                description: "파일이 저장 장치 내에서 연속적인 공간을 차지하도록 블록을 할당하는 파일 할당 방식"
+                superscript: "contiguous allocation"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/457_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/230_페이지"
+              - term: "연결 할당"
+                description: "각 블록 일부에 다른 블록의 주소를 저장하여 각 블록의 다음 블록을 가리키는 형태로 할당하는 파일 할당 방식"
+                superscript: "linked allocation"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/458_페이지"
+              - term: "임의 접근 속도"
+                description: "데이터의 임의의 위치에 접근하는 속도"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/459_페이지"
+                superscript: "random access"
+              - term: "색인 할당"
+                description: "파일의 모든 블록 주소를 색인 블록에 모아 관리하는 파일 할당 방식"
+                superscript: "indexed allocation"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/460_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/230_페이지"
+                image: "assets/img/os/index_allocation.png"
+              - term: "색인 블록"
+                description: "파일의 모든 블록 주소를 모아 놓은 특별한 블록"
+                superscript: "index block"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/460_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/230_페이지"
+              - term: "파일 할당 테이블 (FAT)"
+                description: "각 블록에 포함된 다음 블록의 주소들을 한데 모아 놓은 테이블"
+                superscript: "FAT; File Allocation Table"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/462_페이지"
+              - term: "FAT 파일 시스템"
+                description: "FAT을 이용하는 파일 시스템"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/463_페이지"
+                superscript: "FAT file system"
+              - term: "클러스터 (파일 시스템)"
+                description: "윈도우에서 블록이라는 용어 대신 사용하는 용어"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/463_페이지"
+              - term: "유닉스 파일 시스템"
+                description: "색인 할당을 기반의 파일 시스템으로, 아이노드라는 색인 블록을 색인 블록으로 사용"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/461_페이지"
+                superscript: "UNIX file system"
+              - term: "색인 할당"
+                description: "색인 블록을 기반으로 파일의 데이터 블록들을 찾는 방식"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/467_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/230_페이지"
+              - term: "아이노드 (i-node)"
+                description: "유닉스 파일 시스템에서의 색인 블록으로, 파일 속성 정보와 파일 데이터 위치가 저장될 수 있음"
+                superscript: "index-node"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/467_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/233_페이지"
+              - term: "직접 블록"
+                description: "파일 데이터가 저장된 아이노드 블록"
+                superscript: "direct block"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/468_페이지"
+              - term: "하드 링크 파일"
+                description: "원본 파일과 같은 아이노드를 공유하는 파일"
+                superscript: "hard link file"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/235_페이지"
+                image: "assets/img/os/hard_link.png"
+              - term: "심볼릭 링크"
+                description: "원본 파일 주소를 가리키는 파일"
+                superscript: "symbolic link"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/235_페이지"
+                image: "assets/img/os/symbolic_link.png"
+              - term: "단일 간접 블록"
+                description: "파일 데이터가 저장된 블록이 아닌 파일 데이터를 저장한 블록 주소가 저장된 아이노드 블록"
+                superscript: "single indirect block"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/468_페이지"
+              - term: "이중 간접 블록"
+                description: "데이터 블록 주소를 저장하는 블록 주소가 저장된 아이노드 블록 (단일 간접 블록들의 주소를 저장하는 아이노드 블록)"
+                superscript: "double indirect block"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/469_페이지"
+              - term: "삼중 간접 블록"
+                description: "이중 간접 블록들의 주소를 저장하는 아이노드 블록"
+                superscript: "triple indirect block"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/469_페이지"
+              - term: "NT 파일 시스템"
+                description: "Windows 운영체제에서 사용하는 파일 시스템"
+                superscript: "NTFS"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/474_페이지"
+              - term: "ext 파일 시스템"
+                description: "리눅스 운영체제에서 주로 사용하는 파일 시스템"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/474_페이지"
+                superscript: "ext file system"
+              - term: "시스템 크래시"
+                description: "컴퓨터를 이용해 작업을 하던 도중 갑자기 전원이 나가거나 치명적인 오류로 인해 컴퓨터가 강제로 종료되어 버린 상황"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/475_페이지"
+                superscript: "system crash"
+              - term: "저널링 파일 시스템"
+                description: "저널링 기법을 이용하는 파일 시스템"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/475_페이지"
+                superscript: "journaling file system"
+              - term: "저널링 기법"
+                description: "파일 시스템 변경 전후로 작업 로그를 남기고, 시스템 크래시가 발생했을 때 해당 작업 로그 기반으로 빠르게 복구하는 파일 시스템 기술"
+                superscript: "journaling"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/475_페이지"
+              - term: "마운트"
+                description: "한 저장 장치의 파일 시스템에서 다른 저장 장치의 파일 시스템에 접근할 수 있도록 파일 시스템을 편입시키는 작업"
+                references: 
+                  - "혼자_공부하는_컴퓨터구조_운영체제/476_페이지"
+                  - "이것이_취업을_위한_컴퓨터과학이다/236_페이지"
+                superscript: "mount"
+              - term: "부팅"
+                description: "컴퓨터를 켜서 운영체제를 메모리에 적재하는 작업"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/239_페이지"
+                superscript: "booting"
+              - term: "바이오스"
+                description: "컴퓨터의 전원을 켜면 가장 먼저 실행되는 프로그램으로, 컴퓨터의 기본적인 입출력 작업을 수행하는 프로그램"
+                superscript: "BIOS; Basic Input/Output System"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/239_페이지"
+                image: "assets/img/os/bios.png"
+              - term: "POST (부팅)"
+                description: "부팅 시 하드웨어의 기본적인 동작을 검사하는 작업"
+                superscript: "Power-On Self-Test"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/239_페이지"
+              - term: "마스터 부트 레코드"
+                description: "바이오스가 보조기억장치에서 부팅을 위해 읽어들이는 영역"
+                superscript: "master boot record"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/239_페이지"
+              - term: "부트로더"
+                description: "컴퓨터의 부팅 과정에서 운영체제를 메모리에 적재하는 프로그램"
+                superscript: "boot loader"
+                references: 
+                  - "이것이_취업을_위한_컴퓨터과학이다/239_페이지"
