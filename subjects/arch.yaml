@@ -973,13 +973,13 @@ sections:
                   - "혼자_공부하는_컴퓨터구조_운영체제/183_페이지"
                   - "이것이_취업을_위한_컴퓨터과학이다/92_페이지"
               - term: "빅 엔디안"
-                description: "낮은 번지의 수조에 상위 바이트부터 저장하는 메모리 저장 방식"
+                description: "낮은 번지의 주소에 상위 바이트부터 저장하는 메모리 저장 방식"
                 superscript: "big-endian"
                 references: 
                   - "이것이_취업을_위한_컴퓨터과학이다/93_페이지"
                 image: "assets/img/arch/bigendian.png"
               - term: "리틀 엔디안"
-                description: "낮은 번지의 수조에 하위 바이트부터 저장하는 메모리 저장 방식"
+                description: "낮은 번지의 주소에 하위 바이트부터 저장하는 메모리 저장 방식"
                 superscript: "little-endian"
                 references: 
                   - "이것이_취업을_위한_컴퓨터과학이다/91_페이지"
