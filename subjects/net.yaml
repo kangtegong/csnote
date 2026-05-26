@@ -396,7 +396,7 @@ sections:
                 references: 
                   - "혼자_공부하는_네트워크/79_페이지"
               - term: "변조 타입"
-                description: "비트 신호로 변환된 데이터를 통신 메제로 전송하는 방법"
+                description: "비트 신호로 변환된 데이터를 통신 매체로 전송하는 방법"
                 superscript: "modulation type"
                 references: 
                   - "혼자_공부하는_네트워크/79_페이지"
