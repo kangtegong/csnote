@@ -1,0 +1,2808 @@
+sections:
+  - title: 네트워크
+    content:
+      - subtitle: 컴퓨터 네트워크 시작하기
+        content:
+          - subsubtitle: 컴퓨터 네트워크를 알아야 하는 이유
+            items:
+              - term: Computer Network
+                description: A communication network in which many devices are connected to one another like a net so they can exchange information.
+                superscript: 컴퓨터 네트워크
+                references:
+                  - 혼자_공부하는_네트워크/28_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/347_페이지
+                image: assets/img/net/network.png
+              - term: Internet
+                description: A network of networks that connects many networks together.
+                superscript: 인터넷
+                references:
+                  - 혼자_공부하는_네트워크/29_페이지
+          - subsubtitle: 네트워크 거시적으로 살펴보기
+            items:
+              - term: Graph
+                description: A data structure made of nodes and the edges connecting them; a network can be represented as a graph.
+                superscript: 그래프
+                references:
+                  - 혼자_공부하는_네트워크/36_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/348_페이지
+              - term: Network Topology
+                description: The connection structure between nodes on a network.
+                superscript: 네트워크 토폴로지
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/349_페이지
+                image: assets/img/net/network_topology.png
+              - term: Node
+                description: A device that can exchange information; also called a vertex.
+                superscript: 노드
+                references:
+                  - 혼자_공부하는_네트워크/37_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/348_페이지
+              - term: Edge
+                description: A wired or wireless communication medium that can exchange information; also called a link.
+                superscript: 간선
+                references:
+                  - 혼자_공부하는_네트워크/37_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/348_페이지
+              - term: Host
+                description: An edge node in a network; also called an end system.
+                superscript: 호스트
+                references:
+                  - 혼자_공부하는_네트워크/37_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/349_페이지
+              - term: Server
+                description: A host that provides some service; it receives request messages and sends response messages.
+                superscript: 서버
+                references:
+                  - 혼자_공부하는_네트워크/38_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/349_페이지
+              - term: Client
+                description: A host that requests some service from a server and is provided with the server's response.
+                superscript: 클라이언트
+                references:
+                  - 혼자_공부하는_네트워크/38_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/349_페이지
+              - term: Intermediate Node
+                description: A node not located at the edge of the network, through which information exchanged between hosts passes (e.g., network equipment).
+                references:
+                  - 혼자_공부하는_네트워크/39_페이지
+                superscript: 중간 노드
+              - term: Communication Medium
+                description: The edge that connects each node; there are wired and wireless media.
+                references:
+                  - 혼자_공부하는_네트워크/40_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/348_페이지
+                superscript: 통신 매체
+              - term: Message
+                description: Information exchanged by nodes connected through a communication medium.
+                superscript: 메시지
+                references:
+                  - 혼자_공부하는_네트워크/41_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/359_페이지
+              - term: Local Area Network (LAN)
+                description: A short-range communication network connecting nearby areas.
+                superscript: LAN
+                references:
+                  - 혼자_공부하는_네트워크/41_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/350_페이지
+                image: assets/img/net/lan.png
+              - term: Wide Area Network (WAN)
+                description: A wide-area communication network connecting distant areas.
+                superscript: WAN
+                references:
+                  - 혼자_공부하는_네트워크/42_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/350_페이지
+                image: assets/img/net/lan.png
+              - term: Internet Service Provider (ISP)
+                description: A company that provides various WAN-related services, such as leasing users lines that can connect to a WAN like the internet. Major domestic ISPs include KT, LG U+, and SK Broadband.
+                superscript: ISP
+                references:
+                  - 혼자_공부하는_네트워크/43_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/350_페이지
+              - term: Campus Area Network (CAN)
+                description: A network on the scale of several buildings of a school or company.
+                superscript: CAN
+                references:
+                  - 혼자_공부하는_네트워크/43_페이지
+              - term: Metropolitan Area Network (MAN)
+                description: A network on the scale of a city or metropolitan area.
+                superscript: MAN
+                references:
+                  - 혼자_공부하는_네트워크/43_페이지
+              - term: Circuit Switching
+                description: A method of setting up a circuit, the message transmission path, and transmitting messages through it.
+                superscript: 회선 교환
+                references:
+                  - 혼자_공부하는_네트워크/44_페이지
+              - term: Circuit
+                description: A message transmission path.
+                superscript: 회선
+                references:
+                  - 혼자_공부하는_네트워크/44_페이지
+              - term: Circuit Switch
+                description: Network equipment that secures a one-to-one transmission path between hosts.
+                references:
+                  - 혼자_공부하는_네트워크/44_페이지
+                superscript: 회선 스위치
+              - term: Packet Switching
+                description: A transmission method that solves the problems of circuit switching by splitting a message into small units called packets for transmission.
+                superscript: 패킷 교환
+                references:
+                  - 혼자_공부하는_네트워크/46_페이지
+              - term: Packet
+                description: The unit of a message sent and received over a packet-switched network.
+                superscript: 패킷
+                references:
+                  - 혼자_공부하는_네트워크/46_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/351_페이지
+              - term: Packet Switch
+                description: Network equipment that determines the optimal path so a packet can correctly reach its destination, or identifies the packet's source and destination. Representative packet-switch network equipment includes routers and switches.
+                references:
+                  - 혼자_공부하는_네트워크/46_페이지
+                superscript: 패킷 스위치
+              - term: Payload
+                description: The data to be transmitted through a packet.
+                superscript: 페이로드
+                references:
+                  - 혼자_공부하는_네트워크/47_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/351_페이지
+              - term: Header
+                description: A kind of additional or control information attached to a packet; information included at the front of the packet.
+                superscript: 헤더
+                references:
+                  - 혼자_공부하는_네트워크/47_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/351_페이지
+              - term: Trailer
+                description: Information included at the end of a packet, along with the payload.
+                superscript: 트레일러
+                references:
+                  - 혼자_공부하는_네트워크/47_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/351_페이지
+              - term: Address
+                description: Information that specifies the source and destination.
+                superscript: 주소
+                references:
+                  - 혼자_공부하는_네트워크/48_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/351_페이지
+              - term: Unicast
+                description: A transmission method in which a source and a destination exchange messages one-to-one.
+                superscript: 유니캐스트
+                references:
+                  - 혼자_공부하는_네트워크/48_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/351_페이지
+              - term: Broadcast
+                description: A transmission method that sends to all hosts on the network except oneself.
+                superscript: 브로드캐스트
+                references:
+                  - 혼자_공부하는_네트워크/48_페이지
+              - term: Broadcast Domain
+                description: The range over which a broadcast is transmitted.
+                superscript: 브로드케스트 도메인
+                references:
+                  - 혼자_공부하는_네트워크/48_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/351_페이지
+              - term: Multicast
+                description: A transmission method that sends only to hosts belonging to the same group within a network.
+                superscript: 멀티캐스트
+                references:
+                  - 혼자_공부하는_네트워크/48_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/352_페이지
+              - term: Anycast
+                description: A transmission method that sends to the nearest host among those belonging to the same group within a network.
+                superscript: 애니캐스트
+                references:
+                  - 혼자_공부하는_네트워크/48_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/352_페이지
+          - subsubtitle: 네트워크 미시적으로 살펴보기
+            items:
+              - term: Protocol
+                description: An agreed-upon rule or method for correctly exchanging information during communication.
+                superscript: 프로토콜
+                references:
+                  - 혼자_공부하는_네트워크/50_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/352_페이지
+              - term: Network Reference Model
+                description: A model that represents the structure of communication in layers; also called a network layer model.
+                superscript: 네트워크 참조 모델
+                references:
+                  - 혼자_공부하는_네트워크/50_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/353_페이지
+              - term: OSI Model
+                description: 'A network reference model created by the International Organization for Standardization. It divides communication into 7 layers: from lowest to highest, the physical, data link, network, transport, session, presentation, and application layers.'
+                references:
+                  - 혼자_공부하는_네트워크/58_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/355_페이지
+                image: assets/img/net/osi_layer.png
+                superscript: OSI 모델
+              - term: Physical Layer
+                description: The lowest layer of the OSI model; the layer that exchanges bit signals represented as 1s and 0s.
+                superscript: 물리 계층
+                references:
+                  - 혼자_공부하는_네트워크/58_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/355_페이지
+              - term: Data Link Layer
+                description: The layer for correctly exchanging information between neighboring devices within a network.
+                superscript: 데이터 링크 계층
+                references:
+                  - 혼자_공부하는_네트워크/59_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/355_페이지
+              - term: Network Layer
+                description: The layer that delivers a message to a destination (belonging to another network).
+                superscript: 네트워크 계층
+                references:
+                  - 혼자_공부하는_네트워크/59_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/356_페이지
+              - term: Transport Layer
+                description: The layer needed when reliable and stable transmission is required; it controls packet flow and checks for transmission errors to ensure reliable, stable transmission.
+                superscript: 전송 계층
+                references:
+                  - 혼자_공부하는_네트워크/59_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/356_페이지
+              - term: Application Software
+                description: A general-purpose program that a user uses for a specific purpose.
+                superscript: 응용 프로그램
+                references:
+                  - 혼자_공부하는_네트워크/59_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/356_페이지
+              - term: Session Layer
+                description: The layer that exists to manage sessions.
+                superscript: 세션 계층
+                references:
+                  - 혼자_공부하는_네트워크/59_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/356_페이지
+              - term: Session
+                description: The connection state between the application programs of communicating hosts.
+                superscript: 세션
+                references:
+                  - 혼자_공부하는_네트워크/59_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/356_페이지
+              - term: Presentation Layer
+                description: The layer where work such as converting human-readable text into computer-understandable code, compression, and encryption is performed.
+                superscript: 표현 계층
+                references:
+                  - 혼자_공부하는_네트워크/60_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/356_페이지
+              - term: Application Layer
+                description: The topmost layer of the OSI reference model, the layer most closely in contact with the user and the applications the user runs; the layer where actual network services are provided.
+                superscript: 응용 계층
+                references:
+                  - 혼자_공부하는_네트워크/60_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/356_페이지
+              - term: TCP/IP Model
+                description: 'A network reference model that represents communication in 4 layers: from lowest to highest, the network interface, internet, transport, and application layers.'
+                references:
+                  - 혼자_공부하는_네트워크/60_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/357_페이지
+                image: assets/img/net/tcpip_layer.png
+                superscript: TCP/IP 모델
+              - term: Protocol Suite
+                description: A collection of protocols across various layers.
+                superscript: 프로토콜 스위트
+                references:
+                  - 혼자_공부하는_네트워크/60_페이지
+              - term: Protocol Stack
+                description: A collection of protocols across various layers.
+                superscript: 프로토콜 스택
+                references:
+                  - 혼자_공부하는_네트워크/60_페이지
+              - term: Network Access Layer
+                description: A layer similar to the link layer of the OSI model; also called the link layer or network interface layer.
+                superscript: 네트워크 액세스 계층
+                references:
+                  - 혼자_공부하는_네트워크/61_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/357_페이지
+              - term: Internet Layer
+                description: A layer similar to the network layer of the OSI model.
+                superscript: 인터넷 계층
+                references:
+                  - 혼자_공부하는_네트워크/61_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/357_페이지
+              - term: Transport Layer
+                description: A layer similar to the transport layer of the OSI model.
+                superscript: 전송 계층
+                references:
+                  - 혼자_공부하는_네트워크/61_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/357_페이지
+              - term: Application Layer
+                description: A layer similar to the combination of the OSI model's session, presentation, and application layers.
+                superscript: 응용 계층
+                references:
+                  - 혼자_공부하는_네트워크/62_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/357_페이지
+              - term: Encapsulation
+                description: The process of adding headers and trailers during data transmission.
+                superscript: 캡슐화
+                references:
+                  - 혼자_공부하는_네트워크/65_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/358_페이지
+                image: assets/img/net/encapsulation.png
+              - term: Decapsulation
+                description: The process of removing the headers (and trailers) attached during encapsulation.
+                superscript: 역캡슐화
+                references:
+                  - 혼자_공부하는_네트워크/66_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/358_페이지
+                image: assets/img/net/decapsulation.png
+              - term: Protocol Data Unit (PDU)
+                description: The unit of a message sent and received at each layer.
+                superscript: PDU
+                references:
+                  - 혼자_공부하는_네트워크/67_페이지
+              - term: Segment
+                description: The transport-layer PDU when the TCP protocol is used.
+                references:
+                  - 혼자_공부하는_네트워크/67_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/359_페이지
+                superscript: 세그먼트
+              - term: Datagram
+                description: The transport-layer PDU when the UDP protocol is used.
+                references:
+                  - 혼자_공부하는_네트워크/67_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/359_페이지
+                superscript: 데이터그램
+              - term: IP Packet
+                description: The network-layer PDU.
+                references:
+                  - 혼자_공부하는_네트워크/67_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/359_페이지
+                superscript: IP 패킷
+              - term: Traffic
+                description: The amount of information within a network.
+                superscript: 트래픽
+                references:
+                  - 혼자_공부하는_네트워크/71_페이지
+              - term: Overload (Network)
+                description: A state in which there is so much traffic on the network that the network cannot handle it.
+                superscript: 과부하 (네트워크)
+                references:
+                  - 혼자_공부하는_네트워크/71_페이지
+              - term: Throughput
+                description: The amount of information actually transmitted through the network per unit of time.
+                superscript: 처리율
+                references:
+                  - 혼자_공부하는_네트워크/71_페이지
+              - term: Bandwidth
+                description: The maximum amount of information that can be sent and received through a communication medium per unit of time.
+                superscript: 대역폭
+                references:
+                  - 혼자_공부하는_네트워크/72_페이지
+              - term: Packet Loss
+                description: A situation where sent and received packets are lost.
+                superscript: 패킷 손실
+                references:
+                  - 혼자_공부하는_네트워크/72_페이지
+              - term: ping Command
+                description: A command that sends multiple packets to a destination to report whether the destination is reachable.
+                references:
+                  - 혼자_공부하는_네트워크/72_페이지
+                superscript: ping 명령어
+      - subtitle: 물리 계층과 데이터 링크 계층
+        content:
+          - subsubtitle: 이더넷
+            items:
+              - term: Ethernet
+                description: A network technology that defines various communication medium standards, the form of the frames sent and received, and the methods for exchanging frames.
+                superscript: 이더넷
+                references:
+                  - 혼자_공부하는_네트워크/76_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/366_페이지
+              - term: IEEE 802.3
+                description: A collection of various Ethernet-related standards. The supported network equipment, the types of communication media, and transmission speeds can vary depending on the Ethernet standard.
+                references:
+                  - 혼자_공부하는_네트워크/77_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/366_페이지
+                superscript: IEEE 802.3
+              - term: '''BASE'' in Medium Notation'
+                description: BASE is an abbreviation for baseband, indicating the modulation type.
+                references:
+                  - 혼자_공부하는_네트워크/79_페이지
+                superscript: 통신 매체 표기의 'BASE'
+              - term: Modulation Type
+                description: The method of transmitting data converted into bit signals over a communication medium.
+                superscript: 변조 타입
+                references:
+                  - 혼자_공부하는_네트워크/79_페이지
+              - term: '''Additional Distinction'' in Medium Notation'
+                description: Specifies characteristics of the communication medium (e.g., the maximum transmittable distance, the physical-layer encoding scheme, or the number of lanes).
+                superscript: 통신 매체 표기의 '추가 특성'
+                references:
+                  - 혼자_공부하는_네트워크/79_페이지
+              - term: Number of Lanes
+                description: The number of transmission paths that can carry bit signals.
+                references:
+                  - 혼자_공부하는_네트워크/79_페이지
+                superscript: 레인 수
+              - term: Physical-Layer Encoding Scheme
+                description: The way data is converted into bit signals.
+                references:
+                  - 혼자_공부하는_네트워크/79_페이지
+                superscript: 물리 계층 인코딩 방식
+              - term: 10BASE-T Cable
+                description: A twisted pair cable that supports 10 Mbps Ethernet.
+                references:
+                  - 혼자_공부하는_네트워크/80_페이지
+                superscript: 10BASE-T 케이블
+              - term: 1000BASE-SX Cable
+                description: A short-wavelength optical fiber cable that supports 1000 Mbps Ethernet.
+                references:
+                  - 혼자_공부하는_네트워크/80_페이지
+                superscript: 1000BASE-SX 케이블
+              - term: 1000BASE-LX Cable
+                description: A long-wavelength optical fiber cable that supports 1000 Mbps Ethernet.
+                references:
+                  - 혼자_공부하는_네트워크/80_페이지
+                superscript: 1000BASE-LX 케이블
+              - term: Fast Ethernet
+                description: A collective term for the standards that support speeds of around 100 Mbps.
+                superscript: 고속 이더넷
+                references:
+                  - 혼자_공부하는_네트워크/81_페이지
+              - term: Ethernet Frame
+                description: A frame exchanged on an Ethernet network.
+                superscript: 이더넷 프레임
+                references:
+                  - 혼자_공부하는_네트워크/81_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/367_페이지
+                image: assets/img/net/ethernet_frame.png
+              - term: Ethernet Frame Header
+                description: Composed of the preamble, destination MAC address, source MAC address, and type/length.
+                references:
+                  - 혼자_공부하는_네트워크/81_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/368_페이지
+                superscript: 이더넷 프레임 헤더
+              - term: Preamble
+                description: An 8-byte (64-bit) piece of information that signals the start of an Ethernet frame.
+                superscript: 프리앰블
+                references:
+                  - 혼자_공부하는_네트워크/82_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/368_페이지
+              - term: MAC Address
+                description: A 6-byte (48-bit) address assigned to each network interface that can specify the destination and source within a LAN.
+                references:
+                  - 혼자_공부하는_네트워크/82_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/368_페이지
+                superscript: MAC 주소
+              - term: Type
+                description: Information indicating 'what kind of information an Ethernet frame has encapsulated'; also called the ethertype.
+                superscript: 타입
+                references:
+                  - 혼자_공부하는_네트워크/84_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/368_페이지
+              - term: Data (Packet)
+                description: The payload content received from or to be passed to the upper layer.
+                references:
+                  - 혼자_공부하는_네트워크/84_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/369_페이지
+                superscript: 데이터 (패킷)
+              - term: Padding (Network)
+                description: Bits filled in when there is insufficient data, to satisfy the rule that an Ethernet frame must be a certain size (at least 46 bytes).
+                superscript: 패딩 (네트워크)
+                references:
+                  - 혼자_공부하는_네트워크/84_페이지
+              - term: Frame Check Sequence (FCS)
+                description: A trailer field for checking whether a received Ethernet frame has errors.
+                superscript: FCS
+                references:
+                  - 혼자_공부하는_네트워크/84_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/369_페이지
+              - term: Cyclic Redundancy Check (CRC)
+                description: An error-detection value called a cyclic redundancy check.
+                superscript: CRC
+                references:
+                  - 혼자_공부하는_네트워크/84_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/369_페이지
+              - term: Token Ring
+                description: A LAN technology other than Ethernet in which hosts exchange information called a token, and transmission is possible only when a host holds the token.
+                superscript: 토큰 링
+                references:
+                  - 혼자_공부하는_네트워크/86_페이지
+          - subsubtitle: NIC와 케이블
+            items:
+              - term: Network Interface Controller (NIC)
+                description: Network equipment that connects a host to a communication medium and is assigned a MAC address.
+                superscript: NIC
+                references:
+                  - 혼자_공부하는_네트워크/88_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/375_페이지
+              - term: Cable
+                description: The wired physical-layer communication medium connected to the NIC.
+                superscript: 케이블
+                references:
+                  - 혼자_공부하는_네트워크/88_페이지
+              - term: Expansion Card
+                description: A card-shaped circuit board connected to add functionality to a computer.
+                superscript: 확장 카드
+                references:
+                  - 혼자_공부하는_네트워크/89_페이지
+              - term: Motherboard
+                description: A board that connects the computer's main components, such as the CPU, memory, and secondary storage; also commonly called the mainboard.
+                superscript: 마더보드
+                references:
+                  - 혼자_공부하는_네트워크/90_페이지
+              - term: Twisted Pair Cable
+                description: A communication medium that exchanges electrical signals over copper wires, consisting of the cable body and a connector.
+                superscript: 트위스티드 페어 케이블
+                references:
+                  - 혼자_공부하는_네트워크/91_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/370_페이지
+              - term: RJ-45
+                description: A connector used in twisted pair cables.
+                references:
+                  - 혼자_공부하는_네트워크/91_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/370_페이지
+                superscript: RJ-45
+              - term: Noise
+                description: Interference that can distort electrical signals.
+                superscript: 노이즈
+                references:
+                  - 혼자_공부하는_네트워크/92_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/371_페이지
+              - term: Shielding
+                description: Wrapping around copper wires to reduce noise.
+                superscript: 차폐
+                references:
+                  - 혼자_공부하는_네트워크/92_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/371_페이지
+              - term: Braided Shield
+                description: The mesh-shaped wire used for shielding.
+                superscript: 브레이드 실드
+                references:
+                  - 혼자_공부하는_네트워크/92_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/371_페이지
+              - term: Foil Shield
+                description: The mesh-shaped foil used for shielding.
+                superscript: 포일 실드
+                references:
+                  - 혼자_공부하는_네트워크/92_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/371_페이지
+              - term: STP Cable (Shielded Twisted Pair)
+                description: A twisted pair cable that reduces noise by wrapping the copper wires with a braided shield.
+                superscript: STP 케이블
+                references:
+                  - 혼자_공부하는_네트워크/92_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/371_페이지
+              - term: FTP Cable (Foil Twisted Pair)
+                description: A twisted pair cable that reduces noise with a foil shield.
+                superscript: FTP 케이블
+                references:
+                  - 혼자_공부하는_네트워크/92_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/371_페이지
+              - term: UTP Cable (Unshielded Twisted Pair)
+                description: A cable with only bare copper wires and nothing wrapped around them.
+                superscript: UTP 케이블
+                references:
+                  - 혼자_공부하는_네트워크/93_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/371_페이지
+              - term: S/FTP Cable
+                description: A cable whose exterior is protected by a braided shield and each twisted pair of copper wires is wrapped with a foil shield.
+                references:
+                  - 혼자_공부하는_네트워크/93_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/371_페이지
+                superscript: S/FTP 케이블
+              - term: F/FTP Cable
+                description: A cable whose exterior and each pair of copper wires are all wrapped with a foil shield.
+                references:
+                  - 혼자_공부하는_네트워크/93_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/371_페이지
+                superscript: F/FTP 케이블
+              - term: SF/FTP Cable
+                description: A cable whose exterior is wrapped with both a braided shield and a foil shield, and each pair of copper wires is wrapped with a foil shield.
+                references:
+                  - 혼자_공부하는_네트워크/93_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/371_페이지
+                superscript: SF/FTP 케이블
+              - term: U/UTP Cable
+                description: A cable with nothing wrapped around it.
+                references:
+                  - 혼자_공부하는_네트워크/93_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/371_페이지
+                superscript: U/UTP 케이블
+              - term: Fiber Optic Cable
+                description: A cable that exchanges information using light (optical signals).
+                superscript: 광섬유 케이블
+                references:
+                  - 혼자_공부하는_네트워크/95_페이지
+              - term: Core
+                description: The central part of an optical fiber (the part through which light actually flows in the fiber).
+                superscript: 코어
+                references:
+                  - 혼자_공부하는_네트워크/96_페이지
+              - term: Cladding
+                description: The outer part of an optical fiber surrounding the core (the part that confines light so it flows only within the core).
+                superscript: 클래딩
+                references:
+                  - 혼자_공부하는_네트워크/96_페이지
+              - term: Single-Mode Fiber (SMF)
+                description: An optical fiber cable with a smaller core diameter than multimode. It is more suitable for long-distance transmission, has less noise interference, and is more expensive than multimode.
+                superscript: 싱글모드 광섬유 케이블
+                references:
+                  - 혼자_공부하는_네트워크/97_페이지
+              - term: Multi-Mode Fiber (MMF)
+                description: An optical fiber cable with a larger core diameter than single-mode. It is more suitable for short-distance transmission and is cheaper than single-mode.
+                superscript: 멀티 모드 광섬유 케이블
+                references:
+                  - 혼자_공부하는_네트워크/97_페이지
+          - subsubtitle: 허브
+            items:
+              - term: Hub
+                description: A physical-layer network device that connects several hosts.
+                superscript: 허브
+                references:
+                  - 혼자_공부하는_네트워크/104_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/377_페이지
+              - term: Ethernet Hub
+                description: A hub for an Ethernet network.
+                superscript: 이더넷 허브
+                references:
+                  - 혼자_공부하는_네트워크/104_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/377_페이지
+              - term: Half Duplex
+                description: A communication method that can transmit in only one direction at a time.
+                superscript: 반이중
+                references:
+                  - 혼자_공부하는_네트워크/105_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/377_페이지
+              - term: Full Duplex
+                description: A communication method that can transmit data in both directions simultaneously.
+                superscript: 전이중
+                references:
+                  - 혼자_공부하는_네트워크/105_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/377_페이지
+              - term: Repeater
+                description: Equipment that amplifies an electrical signal to prevent it from weakening or being distorted.
+                superscript: 리피터
+                references:
+                  - 혼자_공부하는_네트워크/105_페이지
+              - term: Collision
+                description: A phenomenon that occurs when two or more hosts try to transmit data simultaneously.
+                superscript: 충돌(콜리전)
+                references:
+                  - 혼자_공부하는_네트워크/106_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/377_페이지
+              - term: Collision Domain
+                description: An area where collisions can occur.
+                superscript: 콜리전 도메인
+                references:
+                  - 혼자_공부하는_네트워크/106_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/377_페이지
+              - term: CSMA/CD (Carrier Sense Multiple Access with Collision Detection)
+                description: A representative Media Access Control (MAC) protocol that prevents collisions in half-duplex Ethernet networks.
+                superscript: CSMA/CD
+                references:
+                  - 혼자_공부하는_네트워크/107_페이지
+              - term: Carrier Sense
+                description: Sensing the carrier wave to check whether the communication medium is currently available.
+                superscript: 캐리어 감지
+                references:
+                  - 혼자_공부하는_네트워크/108_페이지
+              - term: Jam Signal
+                description: A signal that a host detecting a collision transmits to inform others that a collision has occurred.
+                superscript: 잼 신호
+                references:
+                  - 혼자_공부하는_네트워크/109_페이지
+          - subsubtitle: 스위치
+            items:
+              - term: Switch
+                description: A data-link-layer device that divides the collision domain by port and supports full-duplex communication.
+                superscript: 스위치
+                references:
+                  - 혼자_공부하는_네트워크/112_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/379_페이지
+                image: assets/img/net/switch.png
+              - term: MAC Address Learning
+                description: A switch function that remembers the relationship between a specific port and the MAC address of the host connected to that port.
+                superscript: MAC 주소 학습
+                references:
+                  - 혼자_공부하는_네트워크/113_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/379_페이지
+              - term: MAC Address Table
+                description: Information stored in a switch for MAC address learning; table-form information containing the associations between ports and the MAC addresses of connected hosts.
+                superscript: MAC 주소 테이블
+                references:
+                  - 혼자_공부하는_네트워크/113_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/380_페이지
+              - term: Flooding
+                description: The switch operation of transmitting a frame to all ports except the source port.
+                superscript: 플러딩
+                references:
+                  - 혼자_공부하는_네트워크/116_페이지
+              - term: Filtering
+                description: The switch function of deciding which ports to forward a received frame to and which not to.
+                superscript: 필터링
+                references:
+                  - 혼자_공부하는_네트워크/117_페이지
+              - term: Aging (Network Switch)
+                description: A function that deletes an entry registered in the MAC address table if no frame is received from that port for a certain time.
+                superscript: 에이징 (네트워크 스위치)
+                references:
+                  - 혼자_공부하는_네트워크/117_페이지
+              - term: Bridge
+                description: Equipment used to partition a network area to divide the collision domain or to extend a network.
+                superscript: 브리지
+                references:
+                  - 혼자_공부하는_네트워크/118_페이지
+              - term: VLAN (Virtual LAN)
+                description: A switch technology that creates virtual LANs with a single switch.
+                superscript: VLAN
+                references:
+                  - 혼자_공부하는_네트워크/118_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/380_페이지
+                image: assets/img/net/vlan.png
+              - term: Port-Based VLAN
+                description: A scheme in which a switch's port determines the VLAN.
+                superscript: 포트 기반 VLAN
+                references:
+                  - 혼자_공부하는_네트워크/120_페이지
+              - term: VLAN Trunking
+                description: A method of efficiently connecting and extending two or more VLAN switches.
+                superscript: VLAN 트렁킹
+                references:
+                  - 혼자_공부하는_네트워크/121_페이지
+              - term: Trunk Port
+                description: A special port for communication between switches; also called a tagged port.
+                superscript: 트렁크 포트
+                references:
+                  - 혼자_공부하는_네트워크/121_페이지
+              - term: Access Port
+                description: An ordinary port assigned to a single VLAN, not a trunk port.
+                superscript: 액세스 포트
+                references:
+                  - 혼자_공부하는_네트워크/121_페이지
+              - term: 802.1Q Frame
+                description: An extended Ethernet frame with added information for identifying which VLAN it belongs to.
+                references:
+                  - 혼자_공부하는_네트워크/123_페이지
+                superscript: 802.1Q 프레임
+              - term: VLAN Tag
+                description: Information included in an 802.1Q frame that contains data identifying the VLAN.
+                references:
+                  - 혼자_공부하는_네트워크/123_페이지
+                superscript: VLAN 태그
+              - term: MAC-Based VLAN
+                description: A method of determining the VLAN by preconfigured MAC addresses.
+                superscript: MAC 기반 VLAN
+                references:
+                  - 혼자_공부하는_네트워크/123_페이지
+      - subtitle: 네트워크 계층
+        content:
+          - subsubtitle: LAN을 넘어서는 네트워크 계층
+            items:
+              - term: Routing
+                description: The process of determining the optimal path for a packet to travel.
+                superscript: 라우팅
+                references:
+                  - 혼자_공부하는_네트워크/129_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/383_페이지
+                image: assets/img/net/routing.png
+              - term: Router
+                description: A network-layer device that performs routing.
+                superscript: 라우터
+                references:
+                  - 혼자_공부하는_네트워크/129_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/383_페이지
+              - term: IP Address
+                description: The network-layer addressing system, also called a logical address.
+                references:
+                  - 혼자_공부하는_네트워크/130_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/382_페이지
+                superscript: IP 주소
+              - term: DHCP (Dynamic Host Configuration Protocol)
+                description: A protocol that automatically assigns IP addresses to hosts.
+                superscript: DHCP
+                references:
+                  - 혼자_공부하는_네트워크/130_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/398_페이지
+              - term: IP (Internet Protocol)
+                description: A network-layer protocol capable of fragmentation and addressing. There are IPv4 and IPv6.
+                superscript: IP (인터넷 프로토콜)
+                references:
+                  - 혼자_공부하는_네트워크/130_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/382_페이지
+                image: assets/img/net/ipv4.png
+              - term: Octet (IP Address)
+                description: An 8-bit number separated by dots (a decimal number in the range 0–255).
+                superscript: 옥텟 (IP 주소)
+                references:
+                  - 혼자_공부하는_네트워크/131_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/383_페이지
+              - term: IP Addressing
+                description: Designating the source and destination based on IP addresses.
+                superscript: IP 주소 지정
+                references:
+                  - 혼자_공부하는_네트워크/132_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/382_페이지
+              - term: IP Fragmentation
+                description: Dividing a packet into multiple packets no larger than the MTU when the packet to be transmitted is larger than the MTU, the maximum transmission unit.
+                superscript: IP 단편화
+                references:
+                  - 혼자_공부하는_네트워크/132_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/384_페이지
+              - term: Maximum Transmission Unit (MTU)
+                description: The maximum size of an IP packet (including the IP packet header) that can be transmitted at once on a network; generally 1500 bytes.
+                superscript: MTU
+                references:
+                  - 혼자_공부하는_네트워크/132_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/384_페이지
+              - term: Identifier
+                description: A number assigned to packets for reassembling fragmented packets.
+                superscript: 식별자
+                references:
+                  - 혼자_공부하는_네트워크/134_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/385_페이지
+              - term: Flag (IPv4 Header)
+                description: A 3-bit field of the IP header. The first bit is always reserved as 0 and unused. The second bit is the DF (Don't Fragment) bit, where 1 means fragmentation is prohibited. The third bit is the MF (More Fragment) bit, where 1 means there are more fragmented packets.
+                superscript: 플래그 (IPv4 헤더)
+                references:
+                  - 혼자_공부하는_네트워크/134_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/385_페이지
+              - term: Fragment Offset
+                description: A field indicating the position of the packet relative to the original packet's data before fragmentation, used to reassemble packets in order.
+                superscript: 단편화 오프셋
+                references:
+                  - 혼자_공부하는_네트워크/135_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/385_페이지
+              - term: Time To Live (TTL, IPv4 Header)
+                description: A field meaning the packet's lifetime; TTL decreases by 1 each time the packet passes a hop, and the packet is discarded when it reaches 0.
+                superscript: TTL (IPv4 헤더)
+                references:
+                  - 혼자_공부하는_네트워크/135_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/400_페이지
+                image: assets/img/net/ttl.png
+              - term: Hop
+                description: One delivery of a packet to a host or router.
+                superscript: 홉
+                references:
+                  - 혼자_공부하는_네트워크/135_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/400_페이지
+              - term: IPv6
+                description: An IP protocol developed to solve IPv4's address exhaustion problem. IPv6 addresses are represented in 16 bytes (128 bits) as eight groups of hexadecimal numbers separated by colons (:).
+                references:
+                  - 혼자_공부하는_네트워크/136_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/384_페이지
+                superscript: IPv6
+              - term: Next Header (IPv6 Header)
+                description: Points to the upper-layer protocol or to an extension header.
+                superscript: 다음 헤더 (IPv6 헤더)
+                references:
+                  - 혼자_공부하는_네트워크/137_페이지
+              - term: Extension Header
+                description: An additional IPv6 header appended when extra header information is needed beyond the basic IPv6 header; it is located between the basic header and the payload data.
+                superscript: 확장 헤더
+                references:
+                  - 혼자_공부하는_네트워크/137_페이지
+              - term: Hop Limit (IPv6 Header)
+                description: A field indicating the packet's lifetime, similar to the TTL field of an IPv4 packet.
+                superscript: 홉 제한 (IPv6 헤더)
+                references:
+                  - 혼자_공부하는_네트워크/139_페이지
+              - term: ARP (Address Resolution Protocol)
+                description: A protocol that maps an IP address to a MAC address; it can find a MAC address from the IP address of a source/destination within the network.
+                superscript: ARP
+                references:
+                  - 혼자_공부하는_네트워크/139_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/401_페이지
+              - term: Operation Code (ARP)
+                description: A field indicating the type of ARP packet; set to 1 for an ARP request and 2 for an ARP reply.
+                superscript: 오퍼레이션 코드 (ARP)
+                references:
+                  - 혼자_공부하는_네트워크/141_페이지
+              - term: ARP Table
+                description: Table-form information mapping IP addresses to their corresponding MAC addresses; the ARP table is updated as a result of sending and receiving ARP messages.
+                references:
+                  - 혼자_공부하는_네트워크/142_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/403_페이지
+                superscript: ARP 테이블
+              - term: Path MTU
+                description: The maximum size that can be exchanged without IP fragmentation.
+                superscript: 경로 MTU
+                references:
+                  - 혼자_공부하는_네트워크/145_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/387_페이지
+              - term: Path MTU Discovery
+                description: A technique that finds the path MTU and sends and receives only up to that size to avoid IP fragmentation.
+                superscript: 경로 MTU 발견
+                references:
+                  - 혼자_공부하는_네트워크/145_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/387_페이지
+          - subsubtitle: IP 주소
+            items:
+              - term: Network Address (IP Address)
+                description: The part of an IP address that identifies the specific network a host belongs to; also called the network ID or network identifier.
+                superscript: 네트워크 주소 (IP 주소)
+                references:
+                  - 혼자_공부하는_네트워크/148_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/388_페이지
+              - term: Host Address (IP Address)
+                description: The part of an IP address that identifies a specific host within the network; also called the host ID or host identifier.
+                superscript: 호스트 주소 (IP 주소)
+                references:
+                  - 혼자_공부하는_네트워크/148_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/388_페이지
+              - term: Class
+                description: A criterion for classifying IP addresses by network size; the network address and host address can be partitioned by variably adjusting the network size according to the number of host IPs needed.
+                superscript: 클래스
+                references:
+                  - 혼자_공부하는_네트워크/150_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/389_페이지
+              - term: Classful Addressing
+                description: An addressing system that manages IP addresses based on classes.
+                superscript: 클래스풀 주소 체계
+                references:
+                  - 혼자_공부하는_네트워크/150_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/389_페이지
+                image: assets/img/net/classful.png
+              - term: Classless Addressing
+                description: A method of dividing network areas and allocating IP address space to hosts without the concept of classes; it can partition networks more flexibly and precisely than classful addressing.
+                superscript: 클래스리스 주소 체계
+                references:
+                  - 혼자_공부하는_네트워크/153_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/391_페이지
+              - term: Subnet Mask
+                description: A bit string in which the network address part of an IP address is marked as 1 and the host address part as 0.
+                superscript: 서브넷 마스크
+                references:
+                  - 혼자_공부하는_네트워크/154_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/392_페이지
+              - term: Subnetting
+                description: Using a subnet mask to divide a network into smaller pieces of the desired size.
+                superscript: 서브네팅
+                references:
+                  - 혼자_공부하는_네트워크/154_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/392_페이지
+              - term: Subnetwork
+                description: A subset of a network distinguishable by the network address of an IP address; also shortened to subnet.
+                superscript: 서브네트워크
+                references:
+                  - 혼자_공부하는_네트워크/154_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/392_페이지
+              - term: CIDR Notation (Classless Inter-Domain Routing)
+                description: A subnet mask notation written as 'IP address/number of 1s in the subnet mask'.
+                superscript: CIDR 표기법
+                references:
+                  - 혼자_공부하는_네트워크/156_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/393_페이지
+              - term: Public IP Address
+                description: An IP address unique worldwide, used in communication between networks (the internet); it can be assigned through an ISP or a public IP address allocation organization.
+                superscript: 공인 IP 주소
+                references:
+                  - 혼자_공부하는_네트워크/157_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/393_페이지
+              - term: Private IP Address
+                description: An IP address for use in a private network.
+                superscript: 사설 IP 주소
+                references:
+                  - 혼자_공부하는_네트워크/158_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/394_페이지
+              - term: Private Network
+                description: A network not exposed to the internet or external networks.
+                superscript: 사설 네트워크
+                references:
+                  - 혼자_공부하는_네트워크/158_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/395_페이지
+              - term: NAT (Network Address Translation)
+                description: A technology that translates IP addresses, mainly used to translate between the private IP addresses used inside a network and the public IP addresses used outside it.
+                superscript: NAT
+                references:
+                  - 혼자_공부하는_네트워크/158_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/408_페이지
+              - term: Static Allocation (IP Address)
+                description: A method of manually assigning IP addresses directly to hosts.
+                superscript: 정적 할당 (IP 주소)
+                references:
+                  - 혼자_공부하는_네트워크/160_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/396_페이지
+              - term: Static IP Address
+                description: A statically allocated IP address.
+                superscript: 정적 IP 주소
+                references:
+                  - 혼자_공부하는_네트워크/160_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/396_페이지
+              - term: Default Gateway
+                description: The basic first path (first hop) for leaving the network a host belongs to; the default gateway therefore often refers to the address of the router (access point) connected to the outside of the network.
+                superscript: 기본 게이트웨이
+                references:
+                  - 혼자_공부하는_네트워크/161_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/396_페이지
+                image: assets/img/net/default_gateway.png
+              - term: Dynamic Allocation
+                description: A method in which IP addresses are dynamically assigned to hosts, made possible through the DHCP protocol, which assigns IP addresses automatically.
+                superscript: 동적 할당
+                references:
+                  - 혼자_공부하는_네트워크/162_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/398_페이지
+              - term: Dynamic IP Address
+                description: A dynamically allocated IP address.
+                superscript: 동적 IP 주소
+                references:
+                  - 혼자_공부하는_네트워크/162_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/398_페이지
+              - term: DHCP (Dynamic Host Configuration Protocol)
+                description: A representative protocol used for dynamic IP allocation.
+                superscript: DHCP
+                references:
+                  - 혼자_공부하는_네트워크/162_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/398_페이지
+              - term: DHCP Server
+                description: The host that provides IP addresses to hosts in DHCP-based IP allocation; the DHCP server manages a list of assignable IP addresses and assigns one when a client requests it.
+                superscript: DHCP 서버
+                references:
+                  - 혼자_공부하는_네트워크/162_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/398_페이지
+              - term: DHCP Discover
+                description: A broadcast message by which a DHCP client searches for a DHCP server.
+                references:
+                  - 혼자_공부하는_네트워크/164_페이지
+                superscript: DHCP Discover
+              - term: DHCP Offer
+                description: A message by which a DHCP server proposes an assignable IP address to a DHCP client.
+                references:
+                  - 혼자_공부하는_네트워크/164_페이지
+                superscript: DHCP Offer
+              - term: DHCP Request
+                description: A DHCP client's reply to a DHCP Offer message.
+                references:
+                  - 혼자_공부하는_네트워크/164_페이지
+                superscript: DHCP Request
+              - term: DHCP ACK
+                description: The final approval message by which a DHCP server assigns a dynamic IP address.
+                references:
+                  - 혼자_공부하는_네트워크/165_페이지
+                superscript: DHCP ACK
+              - term: Lease Renewal
+                description: A function that extends the lease period before an IP address lease expires; for a dynamic IP address, it is performed automatically twice by default before the lease expires.
+                superscript: 임대 갱신
+                references:
+                  - 혼자_공부하는_네트워크/165_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/398_페이지
+              - term: Loopback Address
+                description: A special address that points to oneself, generally 127.0.0.1.
+                superscript: 루프백 주소
+                references:
+                  - 혼자_공부하는_네트워크/166_페이지
+              - term: localhost
+                description: Another name for the loopback address.
+                superscript: 로컬호스트
+                references:
+                  - 혼자_공부하는_네트워크/166_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/391_페이지
+              - term: 0.0.0.0/8
+                description: A reserved IP address that can be used temporarily before a host is assigned an IP address.
+                references:
+                  - 혼자_공부하는_네트워크/166_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/391_페이지
+                superscript: 0.0.0.0/8
+              - term: Default Route (Routing)
+                description: The path along which packets are forwarded by default when it is difficult to decide which IP address to forward them to.
+                superscript: 디폴트 라우트 (라우팅)
+                references:
+                  - 혼자_공부하는_네트워크/167_페이지
+          - subsubtitle: 라우팅
+            items:
+              - term: Routing Table
+                description: Table-like information specifying the information (routing information) needed to reach a particular destination; it is always referenced during a router's routing process.
+                superscript: 라우팅 테이블
+                references:
+                  - 혼자_공부하는_네트워크/173_페이지
+              - term: Next Hop (Routing Table)
+                description: The IP address or interface of the next host to pass through to reach the final destination; also specified as the gateway.
+                superscript: 다음 홉 (라우팅 테이블)
+                references:
+                  - 혼자_공부하는_네트워크/173_페이지
+              - term: Network Interface (Routing Table)
+                description: The channel through which a packet is sent out; the interface (NIC) name may be specified directly, or the IP address corresponding to the interface may be specified.
+                superscript: 네트워크 인터페이스 (라우팅 테이블)
+                references:
+                  - 혼자_공부하는_네트워크/173_페이지
+              - term: Metric (Routing Table)
+                description: The cost of moving a packet along a particular path; paths with a lower metric are preferred.
+                superscript: 메트릭 (라우팅 테이블)
+                references:
+                  - 혼자_공부하는_네트워크/173_페이지
+              - term: Default Route
+                description: The path along which packets are forwarded by default when it is difficult to decide which IP address to forward them to.
+                superscript: 디폴트 라우트
+                references:
+                  - 혼자_공부하는_네트워크/174_페이지
+              - term: Static Routing
+                description: A routing method based on routing table entries that the user has manually filled in directly.
+                superscript: 정적 라우팅
+                references:
+                  - 혼자_공부하는_네트워크/178_페이지
+              - term: Dynamic Routing
+                description: A routing method that automatically creates routing table entries and uses them to route.
+                superscript: 동적 라우팅
+                references:
+                  - 혼자_공부하는_네트워크/179_페이지
+              - term: Dynamic Routing Protocol
+                description: A protocol used for dynamic routing. There are protocols capable of routing within an AS (RIP, OSPF) and protocols capable of routing between ASes (BGP).
+                superscript: 동적 라우팅 프로토콜
+                references:
+                  - 혼자_공부하는_네트워크/179_페이지
+              - term: Autonomous System (AS)
+                description: A group of routers operated under the same routing policy as a collective network.
+                superscript: AS
+                references:
+                  - 혼자_공부하는_네트워크/180_페이지
+              - term: AS Boundary Router (ASBR)
+                description: A special router that can exchange communication into and out of an AS at the AS boundary.
+                superscript: AS 경계 라우터
+                references:
+                  - 혼자_공부하는_네트워크/180_페이지
+              - term: Routing Protocol
+                description: A protocol by which routers exchange their information to find the optimal path for packets to travel.
+                superscript: 라우팅 프로토콜
+                references:
+                  - 혼자_공부하는_네트워크/181_페이지
+              - term: Interior Gateway Protocol (IGP)
+                description: A routing protocol performed inside an AS.
+                superscript: IGP
+                references:
+                  - 혼자_공부하는_네트워크/181_페이지
+              - term: Exterior Gateway Protocol (EGP)
+                description: A routing protocol performed outside an AS.
+                superscript: EGP
+                references:
+                  - 혼자_공부하는_네트워크/181_페이지
+              - term: Distance Vector Routing Protocol
+                description: A routing protocol that finds the optimal path based on distance; here 'distance' means the number of routers a packet passes through, i.e., the number of hops.
+                superscript: 거리 벡터 라우팅 프로토콜
+                references:
+                  - 혼자_공부하는_네트워크/182_페이지
+              - term: RIP
+                description: A routing protocol that uses distance vectors.
+                superscript: RIP
+                references:
+                  - 혼자_공부하는_네트워크/182_페이지
+              - term: OSPF
+                description: A routing protocol that uses link states.
+                superscript: OSPF
+                references:
+                  - 혼자_공부하는_네트워크/182_페이지
+              - term: Link State Database (LSDB)
+                description: A database storing the link state information used in OSPF.
+                superscript: 링크 상태 데이터베이스
+                references:
+                  - 혼자_공부하는_네트워크/182_페이지
+              - term: Area
+                description: The unit by which OSPF divides an AS.
+                superscript: 에어리어
+                references:
+                  - 혼자_공부하는_네트워크/183_페이지
+              - term: Area Border Router (ABR)
+                description: A router at an area boundary; it handles connections between areas.
+                superscript: ABR
+                references:
+                  - 혼자_공부하는_네트워크/183_페이지
+              - term: BGP (Border Gateway Protocol)
+                description: A representative EGP and a representative protocol used in communication between ASes.
+                superscript: BGP
+                references:
+                  - 혼자_공부하는_네트워크/183_페이지
+              - term: Peer
+                description: The relationship between BGP routers connected so they can exchange BGP messages.
+                superscript: 피어
+                references:
+                  - 혼자_공부하는_네트워크/184_페이지
+              - term: Peering
+                description: The process of connecting to form a peer relationship.
+                superscript: 피어링
+                references:
+                  - 혼자_공부하는_네트워크/184_페이지
+              - term: AS-PATH Attribute (BGP)
+                description: The list of ASes a message passes through on its way to the destination.
+                superscript: AS-PATH 속성 (BGP)
+                references:
+                  - 혼자_공부하는_네트워크/184_페이지
+              - term: NEXT-HOP Attribute (BGP)
+                description: The IP address of the next router to pass through.
+                superscript: NEXT-HOP 속성 (BGP)
+                references:
+                  - 혼자_공부하는_네트워크/186_페이지
+              - term: LOCAL-PREF Attribute (BGP)
+                description: An attribute indicating, for external AS paths, which path is preferred locally within the AS.
+                superscript: LOCAL-PREF 속성 (BGP)
+                references:
+                  - 혼자_공부하는_네트워크/186_페이지
+      - subtitle: 전송 계층
+        content:
+          - subsubtitle: '전송 계층 개요: IP의 한계와 포트'
+            items:
+              - term: Unreliable Communication
+                description: A transmission characteristic in which the IP protocol does not guarantee that a packet was properly delivered to its destination.
+                references:
+                  - 혼자_공부하는_네트워크/191_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/385_페이지
+                superscript: 신뢰할 수 없는 통신
+              - term: Best-Effort Delivery
+                description: A transmission characteristic that does its best but makes no guarantee about the transmission result.
+                superscript: 최선형 전달
+                references:
+                  - 혼자_공부하는_네트워크/191_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/386_페이지
+              - term: Connectionless Communication
+                description: A transmission characteristic in which no prior connection-setup process is performed between the sending and receiving hosts.
+                references:
+                  - 혼자_공부하는_네트워크/191_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/386_페이지
+                superscript: 비연결형 통신
+              - term: Key Communication Characteristics of IP
+                description: Unreliable communication and connectionless communication.
+                references:
+                  - 혼자_공부하는_네트워크/191_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/386_페이지
+                superscript: IP의 주요 통신 특성
+              - term: TCP
+                description: A connection-oriented transport-layer protocol that performs reliable communication; it enables relatively more certain transmission than UDP.
+                references:
+                  - 혼자_공부하는_네트워크/192_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/410_페이지
+                image: assets/img/net/tcp.png
+                superscript: TCP
+              - term: UDP
+                description: A connectionless transport-layer protocol that performs unreliable communication; it enables relatively faster transmission than TCP.
+                references:
+                  - 혼자_공부하는_네트워크/193_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/410_페이지
+                image: assets/img/net/udp.png
+                superscript: UDP
+              - term: Port
+                description: Information that identifies an application-layer application process.
+                superscript: 포트
+                references:
+                  - 혼자_공부하는_네트워크/195_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/404_페이지
+              - term: Well-Known Port
+                description: Port numbers from 0 to 1023; widely known, famous port numbers generally used by general-purpose application protocols; also called system ports.
+                superscript: 잘 알려진 포트
+                references:
+                  - 혼자_공부하는_네트워크/196_페이지
+              - term: Registered Port
+                description: Port numbers from 1024 to 49151; less general than well-known ports but used to assign to commonly used application protocols.
+                superscript: 등록된 포트
+                references:
+                  - 혼자_공부하는_네트워크/196_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/404_페이지
+              - term: Dynamic Port
+                description: Port numbers from 49152 to 65535; freely usable port numbers, usually used by clients; also called private ports or ephemeral ports.
+                superscript: 동적 포트
+                references:
+                  - 혼자_공부하는_네트워크/197_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/404_페이지
+              - term: netstat Command
+                description: A command for checking port numbers in macOS and Linux operating systems.
+                references:
+                  - 혼자_공부하는_네트워크/198_페이지
+                superscript: netstat 명령어
+              - term: NAT Translation Table
+                description: Table-form information specifying the pairs of IP addresses subject to NAT translation.
+                references:
+                  - 혼자_공부하는_네트워크/199_페이지
+                superscript: NAT 변환 테이블
+              - term: NAPT (Network Address Port Translation)
+                description: Port-based NAT; a kind of NAT that uses ports so that multiple private IP addresses can share a single public IP address. It records port numbers in the NAT table along with the IP address pairs to be translated.
+                superscript: NAPT
+                references:
+                  - 혼자_공부하는_네트워크/198_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/409_페이지
+              - term: Port Forwarding
+                description: A function that pre-assigns an IP address and port number to a specific host in the network and delivers packets to that host by that IP address:port number.
+                superscript: 포트 포워딩
+                references:
+                  - 혼자_공부하는_네트워크/202_페이지
+              - term: ICMP (Internet Control Message Protocol)
+                description: A protocol used to obtain feedback messages (ICMP messages) about the transmission process of IP packets.
+                superscript: ICMP
+                references:
+                  - 혼자_공부하는_네트워크/204_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/398_페이지
+              - term: ping
+                description: The most basic command for diagnosing the state of a network; an ICMP-based command.
+                references:
+                  - 혼자_공부하는_네트워크/205_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/401_페이지
+                superscript: ping
+          - subsubtitle: TCP와 UDP
+            items:
+              - term: TCP (Transmission Control Protocol)
+                description: A connection-oriented protocol for reliable communication.
+                superscript: TCP
+                references:
+                  - 혼자_공부하는_네트워크/208_페이지
+              - term: UDP (User Datagram Protocol)
+                description: A connectionless protocol that is less reliable than TCP but enables relatively faster communication; also called a stateless protocol in that it neither maintains nor uses state.
+                superscript: UDP
+                references:
+                  - 혼자_공부하는_네트워크/208_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/410_페이지
+              - term: Maximum Segment Size (MSS)
+                description: The maximum payload size that can be transmitted via TCP.
+                superscript: MMS
+                references:
+                  - 혼자_공부하는_네트워크/209_페이지
+              - term: Source Port and Destination Port Fields (TCP Header)
+                description: TCP header fields specifying the port numbers that identify the source or destination application.
+                superscript: 송신지 포트와 수신지 포트 필드 (TCP 헤더)
+                references:
+                  - 혼자_공부하는_네트워크/210_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/411_페이지
+              - term: Sequence Number Field (TCP Header)
+                description: The TCP header field specifying the sequence number.
+                superscript: 순서 번호 필드 (TCP 헤더)
+                references:
+                  - 혼자_공부하는_네트워크/210_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/412_페이지
+              - term: Acknowledgment Number Field (TCP Header)
+                description: A TCP header field that, in response to a segment sent by the other host, specifies the sequence number expected to be received next.
+                superscript: 확인 응답 번호 필드 (TCP 헤더)
+                references:
+                  - 혼자_공부하는_네트워크/210_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/412_페이지
+              - term: Control Bits Field (TCP Header)
+                description: A TCP header field, also called the flag bits, specifying additional information about the current segment.
+                superscript: 제어 비트 필드 (TCP 헤더)
+                references:
+                  - 혼자_공부하는_네트워크/210_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/413_페이지
+              - term: Window Field (TCP Header)
+                description: The TCP header field specifying the size of the receive window.
+                superscript: 윈도우 필드 (TCP 헤더)
+                references:
+                  - 혼자_공부하는_네트워크/210_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/411_페이지
+              - term: Receive Window
+                description: The amount of data to receive at one time; the receiving host must inform the sending host of it via a TCP header field.
+                references:
+                  - 혼자_공부하는_네트워크/210_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/421_페이지
+                superscript: 수신 윈도우
+              - term: ACK
+                description: A bit indicating acknowledgment of a segment.
+                references:
+                  - 혼자_공부하는_네트워크/210_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/413_페이지
+                superscript: ACK
+              - term: SYN
+                description: A bit for establishing a connection.
+                references:
+                  - 혼자_공부하는_네트워크/210_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/413_페이지
+                superscript: SYN
+              - term: FIN
+                description: A bit for terminating a connection.
+                references:
+                  - 혼자_공부하는_네트워크/210_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/413_페이지
+                superscript: FIN
+              - term: Sequence Number
+                description: A number for guaranteeing the correct send/receive order of segments.
+                superscript: 순서 번호
+                references:
+                  - 혼자_공부하는_네트워크/211_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/412_페이지
+              - term: Initial Sequence Number (ISN)
+                description: The first sequence number, set randomly at the time the SYN segment is transmitted.
+                superscript: 초기 순서 번호
+                references:
+                  - 혼자_공부하는_네트워크/212_페이지
+              - term: Acknowledgment Number
+                description: The sequence number the receiving host hopes to receive next.
+                references:
+                  - 혼자_공부하는_네트워크/213_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/412_페이지
+                superscript: 확인 응답 번호
+              - term: Three-Way Handshake
+                description: The three-step TCP connection establishment process.
+                superscript: 쓰리 웨이 핸드셰이크
+                references:
+                  - 혼자_공부하는_네트워크/216_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/414_페이지
+                image: assets/img/net/three_way_handshake.png
+              - term: Four-Way Handshake
+                description: The four-step TCP connection termination process.
+                superscript: 포 웨이 핸드셰이크
+                references:
+                  - 혼자_공부하는_네트워크/213_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/415_페이지
+                image: assets/img/net/four_way_handshake.png
+              - term: Active Open
+                description: The connection establishment process of the host that initiates the connection first.
+                superscript: 액티브 오픈
+                references:
+                  - 혼자_공부하는_네트워크/214_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/414_페이지
+              - term: Passive Open
+                description: The connection establishment process of the host that establishes a connection in response after receiving a connection request.
+                superscript: 패시브 오픈
+                references:
+                  - 혼자_공부하는_네트워크/214_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/414_페이지
+              - term: Active Close
+                description: The connection termination process performed by the host that tries to terminate the connection first.
+                superscript: 액티브 클로즈
+                references:
+                  - 혼자_공부하는_네트워크/216_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/424_페이지
+              - term: Passive Close
+                description: The connection termination process performed by the host that accepts the connection termination request.
+                superscript: 패시브 클로즈
+                references:
+                  - 혼자_공부하는_네트워크/216_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/424_페이지
+              - term: State
+                description: Information indicating which communication process one is currently in.
+                superscript: 상태
+                references:
+                  - 혼자_공부하는_네트워크/216_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/425_페이지
+                image: assets/img/net/tcp_state.png
+              - term: Stateful Protocol
+                description: A protocol that maintains and uses state; TCP is a representative example.
+                superscript: 스테이트풀 프로토콜
+                references:
+                  - 혼자_공부하는_네트워크/216_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/425_페이지
+              - term: CLOSED State
+                description: A TCP state with no connection at all.
+                references:
+                  - 혼자_공부하는_네트워크/217_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/427_페이지
+                superscript: CLOSED 상태
+              - term: LISTEN State
+                description: A kind of connection-wait state, waiting for a SYN segment.
+                references:
+                  - 혼자_공부하는_네트워크/217_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/427_페이지
+                superscript: LISTEN 상태
+              - term: SYN-SENT State
+                description: The state in which an active-open host, after sending a SYN segment, waits for the SYN+ACK segment in response.
+                references:
+                  - 혼자_공부하는_네트워크/218_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/427_페이지
+                superscript: SYN-SENT 상태
+              - term: SYN-RECEIVED State
+                description: The state in which a passive-open host, after sending a SYN+ACK segment, waits for the ACK segment in response.
+                references:
+                  - 혼자_공부하는_네트워크/218_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/427_페이지
+                superscript: SYN-RECEIVED 상태
+              - term: ESTABLISHED State
+                description: The state indicating that a connection has been established.
+                references:
+                  - 혼자_공부하는_네트워크/218_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/427_페이지
+                superscript: ESTABLISHED 상태
+              - term: FIN-WAIT-1 State
+                description: The first step of connection termination in the normal TCP connection termination process.
+                references:
+                  - 혼자_공부하는_네트워크/218_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/428_페이지
+                superscript: FIN-WAIT-1 상태
+              - term: CLOSE-WAIT State
+                description: The state in which a passive-close host, after receiving a FIN segment (termination request) and sending an ACK segment in response, waits.
+                references:
+                  - 혼자_공부하는_네트워크/218_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/428_페이지
+                superscript: CLOSE-WAIT 상태
+              - term: FIN-WAIT-2 State
+                description: Entered when an ACK segment is received in the FIN-WAIT-1 state; the state of waiting for the other host's FIN segment.
+                references:
+                  - 혼자_공부하는_네트워크/218_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/428_페이지
+                superscript: FIN-WAIT-2 상태
+              - term: LAST-ACK State
+                description: The state of waiting for an ACK segment after transmitting a FIN segment from the CLOSE-WAIT state.
+                references:
+                  - 혼자_공부하는_네트워크/219_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/428_페이지
+                superscript: LAST-ACK 상태
+              - term: TIME-WAIT State
+                description: The state an active-close host enters after receiving a FIN segment and transmitting an ACK segment in response.
+                references:
+                  - 혼자_공부하는_네트워크/219_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/428_페이지
+                superscript: TIME-WAIT 상태
+              - term: CLOSING State
+                description: The state entered when both sides try to terminate the connection simultaneously.
+                references:
+                  - 혼자_공부하는_네트워크/219_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/429_페이지
+                superscript: CLOSING 상태
+              - term: UDP Datagram
+                description: Composed of the source port, destination port, length, and checksum fields.
+                references:
+                  - 혼자_공부하는_네트워크/222_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/411_페이지
+                superscript: UDP 데이터그램
+          - subsubtitle: TCP의 오류•흐름•혼잡 제어
+            items:
+              - term: Round Trip Time (RTT)
+                description: The time taken from transmitting a message to receiving the reply to it.
+                superscript: RTT
+                references:
+                  - 혼자_공부하는_네트워크/229_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/423_페이지
+              - term: Timeout (TCP)
+                description: A situation in which the retransmission timer, started each time a host transmits a segment, expires.
+                superscript: 타임아웃 (TCP 송수신)
+                references:
+                  - 혼자_공부하는_네트워크/229_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/420_페이지
+              - term: Automatic Repeat Request (ARQ)
+                description: A method that ensures reliability by diagnosing problems based on the receiving host's reply (ACK) and timeout occurrences, and retransmitting the problematic message.
+                superscript: 자동 재전송 요구(ARQ)
+                references:
+                  - 혼자_공부하는_네트워크/230_페이지
+              - term: Stop-and-Wait ARQ
+                description: A method that does not send a new message until delivery has been confirmed.
+                references:
+                  - 혼자_공부하는_네트워크/230_페이지
+                superscript: Stop-and-Wait ARQ
+              - term: Pipelining (TCP)
+                description: A technique that can transmit messages consecutively even before receiving the acknowledgment message.
+                superscript: 파이프라이닝 (TCP 송수신)
+                references:
+                  - 혼자_공부하는_네트워크/231_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/420_페이지
+              - term: Go-Back-N ARQ
+                description: A method that transmits multiple segments using pipelining and, if an incorrectly transmitted segment occurs midway, retransmits everything from that segment on.
+                references:
+                  - 혼자_공부하는_네트워크/232_페이지
+                superscript: Go-Back-N ARQ
+              - term: Cumulative Acknowledgment (CACK)
+                description: The ACK segment of Go-Back-N ARQ.
+                superscript: 누적 확인 응답
+                references:
+                  - 혼자_공부하는_네트워크/233_페이지
+              - term: Fast Retransmit
+                description: A function that immediately retransmits a segment if three identical ACK segments are received, even before the retransmission timer expires.
+                superscript: 빠른 재전송
+                references:
+                  - 혼자_공부하는_네트워크/233_페이지
+              - term: Selective Repeat ARQ
+                description: A method of selectively retransmitting; the receiving host sends an ACK segment for each packet it has correctly received.
+                references:
+                  - 혼자_공부하는_네트워크/233_페이지
+                superscript: Selective Repeat ARQ
+              - term: Receive Buffer
+                description: A space where received segments are temporarily stored before being read by the application process.
+                references:
+                  - 혼자_공부하는_네트워크/235_페이지
+                superscript: 수신 버퍼
+              - term: Send Buffer
+                description: A space where segments to be sent are stored.
+                references:
+                  - 혼자_공부하는_네트워크/235_페이지
+                superscript: 송신 버퍼
+              - term: Window (TCP)
+                description: The maximum amount the sending host can pipeline.
+                superscript: 윈도우 (TCP 송수신)
+                references:
+                  - 혼자_공부하는_네트워크/236_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/421_페이지
+              - term: Sliding Window
+                description: TCP's flow control technique.
+                superscript: 슬라이딩 윈도우
+                references:
+                  - 혼자_공부하는_네트워크/238_페이지
+              - term: Flow Control
+                description: A method that transmits while considering the receiver's processing speed.
+                references:
+                  - 혼자_공부하는_네트워크/238_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/421_페이지
+                superscript: 흐름 제어
+              - term: Congestion
+                description: A network situation in which packet processing slows down or packets may be lost due to heavy traffic.
+                superscript: 혼잡
+                references:
+                  - 혼자_공부하는_네트워크/239_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/421_페이지
+              - term: Congestion Collapse
+                description: A phenomenon in which the transmission rate drops sharply due to congestion.
+                superscript: 혼잡 붕괴
+                references:
+                  - 혼자_공부하는_네트워크/239_페이지
+              - term: Congestion Window
+                description: The amount of data that can likely be transmitted without congestion.
+                superscript: 혼잡 윈도우
+                references:
+                  - 혼자_공부하는_네트워크/239_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/422_페이지
+              - term: Congestion Control
+                description: A method that judges the degree of network congestion and adjusts the transmission amount accordingly; algorithms such as slow start, congestion avoidance, and fast recovery can be used.
+                references:
+                  - 혼자_공부하는_네트워크/244_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/422_페이지
+                superscript: 혼잡 제어
+              - term: Congestion Control Algorithm
+                description: A set of methods for performing congestion control.
+                superscript: 혼잡 제어 알고리즘
+                references:
+                  - 혼자_공부하는_네트워크/240_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/423_페이지
+              - term: AIMD (Additive Increase/Multiplicative Decrease)
+                description: Meaning 'increase by addition, decrease by multiplication'; an algorithm that linearly increases the congestion window by 1 each RTT when no congestion is detected, and halves the congestion window when congestion is detected, repeating this behavior.
+                superscript: AIMD (혼잡 제어 알고리즘)
+                references:
+                  - 혼자_공부하는_네트워크/240_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/423_페이지
+                image: assets/img/net/aimd.png
+              - term: Slow Start
+                description: A method that starts the congestion window at 1 and increases it by 1 for each ACK segment received without problems.
+                superscript: 느린 시작
+                references:
+                  - 혼자_공부하는_네트워크/241_페이지
+              - term: Slow Start Threshold
+                description: A value used together to specify the point at which the slow start algorithm ends.
+                superscript: 느린 시작 임계치
+                references:
+                  - 혼자_공부하는_네트워크/241_페이지
+              - term: RWND (Receiver Window)
+                description: An abbreviation for receive window.
+                superscript: RWND
+                references:
+                  - 혼자_공부하는_네트워크/242_페이지
+              - term: CWND (Congestion Window)
+                description: An abbreviation for congestion window.
+                superscript: CWND
+                references:
+                  - 혼자_공부하는_네트워크/242_페이지
+              - term: SSTHRESH (Slow Start Threshold)
+                description: An abbreviation for slow start threshold.
+                superscript: SSTHRESH
+                references:
+                  - 혼자_공부하는_네트워크/242_페이지
+              - term: Congestion Avoidance
+                description: An algorithm that increases the congestion window by 1 MSS (Maximum Segment Size) each RTT.
+                superscript: 혼잡 회피 알고리즘
+                references:
+                  - 혼자_공부하는_네트워크/242_페이지
+              - term: Fast Recovery
+                description: An algorithm that skips slow start and performs congestion avoidance when three duplicate ACK segments are received.
+                superscript: 빠른 회복 알고리즘
+                references:
+                  - 혼자_공부하는_네트워크/243_페이지
+              - term: Explicit Congestion Notification (ECN)
+                description: A method of receiving help from intermediate network devices (mainly routers) to avoid congestion.
+                superscript: 명시적 혼잡 알림
+                references:
+                  - 혼자_공부하는_네트워크/245_페이지
+      - subtitle: 응용 계층
+        content:
+          - subsubtitle: DNS와 자원
+            items:
+              - term: Domain Name
+                description: Host-identifying information in string form corresponding to a host's IP address.
+                superscript: 도메인 네임
+                references:
+                  - 혼자_공부하는_네트워크/253_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/431_페이지
+              - term: Name Server
+                description: A server that manages domain names and IP addresses; it acts like a 'public' phone book that gathers and manages hosts' domain names and IP addresses.
+                superscript: 네임 서버
+                references:
+                  - 혼자_공부하는_네트워크/253_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/431_페이지
+              - term: DNS Server
+                description: A name server that manages domain names.
+                superscript: DNS 서버
+                references:
+                  - 혼자_공부하는_네트워크/253_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/431_페이지
+                image: assets/img/net/dns_server.png
+              - term: Top-Level Domain (TLD)
+                description: The last part of a domain name (e.g., .com, .kr, .net, ...).
+                superscript: 최상위 도메인
+                references:
+                  - 혼자_공부하는_네트워크/255_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/432_페이지
+              - term: Second-Level Domain
+                description: A subdomain of the top-level domain.
+                superscript: 2단계 도메인
+                references:
+                  - 혼자_공부하는_네트워크/255_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/432_페이지
+              - term: Fully Qualified Domain Name (FQDN)
+                description: A domain name that includes the entire domain name.
+                superscript: 전체 주소 도메인 네임 (FQDN)
+                references:
+                  - 혼자_공부하는_네트워크/255_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/432_페이지
+              - term: Host Name
+                description: The first part of an FQDN (www); it can also refer to the FQDN itself, and is sometimes used to refer to the name of the device itself on the network.
+                superscript: 호스트 네임
+                references:
+                  - 혼자_공부하는_네트워크/256_페이지
+              - term: Domain Name System (DNS)
+                description: A hierarchical, distributed management system for domain names and the protocol that manages it.
+                superscript: 도메인 네임 시스템
+                references:
+                  - 혼자_공부하는_네트워크/256_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/433_페이지
+              - term: Subdomain
+                description: A domain contained within another domain (e.g., mail.google.com, a subdomain of google.com).
+                superscript: 서브 도메인
+                references:
+                  - 혼자_공부하는_네트워크/257_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/432_페이지
+              - term: Domain Name Resolving
+                description: The process of finding the IP address corresponding to a domain name.
+                superscript: 도메인 네임 리졸빙
+                references:
+                  - 혼자_공부하는_네트워크/257_페이지
+              - term: Local Name Server
+                description: A name server in contact with the client; the first name server a client looks up when trying to find an IP address via a domain name.
+                superscript: 로컬 네임 서버
+                references:
+                  - 혼자_공부하는_네트워크/258_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/433_페이지
+              - term: Public DNS Server
+                description: A DNS server open on the internet, rather than the local name server address assigned by an ISP (e.g., 8.8.8.8, 1.1.1.1).
+                superscript: 공개 DNS 서버
+                references:
+                  - 혼자_공부하는_네트워크/258_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/433_페이지
+              - term: Root Name Server
+                description: A name server that oversees the root domain; it can return the IP address of a TLD name server for a query.
+                superscript: 루트 네임 서버
+                references:
+                  - 혼자_공부하는_네트워크/258_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/433_페이지
+              - term: TLD Name Server
+                description: A name server that manages a TLD; it can return, for a query, the address of a name server that manages the TLD's subdomain names.
+                references:
+                  - 혼자_공부하는_네트워크/259_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/433_페이지
+                superscript: TLD 네임 서버
+              - term: Authoritative Name Server
+                description: A name server that manages a particular domain zone; a name server that can directly answer the IP address for a query.
+                superscript: 책임 네임 서버
+                references:
+                  - 혼자_공부하는_네트워크/259_페이지
+              - term: Recursive Query
+                description: A method in which, when a client queries the local name server for a domain name, the local name server queries the root name server, the root name server queries the TLD name server, and so on, repeatedly, then the final result (IP address) is delivered back in reverse order.
+                superscript: 재귀적 질의
+                references:
+                  - 혼자_공부하는_네트워크/260_페이지
+              - term: Iterative Query
+                description: A method in which, when a client queries the local name server for a domain name's IP address, the local name server queries the root domain server and receives the address of the next name server to query, then queries the TLD name server and receives the next one, repeating until it tells the client the final result (IP address).
+                superscript: 반복적 질의
+                references:
+                  - 혼자_공부하는_네트워크/261_페이지
+              - term: DNS Cache
+                description: A technique in which name servers temporarily store previously received results and use them for later identical queries.
+                superscript: DNS 캐시
+                references:
+                  - 혼자_공부하는_네트워크/261_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/433_페이지
+              - term: TTL (DNS)
+                description: The time a DNS record can be cached.
+                superscript: TTL (DNS)
+                references:
+                  - 혼자_공부하는_네트워크/261_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/434_페이지
+              - term: Resource (Network)
+                description: The object exchanged through messages on a network.
+                superscript: 자원 (네트워크)
+                references:
+                  - 혼자_공부하는_네트워크/262_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/436_페이지
+              - term: HTML File
+                description: A file made of a language called HTML that can express the components of a web page (titles, hyperlinks, images, etc.).
+                references:
+                  - 혼자_공부하는_네트워크/262_페이지
+                superscript: HTML 파일
+              - term: Uniform Resource Identifier (URI)
+                description: Information that can identify a resource.
+                superscript: URI
+                references:
+                  - 혼자_공부하는_네트워크/262_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/436_페이지
+              - term: Uniform Resource Locator (URL)
+                description: Information that can identify a resource by its location.
+                superscript: URL
+                references:
+                  - 혼자_공부하는_네트워크/262_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/436_페이지
+                image: assets/img/net/url.png
+              - term: Uniform Resource Name (URN)
+                description: Information that can identify a resource by its name.
+                superscript: URN
+                references:
+                  - 혼자_공부하는_네트워크/262_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/436_페이지
+              - term: scheme (URL)
+                description: The first part of a URL, indicating the method of accessing the resource.
+                references:
+                  - 혼자_공부하는_네트워크/263_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/437_페이지
+                superscript: scheme (URL)
+              - term: authority (URL)
+                description: Information that can specify the host, such as an IP address or domain name.
+                references:
+                  - 혼자_공부하는_네트워크/263_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/437_페이지
+                superscript: authority (URL)
+              - term: path (URL)
+                description: Specifies the path where the resource is located.
+                references:
+                  - 혼자_공부하는_네트워크/263_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/437_페이지
+                superscript: path (URL)
+              - term: Query String (URL)
+                description: Data in <key=value> form starting with a question mark (?) that can be sent to the server via a URL; also called query parameters, and multiple query strings can be joined with an ampersand (&).
+                superscript: 쿼리 문자열 (URL)
+                references:
+                  - 혼자_공부하는_네트워크/265_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/437_페이지
+              - term: fragment (URL)
+                description: Information for pointing to a fragment of a resource.
+                references:
+                  - 혼자_공부하는_네트워크/265_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/437_페이지
+                superscript: fragment (URL)
+              - term: DNS Resource Record
+                description: Information representing the mapping between a domain name and an IP address.
+                superscript: DNS 자원 레코드
+                references:
+                  - 혼자_공부하는_네트워크/268_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/435_페이지
+          - subsubtitle: HTTP
+            items:
+              - term: HTTP (Hypertext Transfer Protocol)
+                description: A protocol used at the application layer to exchange various information; a request-response protocol based on a client-server structure; a media-independent protocol that can operate independently without particular restrictions on the media type exchanged.
+                superscript: HTTP
+                references:
+                  - 혼자_공부하는_네트워크/273_페이지
+              - term: Media Type
+                description: The kind of resource exchanged as a message in HTTP, a concept like a file extension in the web world; structured as 'type/subtype', where the type indicates the kind of data and the subtype indicates a detailed kind within the given type.
+                superscript: 미디어 타입
+                references:
+                  - 혼자_공부하는_네트워크/275_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/439_페이지
+              - term: MIME Type (Multipurpose Internet Mail Extensions Type)
+                description: Another name for media type.
+                superscript: MIME 타입
+                references:
+                  - 혼자_공부하는_네트워크/275_페이지
+              - term: Stateless Protocol
+                description: A protocol that does not maintain state (e.g., HTTP).
+                superscript: 스테이트리스 프로토콜
+                references:
+                  - 혼자_공부하는_네트워크/277_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/440_페이지
+              - term: Persistent Connection
+                description: A technique that can exchange multiple request-responses over a single TCP connection; also called keep-alive.
+                superscript: 지속 연결
+                references:
+                  - 혼자_공부하는_네트워크/279_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/440_페이지
+                image: assets/img/net/keep_alive.png
+              - term: HTTP Method
+                description: The kind of operation a client performs on a server's resource (request target) (e.g., GET, HEAD, POST, PUT, DELETE).
+                superscript: HTTP 메서드
+                references:
+                  - 혼자_공부하는_네트워크/281_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/446_페이지
+              - term: Request Target
+                description: The server resource to which an HTTP request is sent.
+                superscript: 요청 대상
+                references:
+                  - 혼자_공부하는_네트워크/281_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/446_페이지
+              - term: HTTP Version
+                description: The HTTP version used; follows the notation 'HTTP/<version>'.
+                superscript: HTTP 버전
+                references:
+                  - 혼자_공부하는_네트워크/281_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/446_페이지
+              - term: Status Line
+                description: The first line of an HTTP response message, composed of the HTTP version, status code, and reason phrase.
+                superscript: 상태 라인
+                references:
+                  - 혼자_공부하는_네트워크/282_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/446_페이지
+              - term: Status Code
+                description: A three-digit integer indicating the result of a request.
+                superscript: 상태 코드
+                references:
+                  - 혼자_공부하는_네트워크/282_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/446_페이지
+              - term: Reason Phrase
+                description: A string-form description of a status code.
+                superscript: 이유 구문
+                references:
+                  - 혼자_공부하는_네트워크/282_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/446_페이지
+              - term: HTTP Header
+                description: Additional information needed for HTTP communication; composed of a header name and one or more header values, separated by a colon (:).
+                superscript: HTTP 헤더
+                references:
+                  - 혼자_공부하는_네트워크/282_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/447_페이지
+              - term: GET Method
+                description: A method used to retrieve and obtain a resource.
+                references:
+                  - 혼자_공부하는_네트워크/286_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/449_페이지
+                superscript: GET 메서드
+              - term: HEAD Method
+                description: A method that plays the same role as GET but whose response message contains no message body.
+                references:
+                  - 혼자_공부하는_네트워크/286_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/449_페이지
+                superscript: HEAD 메서드
+              - term: POST Method
+                description: A method that requests the server to process a particular task.
+                references:
+                  - 혼자_공부하는_네트워크/287_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/449_페이지
+                superscript: POST 메서드
+              - term: PUT Method
+                description: A method that requests an 'overwrite'; if the requested resource does not exist, it newly creates the resource from the message body, and if it already exists, it completely replaces the resource with the message body.
+                references:
+                  - 혼자_공부하는_네트워크/288_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/449_페이지
+                superscript: PUT 메서드
+              - term: PATCH Method
+                description: A method that performs a partial modification; when a request is sent with PATCH, the resource is partially modified according to the message body.
+                references:
+                  - 혼자_공부하는_네트워크/289_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/449_페이지
+                superscript: PATCH 메서드
+              - term: DELETE Method
+                description: A method used when you want to delete a particular resource.
+                references:
+                  - 혼자_공부하는_네트워크/290_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/449_페이지
+                superscript: DELETE 메서드
+              - term: API Document
+                description: A document explaining 'when the server receives which request at which URL, how will it respond?'.
+                references:
+                  - 혼자_공부하는_네트워크/290_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/454_페이지
+                superscript: API 문서
+              - term: 100-Series Status Codes
+                description: Informational status codes.
+                references:
+                  - 혼자_공부하는_네트워크/292_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/454_페이지
+                superscript: 100번대 상태 코드
+              - term: 200-Series Status Codes
+                description: Success status codes, meaning the request succeeded.
+                references:
+                  - 혼자_공부하는_네트워크/292_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/454_페이지
+                superscript: 200번대 상태 코드
+              - term: 300-Series Status Codes
+                description: Redirection status codes.
+                references:
+                  - 혼자_공부하는_네트워크/292_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/455_페이지
+                superscript: 300번대 상태 코드
+              - term: Redirection
+                description: Moving a client's request elsewhere when the resource the client requested is located somewhere else.
+                superscript: 리다이렉션
+                references:
+                  - 혼자_공부하는_네트워크/294_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/455_페이지
+              - term: Permanent Redirection
+                description: When a resource moves to a completely new place and its path is permanently redirected.
+                superscript: 영구적인 리다이렉션
+                references:
+                  - 혼자_공부하는_네트워크/294_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/456_페이지
+              - term: 400-Series Status Codes
+                description: Client error status codes.
+                references:
+                  - 혼자_공부하는_네트워크/292_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/457_페이지
+                superscript: 400번대 상태 코드
+              - term: 500-Series Status Codes
+                description: Server error status codes.
+                references:
+                  - 혼자_공부하는_네트워크/292_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/457_페이지
+                superscript: 500번대 상태 코드
+              - term: 200 OK
+                description: A status code meaning the request succeeded.
+                references:
+                  - 혼자_공부하는_네트워크/292_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/454_페이지
+                superscript: 200 OK
+              - term: 201 Created
+                description: A status code meaning the request succeeded and a new resource was created.
+                references:
+                  - 혼자_공부하는_네트워크/292_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/454_페이지
+                superscript: 201 Created
+              - term: 202 Accepted
+                description: A status code meaning the request was received well, but the requested task has not yet been completed.
+                references:
+                  - 혼자_공부하는_네트워크/292_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/454_페이지
+                superscript: 202 Accepted
+              - term: 204 No Content
+                description: A status code meaning the request succeeded but there is no data to display in the message body.
+                references:
+                  - 혼자_공부하는_네트워크/292_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/454_페이지
+                superscript: 204 No Content
+              - term: 301 Moved Permanently
+                description: A status code meaning a permanent redirection; the re-request method may change.
+                references:
+                  - 혼자_공부하는_네트워크/295_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/455_페이지
+                superscript: 301 Moved Permanently
+              - term: 308 Permanent Redirect
+                description: A status code meaning a permanent redirection; the re-request method does not change.
+                references:
+                  - 혼자_공부하는_네트워크/295_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/455_페이지
+                superscript: 308 Permanent Redirect
+              - term: Temporary Redirection
+                description: Mainly used when a resource's location has changed temporarily or a temporary URL is needed.
+                superscript: 일시적인 리다이렉션
+                references:
+                  - 혼자_공부하는_네트워크/296_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/455_페이지
+              - term: 302 Found
+                description: A status code meaning a temporary redirection; the re-request method may change.
+                references:
+                  - 혼자_공부하는_네트워크/296_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/455_페이지
+                superscript: 302 Found
+              - term: 303 See Other
+                description: A status code meaning a temporary redirection; the re-request method is changed to GET.
+                references:
+                  - 혼자_공부하는_네트워크/296_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/455_페이지
+                superscript: 303 See Other
+              - term: 307 Temporary Redirect
+                description: A status code meaning a temporary redirection; the re-request method does not change.
+                references:
+                  - 혼자_공부하는_네트워크/296_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/455_페이지
+                superscript: 307 Temporary Redirect
+              - term: 400 Bad Request
+                description: A status code meaning the client's request was malformed.
+                references:
+                  - 혼자_공부하는_네트워크/457_페이지
+                superscript: 400 Bad Request
+              - term: 401 Unauthorized
+                description: A status code meaning there is no valid authentication for the requested resource.
+                references:
+                  - 혼자_공부하는_네트워크/298_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/457_페이지
+                superscript: 401 Unauthorized
+              - term: 403 Forbidden
+                description: A status code meaning the request was refused by the server (e.g., when there is no access permission).
+                references:
+                  - 혼자_공부하는_네트워크/298_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/457_페이지
+                superscript: 403 Forbidden
+              - term: 404 Not Found
+                description: A status code meaning the requested resource could not be found.
+                references:
+                  - 혼자_공부하는_네트워크/298_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/457_페이지
+                superscript: 404 Not Found
+              - term: 405 Method Not Allowed
+                description: A status code meaning the requested method is not supported.
+                references:
+                  - 혼자_공부하는_네트워크/298_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/457_페이지
+                superscript: 405 Method Not Allowed
+              - term: Authentication
+                description: Proving who you are.
+                superscript: 인증
+                references:
+                  - 혼자_공부하는_네트워크/299_페이지
+              - term: Authorization
+                description: Permitting actions to an authenticated subject.
+                superscript: 권한 부여 (인가)
+                references:
+                  - 혼자_공부하는_네트워크/299_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/457_페이지
+              - term: 500 Internal Server Error
+                description: A status code meaning the request cannot be processed.
+                references:
+                  - 혼자_공부하는_네트워크/301_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/458_페이지
+                superscript: 500 Internal Server Error
+              - term: 502 Bad Gateway
+                description: A status code meaning a communication error in an intermediate server.
+                references:
+                  - 혼자_공부하는_네트워크/301_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/458_페이지
+                image: assets/img/net/502.png
+                superscript: 502 Bad Gateway
+              - term: 503 Service Unavailable
+                description: A status code meaning the request cannot be processed now but may be possible later.
+                references:
+                  - 혼자_공부하는_네트워크/301_페이지
+                superscript: 503 Service Unavailable
+              - term: HTTP/0.9
+                description: An early HTTP version in which the only usable method was GET and the request message consisted of a single line.
+                references:
+                  - 혼자_공부하는_네트워크/304_페이지
+                superscript: HTTP/0.9
+              - term: HTTP/1.0
+                description: An HTTP version that introduced methods other than GET, such as HEAD and POST; headers began to be supported, allowing much more varied information to be exchanged, but it did not officially support persistent connections.
+                references:
+                  - 혼자_공부하는_네트워크/304_페이지
+                superscript: HTTP/1.0
+              - term: HTTP/1.1
+                description: An HTTP version that officially supported persistent connections; it supports pipelining (sending the next request before the response to a particular request is received) and added various convenience features such as content negotiation and usable headers.
+                references:
+                  - 혼자_공부하는_네트워크/304_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/443_페이지
+                superscript: HTTP/1.1
+              - term: HTTP/2.0
+                description: An HTTP version that compresses headers for transmission to improve efficiency, exchanges binary-data-based messages (unlike previous text-based versions), provides a feature called server push, and mitigates a problem called HOL blocking.
+                references:
+                  - 혼자_공부하는_네트워크/304_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/444_페이지
+                superscript: HTTP/2.0
+              - term: Server Push
+                description: A feature that transmits in advance resources expected to be needed in the future, even if the client has not requested them.
+                superscript: 서버 푸시
+                references:
+                  - 혼자_공부하는_네트워크/304_페이지
+              - term: Head-Of-Line (HOL) Blocking
+                description: A problem in which, when multiple packets wait in the same queue and are processed sequentially, a processing delay of the first packet delays the processing of all the rest.
+                superscript: HOL 블로킹
+                references:
+                  - 혼자_공부하는_네트워크/305_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/444_페이지
+              - term: HTTP Multiplexing
+                description: A technique for exchanging messages in parallel using multiple streams.
+                references:
+                  - 혼자_공부하는_네트워크/306_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/444_페이지
+                superscript: HTTP 멀티플렉싱
+              - term: HTTP/3.0
+                description: The latest HTTP version that operates on the QUIC protocol, which is implemented on top of UDP.
+                references:
+                  - 혼자_공부하는_네트워크/306_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/445_페이지
+                superscript: HTTP/3.0
+          - subsubtitle: HTTP 헤더와 HTTP 기반 기술
+            items:
+              - term: Host (HTTP Header)
+                description: An HTTP header indicating the host to send the request to.
+                references:
+                  - 혼자_공부하는_네트워크/309_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/459_페이지
+                superscript: Host (HTTP 헤더)
+              - term: User-Agent (HTTP Header)
+                description: An HTTP header specifying various information about the client program involved in creating the request message.
+                references:
+                  - 혼자_공부하는_네트워크/309_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/459_페이지
+                superscript: User-Agent (HTTP 헤더)
+              - term: User Agent
+                description: A client-side program that initiates HTTP requests, such as a web browser.
+                superscript: 유저 에이전트
+                references:
+                  - 혼자_공부하는_네트워크/309_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/459_페이지
+              - term: Referer (HTTP Header)
+                description: An HTTP header specifying the URL the client was on when sending the request.
+                references:
+                  - 혼자_공부하는_네트워크/310_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/460_페이지
+                superscript: Referer (HTTP 헤더)
+              - term: Authorization (HTTP Header)
+                description: An HTTP header that holds the client's authentication information; the authentication type and the credentials for authentication are specified in order.
+                references:
+                  - 혼자_공부하는_네트워크/310_페이지
+                superscript: Authorization (HTTP 헤더)
+              - term: Base64 Encoding
+                description: A kind of encoding scheme that splits data into 6-bit chunks and represents them with 64 characters.
+                references:
+                  - 혼자_공부하는_네트워크/310_페이지
+                superscript: Base64 인코딩
+              - term: Encoding
+                description: A method of converting characters into code.
+                superscript: 인코딩
+                references:
+                  - 혼자_공부하는_네트워크/310_페이지
+              - term: Server (HTTP Header)
+                description: An HTTP header specifying information about the server-side software that processes the request.
+                references:
+                  - 혼자_공부하는_네트워크/311_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/460_페이지
+                superscript: Server (HTTP 헤더)
+              - term: Allow (HTTP Header)
+                description: An HTTP header used to inform the client of the list of allowed HTTP methods.
+                references:
+                  - 혼자_공부하는_네트워크/311_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/460_페이지
+                superscript: Allow (HTTP 헤더)
+              - term: Retry-After (HTTP Header)
+                description: An HTTP header indicating the date or time at which a resource can be used.
+                references:
+                  - 혼자_공부하는_네트워크/312_페이지
+                superscript: Retry-After (HTTP 헤더)
+              - term: Location (HTTP Header)
+                description: An HTTP header used to inform the client of a resource's location; mainly used when a redirection occurs or a new resource is created.
+                references:
+                  - 혼자_공부하는_네트워크/312_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/460_페이지
+                superscript: Location (HTTP 헤더)
+              - term: WWW-Authenticate (HTTP Header)
+                description: An HTTP header that describes the authentication method for accessing a resource.
+                references:
+                  - 혼자_공부하는_네트워크/312_페이지
+                superscript: WWW-Authenticate (HTTP 헤더)
+              - term: realm
+                description: The area to which security applies in the WWW-Authenticate header.
+                references:
+                  - 혼자_공부하는_네트워크/313_페이지
+                superscript: realm
+              - term: Date (HTTP Header)
+                description: An HTTP header specifying information about the date and time the message was created.
+                references:
+                  - 혼자_공부하는_네트워크/314_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/461_페이지
+                superscript: Date (HTTP 헤더)
+              - term: Connection (HTTP Header)
+                description: An HTTP header that sets the connection method between the client's request and the response.
+                references:
+                  - 혼자_공부하는_네트워크/314_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/463_페이지
+                superscript: Connection (HTTP 헤더)
+              - term: Content-Length (HTTP Header)
+                description: An HTTP header indicating the size (length) of the body in bytes.
+                references:
+                  - 혼자_공부하는_네트워크/314_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/461_페이지
+                superscript: Content-Length (HTTP 헤더)
+              - term: Content-Type (HTTP Header)
+                description: An HTTP header specifying the media type used in the message body.
+                references:
+                  - 혼자_공부하는_네트워크/315_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/462_페이지
+                superscript: Content-Type (HTTP 헤더)
+              - term: Content-Language (HTTP Header)
+                description: An HTTP header specifying the natural language used in the message body.
+                references:
+                  - 혼자_공부하는_네트워크/315_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/462_페이지
+                superscript: Content-Language (HTTP 헤더)
+              - term: Content-Encoding (HTTP Header)
+                description: An HTTP header specifying how the message body was compressed or transformed.
+                references:
+                  - 혼자_공부하는_네트워크/316_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/462_페이지
+                superscript: Content-Encoding (HTTP 헤더)
+              - term: Cache
+                description: A technique that temporarily stores a copy of information to prevent unnecessary bandwidth waste and response delays.
+                superscript: 캐시
+                references:
+                  - 혼자_공부하는_네트워크/317_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/467_페이지
+              - term: Private Cache
+                description: A cache stored in the web browser.
+                superscript: 개인 전용 캐시
+                references:
+                  - 혼자_공부하는_네트워크/317_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/468_페이지
+              - term: Public Cache
+                description: A cache stored in an intermediate server located between the client and the server.
+                superscript: 공용 캐시
+                references:
+                  - 혼자_공부하는_네트워크/317_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/468_페이지
+              - term: Cache Freshness
+                description: A metric indicating how similar the cached copy data is to the latest original data.
+                superscript: 캐시 신선도
+                references:
+                  - 혼자_공부하는_네트워크/318_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/469_페이지
+              - term: Entity Tag (ETag)
+                description: Information used in caching to identify the version of a resource.
+                superscript: 엔티티 태그
+                references:
+                  - 혼자_공부하는_네트워크/322_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/471_페이지
+              - term: Version
+                description: A meaningful change.
+                superscript: 버전
+                references:
+                  - 혼자_공부하는_네트워크/322_페이지
+              - term: Cookie
+                description: Data created by the server and stored on the client side; a means of supplementing HTTP's stateless characteristic.
+                superscript: 쿠키
+                references:
+                  - 혼자_공부하는_네트워크/323_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/464_페이지
+                image: assets/img/net/cookie.png
+              - term: Session ID
+                description: A unique identifier for identifying a session, the connection state between a client and a server.
+                superscript: 세션 아이디
+                references:
+                  - 혼자_공부하는_네트워크/324_페이지
+              - term: Session Authentication
+                description: An authentication method using sessions.
+                superscript: 세션 인증
+                references:
+                  - 혼자_공부하는_네트워크/324_페이지
+              - term: Expires/Max-Age
+                description: A cookie attribute value indicating the cookie's validity period.
+                references:
+                  - 혼자_공부하는_네트워크/327_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/466_페이지
+                superscript: Expires/Max-Age
+              - term: Secure
+                description: A cookie attribute value that allows a cookie to be transmitted only when the HTTPS protocol is used.
+                references:
+                  - 혼자_공부하는_네트워크/327_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/466_페이지
+                superscript: Secure
+              - term: HttpOnly
+                description: An attribute that restricts cookie use to HTTP transmission only; a cookie attribute value that prevents access to the cookie from JavaScript.
+                references:
+                  - 혼자_공부하는_네트워크/327_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/466_페이지
+                superscript: HttpOnly
+              - term: Web Storage
+                description: 'Storage space within the web browser that can store larger data than cookies (types: local storage and session storage).'
+                superscript: 웹 스토리지
+                references:
+                  - 혼자_공부하는_네트워크/328_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/467_페이지
+              - term: Local Storage
+                description: Information that can be stored permanently unless separately deleted.
+                superscript: 로컬 스토리지
+                references:
+                  - 혼자_공부하는_네트워크/328_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/467_페이지
+              - term: Session Storage
+                description: Information that is retained while the session is maintained (while the browser is open).
+                superscript: 세션 스토리지
+                references:
+                  - 혼자_공부하는_네트워크/328_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/467_페이지
+              - term: Content Negotiation
+                description: A mechanism that provides the most appropriate form of a resource for the same URI.
+                superscript: 콘텐츠 협상
+                references:
+                  - 혼자_공부하는_네트워크/329_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/472_페이지
+              - term: Representation of a Resource
+                description: The transmittable form of a resource.
+                superscript: 자원의 표현
+                references:
+                  - 혼자_공부하는_네트워크/329_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/472_페이지
+              - term: Accept Header (HTTP Header)
+                description: An HTTP header for indicating the preferred media type.
+                references:
+                  - 혼자_공부하는_네트워크/329_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/473_페이지
+                superscript: Accept 헤더 (HTTP 헤더)
+              - term: Accept-Language Header (HTTP Header)
+                description: An HTTP header for indicating the preferred language.
+                references:
+                  - 혼자_공부하는_네트워크/329_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/473_페이지
+                superscript: Accept-Language 헤더 (HTTP 헤더)
+              - term: Accept-Charset Header (HTTP Header)
+                description: An HTTP header for indicating the preferred character encoding scheme.
+                references:
+                  - 혼자_공부하는_네트워크/329_페이지
+                superscript: Accept-Charset 헤더 (HTTP 헤더)
+              - term: Accept-Encoding Header (HTTP Header)
+                description: An HTTP header for indicating the preferred compression scheme.
+                references:
+                  - 혼자_공부하는_네트워크/329_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/473_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/473_페이지
+                superscript: Accept-Encoding 헤더 (HTTP 헤더)
+      - subtitle: 네트워크 심화
+        content:
+          - subsubtitle: 안정성을 위한 기술
+            items:
+              - term: Availability
+                description: The proportion of time a computer system can actually perform a particular function.
+                superscript: 가용성
+                references:
+                  - 혼자_공부하는_네트워크/383_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/481_페이지
+              - term: High Availability
+                description: The property of having high availability.
+                superscript: 고가용성
+                references:
+                  - 혼자_공부하는_네트워크/383_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/481_페이지
+              - term: Uptime
+                description: The time of normal use.
+                superscript: 업타임
+                references:
+                  - 혼자_공부하는_네트워크/383_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/482_페이지
+              - term: Downtime
+                description: The time during which normal use is impossible.
+                superscript: 다운타임
+                references:
+                  - 혼자_공부하는_네트워크/383_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/482_페이지
+              - term: Fault Tolerance
+                description: The ability to function even when a problem occurs.
+                superscript: 결함 감내
+                references:
+                  - 혼자_공부하는_네트워크/384_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/483_페이지
+              - term: Redundancy
+                description: A technique of duplicating a particular system; a technique of preparing a backup to tolerate faults and increase availability.
+                references:
+                  - 혼자_공부하는_네트워크/384_페이지
+                superscript: 이중화
+              - term: Single Point of Failure (SPoF)
+                description: An object whose failure can bring down the entire system.
+                superscript: 단일 장애점 (SPoF)
+                references:
+                  - 혼자_공부하는_네트워크/385_페이지
+              - term: Active-Standby
+                description: Active means the operating state, and standby means the state of waiting as a backup for the active; that is, a redundancy configuration in which one system operates while another is left on standby for backup.
+                superscript: 액티브/스탠바이
+                references:
+                  - 혼자_공부하는_네트워크/385_페이지
+              - term: Active-Active
+                description: A configuration in which both systems are left in the operating state.
+                superscript: 액티브/액티브
+                references:
+                  - 혼자_공부하는_네트워크/385_페이지
+              - term: Failover
+                description: A function that automatically switches to the prepared standby system when a problem occurs in the active system.
+                superscript: 페일오버
+                references:
+                  - 혼자_공부하는_네트워크/385_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/483_페이지
+              - term: Multiplexing (Multiplication)
+                description: A technique of having several of a particular system.
+                references:
+                  - 혼자_공부하는_네트워크/386_페이지
+                superscript: 다중화
+              - term: Teaming
+                description: A technique that makes redundant/multiple network interfaces (NICs) appear as a single interface with better, more stable performance; a term mainly used in Windows.
+                superscript: 티밍
+                references:
+                  - 혼자_공부하는_네트워크/387_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/377_페이지
+              - term: Bonding
+                description: A technique that makes redundant/multiple network interfaces (NICs) appear as a single interface with better, more stable performance; a term mainly used in Linux.
+                superscript: 본딩
+                references:
+                  - 혼자_공부하는_네트워크/387_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/377_페이지
+              - term: Traffic
+                description: The amount of packets passing through a particular node at a given time.
+                superscript: 트래픽
+                references:
+                  - 혼자_공부하는_네트워크/387_페이지
+              - term: Load Balancing
+                description: A technique performed by a load balancer to distribute traffic evenly; a combination of 'load' and 'balancing'.
+                superscript: 로드 밸런싱
+                references:
+                  - 혼자_공부하는_네트워크/388_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/484_페이지
+                image: assets/img/net/load_balancing.png
+              - term: Health Check
+                description: A function that periodically checks whether a system is in a state able to correctly respond to current requests.
+                superscript: 헬스 체크
+                references:
+                  - 혼자_공부하는_네트워크/389_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/484_페이지
+              - term: Heartbeat
+                description: A method in which servers periodically exchange heartbeat messages and detect a problem when the signal is cut off.
+                superscript: 하트비트
+                references:
+                  - 혼자_공부하는_네트워크/389_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/484_페이지
+              - term: Round Robin Algorithm (Load Balancing Algorithm)
+                description: A load balancing algorithm that simply distributes load by rotating among servers.
+                superscript: 라운드 로빈 알고리즘 (로드 밸런싱 알고리즘)
+                references:
+                  - 혼자_공부하는_네트워크/389_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/485_페이지
+              - term: Least Connection Algorithm (Load Balancing Algorithm)
+                description: A load balancing algorithm that delivers load preferentially to the server with the fewest connections.
+                superscript: 최소 연결 알고리즘 (로드 밸런싱 알고리즘)
+                references:
+                  - 혼자_공부하는_네트워크/389_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/485_페이지
+              - term: Weighted Round Robin Algorithm (Load Balancing Algorithm)
+                description: A load balancing algorithm that operates by round robin but lets servers with higher weights be selected more often and receive more load.
+                superscript: 가중치 라운드 로빈 알고리즘 (로드 밸런싱 알고리즘)
+                references:
+                  - 혼자_공부하는_네트워크/390_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/485_페이지
+              - term: Weighted Least Connection Algorithm (Load Balancing Algorithm)
+                description: A load balancing algorithm that operates by least connection but lets servers with higher weights be selected more often and receive more load.
+                superscript: 가중치 최소 연결 알고리즘 (로드 밸런싱 알고리즘)
+                references:
+                  - 혼자_공부하는_네트워크/390_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/485_페이지
+              - term: Origin Server
+                description: An HTTP server that can create resources and send authoritative responses to clients.
+                superscript: 오리진 서버
+                references:
+                  - 혼자_공부하는_네트워크/391_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/480_페이지
+              - term: Inbound Message
+                description: A message heading toward the origin server.
+                superscript: 인바운드 메시지
+                references:
+                  - 혼자_공부하는_네트워크/391_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/493_페이지
+              - term: Outbound Message
+                description: A message heading toward the client.
+                superscript: 아웃바운드 메시지
+                references:
+                  - 혼자_공부하는_네트워크/391_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/493_페이지
+              - term: Proxy
+                description: A message-forwarding agent chosen by the client, an intermediate server located near the client; it mainly provides functions such as cache storage, client encryption, and access restriction.
+                superscript: 프록시
+                references:
+                  - 혼자_공부하는_네트워크/391_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/481_페이지
+                image: assets/img/net/forward_proxy.png
+              - term: Gateway
+                description: An intermediate server that acts as an entrance enabling communication between networks, located near the origin server; also called a reverse proxy.
+                superscript: 게이트웨이
+                references:
+                  - 혼자_공부하는_네트워크/392_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/482_페이지
+                image: assets/img/net/reverse_proxy.png
+          - subsubtitle: 안전성을 위한 기술
+            items:
+              - term: Encryption
+                description: The process of changing original data into an unrecognizable form.
+                superscript: 암호화
+                references:
+                  - 혼자_공부하는_네트워크/394_페이지
+              - term: Decryption
+                description: The process of restoring encrypted data back to the original data.
+                superscript: 복호화
+                references:
+                  - 혼자_공부하는_네트워크/394_페이지
+              - term: Symmetric Key Encryption
+                description: An encryption method that uses the same encryption key for encryption and decryption.
+                superscript: 대칭 키 암호화
+                references:
+                  - 혼자_공부하는_네트워크/395_페이지
+              - term: Public Key Encryption
+                description: An encryption method that uses different keys for encryption and decryption; also called asymmetric key encryption.
+                superscript: 공개 키 암호화
+                references:
+                  - 혼자_공부하는_네트워크/396_페이지
+              - term: Asymmetric Key Encryption
+                description: An encryption method that uses different keys for encryption and decryption; also called public key encryption.
+                superscript: 비대칭 키 암호화
+                references:
+                  - 혼자_공부하는_네트워크/396_페이지
+              - term: Certificate
+                description: A document for proving something.
+                superscript: 인증서
+                references:
+                  - 혼자_공부하는_네트워크/398_페이지
+                  - 혼자_공부하는_네트워크/479_페이지
+                image: assets/img/net/certificate.png
+              - term: Public Key Certificate
+                description: An electronic document for proving a public key and its validity.
+                superscript: 공개키 인증서
+                references:
+                  - 혼자_공부하는_네트워크/399_페이지
+              - term: Certification Authority (CA)
+                description: An accredited organization that can perform roles such as issuing, verifying, and storing certificates.
+                superscript: 인증 기관 (CA)
+                references:
+                  - 혼자_공부하는_네트워크/399_페이지
+                  - 혼자_공부하는_네트워크/478_페이지
+              - term: Signature
+                description: The CA's information guaranteeing the issued certificate.
+                superscript: 서명값
+                references:
+                  - 혼자_공부하는_네트워크/399_페이지
+              - term: Fingerprint
+                description: The hash value of the certificate's contents.
+                superscript: 지문
+                references:
+                  - 혼자_공부하는_네트워크/400_페이지
+              - term: Hash Value
+                description: The result value of applying a hash function.
+                references:
+                  - 혼자_공부하는_네트워크/400_페이지
+                superscript: 해시 값
+              - term: Hash Function
+                description: A function that converts data of arbitrary length into data of fixed length.
+                references:
+                  - 혼자_공부하는_네트워크/400_페이지
+                superscript: 해시 함수
+              - term: Digital Signature
+                description: A procedure that proves identity by decrypting, with a public key, a message encrypted with a private key.
+                superscript: 디지털 서명
+                references:
+                  - 혼자_공부하는_네트워크/401_페이지
+              - term: SSL (Secure Sockets Layer)
+                description: A protocol that performs authentication and encryption.
+                superscript: SSL
+                references:
+                  - 혼자_공부하는_네트워크/401_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/474_페이지
+              - term: TLS (Transport Layer Security)
+                description: A protocol that performs authentication and encryption, succeeding SSL.
+                superscript: TLS
+                references:
+                  - 혼자_공부하는_네트워크/401_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/474_페이지
+              - term: TLS Handshake
+                description: Messages exchanged to perform TLS-based encrypted communication (e.g., HTTPS sets up TLS encrypted communication via a TLS handshake after establishing a TCP connection via a three-way handshake).
+                superscript: TLS 핸드셰이크
+                references:
+                  - 혼자_공부하는_네트워크/401_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/475_페이지
+                image: assets/img/net/tls.png
+              - term: HTTPS (HTTP over TLS)
+                description: A protocol developed for the safe transmission of HTTP messages.
+                superscript: HTTPS
+                references:
+                  - 혼자_공부하는_네트워크/401_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/474_페이지
+              - term: Cipher Suite
+                description: Information containing the usable encryption methods and hash functions.
+                superscript: 암호 스위트
+                references:
+                  - 혼자_공부하는_네트워크/403_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/476_페이지
+              - term: Scale Up
+                description: A method of improving performance by replacing equipment with better equipment.
+                superscript: 스케일 업
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/486_페이지
+                image: assets/img/net/scale_up.png
+              - term: Scale Out
+                description: A method of improving performance by adding more equipment.
+                superscript: 스케일 아웃
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/486_페이지
+                image: assets/img/net/scale_out.png
+              - term: Vertical Scaling
+                description: Another name for scale up.
+                superscript: 수직적 확장
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/486_페이지
+              - term: Horizontal Scaling
+                description: Another name for scale out.
+                superscript: 수평적 확장
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/486_페이지
+              - term: Auto Scaling
+                description: A technique that dynamically expands or shrinks a system whenever needed.
+                superscript: 오토 스케일링
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/488_페이지
+              - term: Upstream
+                description: The direction of transmitting data toward the upper server (toward the origin server).
+                superscript: 업스트림
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/493_페이지
+              - term: Downstream
+                description: The direction of transmitting data toward the lower server (toward the client).
+                superscript: 다운스트림
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/493_페이지
+              - term: Web Server
+                description: An HTTP server that responds with static information (e.g., Apache, Nginx).
+                superscript: 웹 서버
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/494_페이지
+              - term: Web Application Server (WAS)
+                description: An HTTP server that responds with dynamic information (e.g., Tomcat, JBoss).
+                superscript: 웹 애플리케이션 서버
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/495_페이지
+              - term: Socket (Network)
+                description: An endpoint of network communication between processes; in many operating systems, a socket is handled like a file.
+                superscript: 소켓 (네트워크)
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/497_페이지
+                image: assets/img/net/socket.png
+          - subsubtitle: 무선 네트워크
+            items:
+              - term: Radio Wave
+                description: A kind of invisible electromagnetic wave with a frequency of roughly 3 kHz to 3 THz.
+                superscript: 전파
+                references:
+                  - 혼자_공부하는_네트워크/409_페이지
+              - term: Modulation
+                description: Converting information into a signal of the desired form.
+                superscript: 변조
+                references:
+                  - 혼자_공부하는_네트워크/411_페이지
+              - term: Demodulation
+                description: Converting a modulated signal back into the original information.
+                superscript: 복조
+                references:
+                  - 혼자_공부하는_네트워크/411_페이지
+              - term: Frequency Band
+                description: A particular range of frequencies.
+                references:
+                  - 혼자_공부하는_네트워크/411_페이지
+                superscript: 주파수 대역
+              - term: IEEE 802.11
+                description: The standard specification for wireless LAN.
+                references:
+                  - 혼자_공부하는_네트워크/412_페이지
+                superscript: IEEE 802.11
+              - term: Wi-Fi
+                description: A wireless LAN technology that follows particular IEEE 802.11 standards.
+                superscript: 와이파이
+                references:
+                  - 혼자_공부하는_네트워크/412_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/372_페이지
+              - term: 5GHz Wi-Fi
+                description: Faster in send/receive speed than 2.4 GHz Wi-Fi, but more affected by obstacles.
+                references:
+                  - 혼자_공부하는_네트워크/413_페이지
+                superscript: 5GHz 와이파이
+              - term: 2.4GHz Wi-Fi
+                description: Slower in send/receive speed than 5 GHz Wi-Fi, but less affected by obstacles.
+                references:
+                  - 혼자_공부하는_네트워크/413_페이지
+                superscript: 2.4GHz 와이파이
+              - term: Diffraction
+                description: A phenomenon in which a wave propagates around to the far side when it passes an obstacle or a narrow gap.
+                references:
+                  - 혼자_공부하는_네트워크/413_페이지
+                superscript: 회절성
+              - term: Channel
+                description: A particular frequency band to be used in a wireless network; each channel is distinguished by a number.
+                superscript: 채널
+                references:
+                  - 혼자_공부하는_네트워크/414_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/374_페이지
+              - term: Access Point (AP)
+                description: A device that connects wireless communication devices to form a wireless network.
+                superscript: AP
+                references:
+                  - 혼자_공부하는_네트워크/415_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/375_페이지
+              - term: Infrastructure Mode
+                description: A wireless network communication mode in which communication takes place via an AP.
+                superscript: 인프라스트럭처 모드
+                references:
+                  - 혼자_공부하는_네트워크/415_페이지
+              - term: Ad Hoc Mode
+                description: A wireless communication mode in which hosts communicate one-to-one without the intervention of an AP.
+                superscript: 애드 혹 모드
+                references:
+                  - 혼자_공부하는_네트워크/415_페이지
+              - term: Service Set
+                description: The set of an AP and the various devices forming a wireless network; devices in the same service set belong to the same wireless network.
+                superscript: 서비스 셋
+                references:
+                  - 혼자_공부하는_네트워크/415_페이지
+              - term: Service Set Identifier (SSID)
+                description: A means of distinguishing a wireless network and the unique name referring to it.
+                superscript: 서비스 셋 식별자(SSID)
+                references:
+                  - 혼자_공부하는_네트워크/416_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/375_페이지
+              - term: Basic Service Set (BSS)
+                description: A wireless LAN composed of a single AP.
+                superscript: BSS (무선 네트워크)
+                references:
+                  - 혼자_공부하는_네트워크/416_페이지
+              - term: Extended Service Set (ESS)
+                description: A wireless LAN composed of multiple APs.
+                superscript: ESS (무선 네트워크)
+                references:
+                  - 혼자_공부하는_네트워크/416_페이지
+              - term: Beacon Frame
+                description: A broadcast message that an AP periodically transmits to announce its existence.
+                superscript: 비컨 프레임
+                references:
+                  - 혼자_공부하는_네트워크/416_페이지
