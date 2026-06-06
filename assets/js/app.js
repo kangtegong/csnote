@@ -440,7 +440,7 @@ document.addEventListener('click', (e) => {
     case 'term': go({ term: id }); break;
     case 'term-replace': go({ term: id, replace: true }); break;
     case 'back': back(); break;
-    case 'theme': S.dark = !S.dark; persist(); render(); break;
+    case 'theme': { S.dark = !S.dark; persist(); render(); const ib = $('#installBanner'); if (ib) ib.classList.toggle('dark', S.dark); break; }
     case 'bm': toggleBm(id); break;
     case 'fs': S.fs = parseFloat(el.getAttribute('data-v')); persist(); render(); break;
     case 'lang': switchLang(el.getAttribute('data-v')); break;
@@ -491,9 +491,10 @@ function maybeShowInstall() {
     : `브라우저 메뉴에서 <b>'홈 화면에 추가'</b> 또는 <b>설치</b>를 선택해 앱처럼 사용해 보세요.`;
   const banner = document.createElement('div');
   banner.id = 'installBanner';
-  banner.className = 'install-banner';
-  banner.innerHTML = `<span style="color:var(--accent);display:flex;flex-shrink:0;margin-top:1px">${isIOS() ? IC.share(22) : IC.plus(22)}</span>
-    <div style="flex:1;min-width:0"><div style="font-size:14px;font-weight:700;margin-bottom:3px">앱으로 설치하기</div><div style="font-size:12.5px;color:var(--text-2);line-height:1.5">${msg}</div></div>
+  // .app-frame은 .csn 바깥이라 테마 변수를 못 받음 → 자체 색상 + dark 클래스 사용
+  banner.className = 'install-banner' + (S.dark ? ' dark' : '');
+  banner.innerHTML = `<span class="ib-icon" style="display:flex;flex-shrink:0;margin-top:1px">${isIOS() ? IC.share(22) : IC.plus(22)}</span>
+    <div style="flex:1;min-width:0"><div class="ib-title" style="font-size:14px;font-weight:700;margin-bottom:3px">앱으로 설치하기</div><div class="ib-desc" style="font-size:12.5px;line-height:1.5">${msg}</div></div>
     <button class="ib-close tap" data-act="dismiss-install" aria-label="닫기">${IC.close(18)}</button>`;
   frame.appendChild(banner);
 }

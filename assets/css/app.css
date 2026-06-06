@@ -208,10 +208,13 @@ mark { background: color-mix(in srgb, var(--accent) 26%, transparent); color: in
 .nav-btn .nb-label { font-size: 10.5px; color: var(--text-3); font-weight: 600; }
 .nav-btn .nb-title { font-size: 14px; font-weight: 650; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-/* iOS 설치 안내 배너 */
+/* iOS 설치 안내 배너 ── .csn 바깥(.app-frame)에 붙으므로 테마 변수 대신 리터럴 색상 사용 */
 .install-banner {
   position: absolute; left: 14px; right: 14px; bottom: calc(env(safe-area-inset-bottom,0px) + 84px);
-  z-index: 40; background: var(--surface); border: 1px solid var(--border-2);
+  z-index: 40;
+  background: #ffffff;                 /* 불투명 흰색 (배경 비침 방지) */
+  color: #211e19;
+  border: 1px solid rgba(33,30,25,0.14);
   border-radius: 18px;
   /* 종이톤 배경/흰 카드와 겹쳐도 또렷이 떠 보이도록 강한 다중 그림자 + 분리 링 */
   box-shadow: 0 0 0 1px rgba(33,30,25,0.06), 0 2px 8px rgba(33,30,25,0.14), 0 18px 50px rgba(33,30,25,0.34);
@@ -219,13 +222,20 @@ mark { background: color-mix(in srgb, var(--accent) 26%, transparent); color: in
   display: flex; gap: 12px; align-items: flex-start;
   animation: csn-in .3s ease both;
 }
-.csn[data-theme="dark"] .install-banner {
-  /* 거의 검은 배경 위에서 떠 보이도록 한 단계 밝은 톤 + 또렷한 밝은 테두리 */
+.install-banner .ib-icon { color: oklch(0.54 0.13 256); }
+.install-banner .ib-desc { color: #6e6a62; }
+.install-banner .ib-close { color: #a39e94; cursor: pointer; flex-shrink: 0; background: none; border: none; padding: 2px; }
+
+.install-banner.dark {
+  /* 거의 검은 배경 위에서 떠 보이도록 한 단계 밝은 불투명 톤 + 또렷한 밝은 테두리 */
   background: #2c2823;
+  color: #ece7dd;
   border-color: rgba(255,255,255,0.16);
   box-shadow: 0 2px 8px rgba(0,0,0,0.5), 0 18px 50px rgba(0,0,0,0.7);
 }
-.install-banner .ib-close { color: var(--text-3); cursor: pointer; flex-shrink: 0; background: none; border: none; padding: 2px; }
+.install-banner.dark .ib-icon { color: oklch(0.74 0.12 256); }
+.install-banner.dark .ib-desc { color: rgba(236,231,221,0.60); }
+.install-banner.dark .ib-close { color: rgba(236,231,221,0.36); }
 
 /* 로딩 */
 .csn-loading { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 14px; color: var(--text-3); }
