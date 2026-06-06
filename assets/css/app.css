@@ -220,7 +220,10 @@ mark { background: color-mix(in srgb, var(--accent) 26%, transparent); color: in
   animation: csn-in .3s ease both;
 }
 .csn[data-theme="dark"] .install-banner {
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.05), 0 2px 8px rgba(0,0,0,0.4), 0 18px 50px rgba(0,0,0,0.6);
+  /* 거의 검은 배경 위에서 떠 보이도록 한 단계 밝은 톤 + 또렷한 밝은 테두리 */
+  background: #2c2823;
+  border-color: rgba(255,255,255,0.16);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5), 0 18px 50px rgba(0,0,0,0.7);
 }
 .install-banner .ib-close { color: var(--text-3); cursor: pointer; flex-shrink: 0; background: none; border: none; padding: 2px; }
 
