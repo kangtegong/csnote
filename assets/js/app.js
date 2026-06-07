@@ -43,6 +43,9 @@ const UI = {
     refBooks: '참조 도서', info: '정보', version: '버전', source: '원본',
     filterPh: (s) => `${s} 용어 필터`, noFilter: (q) => `'${q}'와 일치하는 용어가 없어요`,
     footer: '컴퓨터과학 핵심 키워드 노트<br>모바일 리디자인', terms: (n) => `${n} terms`, subjectsCount: (n) => `${n} subjects`,
+    learnMore: '자세히 학습하기',
+    learnMoreDesc: "csnote는 '자세한 용어 정리 자료'이지만, 각 용어 관련 자세한 원리·용어 간의 관계에 대한 설명은 포함되어 있지 않습니다. 학습의 완성도를 높이고 싶다면 제작자의 집필 서적이나 무료 강의를 참고해 주세요.",
+    learnConcept: '기본 개념 학습', authorBooks: '집필 서적', freeLectures: '무료 강의', contact: '문의',
   },
   en: {
     tagline: 'CS core keyword notes', home: 'Home', search: 'Search', bookmarks: 'Bookmarks', settings: 'Settings',
@@ -58,6 +61,9 @@ const UI = {
     refBooks: 'Reference books', info: 'About', version: 'Version', source: 'Source',
     filterPh: (s) => `Filter ${s} terms`, noFilter: (q) => `No term matches '${q}'`,
     footer: 'CS core keyword notes<br>mobile redesign', terms: (n) => `${n} terms`, subjectsCount: (n) => `${n} subjects`,
+    learnMore: 'Learn more',
+    learnMoreDesc: "CSnote is a detailed glossary, but it doesn't explain the underlying principles of each term or how terms relate to one another. To round out your study, check out the author's books and free lectures.",
+    learnConcept: 'Core concepts', authorBooks: 'Books', freeLectures: 'Free lectures', contact: 'Contact',
   },
 };
 const L = (key, ...args) => { const v = (UI[S.lang] || UI.ko)[key]; return typeof v === 'function' ? v(...args) : v; };
@@ -142,6 +148,35 @@ function termRowHtml(t, { q = '', showSubject = false } = {}) {
   </div>`;
 }
 
+// 홈 하단 안내: 자세히 학습하기 / 도움을 주신 분 / 기여 / 문의
+const ABOUT_BOOKS = [
+  { img: 'hongong1.png', href: 'https://www.yes24.com/Product/Goods/111378840' },
+  { img: 'hongong2.png', href: 'https://www.yes24.com/Product/Goods/125830483' },
+  { img: 'thisis.png', href: 'https://www.yes24.com/Product/Goods/130179291' },
+  { img: 'hongong3.png', href: 'https://minchul.net/publications/' },
+];
+function aboutHtml() {
+  const linkStyle = 'font-size:13.5px;font-weight:600;color:var(--accent);text-decoration:none';
+  return `
+    <div class="section-label"><span>${L('learnMore')}</span></div>
+    <div style="padding:2px 20px 0">
+      <p style="font-size:13px;line-height:1.7;color:var(--text-2);margin:2px 0 14px;word-break:keep-all">${L('learnMoreDesc')}</p>
+      <div class="en" style="font-size:11px;font-weight:600;color:var(--text-3);margin-bottom:8px">▴ ${L('learnConcept')}</div>
+      <div style="display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px">
+        ${ABOUT_BOOKS.map((b) => `<a href="${b.href}" target="_blank" rel="noopener" style="flex:none"><img src="assets/img/${b.img}" alt="" loading="lazy" style="height:124px;border-radius:10px;border:1px solid var(--border);box-shadow:var(--shadow);display:block"></a>`).join('')}
+      </div>
+      <div style="display:flex;gap:18px;margin-top:14px">
+        <a href="https://minchul.net/publications/" target="_blank" rel="noopener" style="${linkStyle}">${L('authorBooks')} →</a>
+        <a href="https://minchul.net/lectures/" target="_blank" rel="noopener" style="${linkStyle}">${L('freeLectures')} →</a>
+      </div>
+    </div>
+
+    <div class="section-label"><span>${L('contact')}</span></div>
+    <div class="card" style="margin:0 20px;overflow:hidden">
+      <div class="set-row"><span style="font-size:14px;font-weight:500">Email</span><span class="en" style="font-size:13px;color:var(--text-2)">tegongkang at gmail dot com</span></div>
+    </div>`;
+}
+
 function homeHtml() {
   const subjects = window.CS_SUBJECTS;
   const total = window.CS_TERMS.length;
@@ -184,6 +219,8 @@ function homeHtml() {
           <div style="font-size:11.5px;color:var(--text-2);margin-top:7px;line-height:1.35">${esc(s.desc)}</div>
         </div>`).join('')}
       </div>
+
+      ${aboutHtml()}
 
       ${bms.length ? `<div class="section-label"><span>${L('bookmarks')}</span><span class="tap en" style="font-size:11.5px;font-weight:600;color:var(--accent)" data-act="tab" data-tab="bookmarks">${L('viewAll')}</span></div>
       <div class="card" style="margin:0 20px;padding:2px 14px">

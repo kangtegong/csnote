@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "subjects": [
     {"name_ko": "컴퓨터 구조", "name_en": "Computer Architecture", "file": "arch.yaml"},
     {"name_ko": "운영체제", "name_en": "Operating System", "file": "os.yaml"},
