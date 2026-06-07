@@ -41,6 +41,8 @@ csnote는 '자세한 용어 정리 자료'이지만,
 - 최정혜님(@jeonghye-choi)
 - KUCSEPotato(@KUCSEPotato)
 - YH(@songjung-good)
+- YUNJUNG KIM 님 (@BanYeah)
+- Hyeongi Kim 님(@hgkim215)
 
 # 도움을 주는 방법
 
