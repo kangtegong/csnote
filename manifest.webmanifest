@@ -1,0 +1,20 @@
+{
+  "name": "CSnote — 컴퓨터과학 핵심 키워드 노트",
+  "short_name": "CSnote",
+  "description": "개발자를 위한 컴퓨터과학 핵심 키워드 노트",
+  "lang": "ko",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#efece7",
+  "theme_color": "#efece7",
+  "icons": [
+    { "src": "assets/img/favicon/android-icon-36x36.png", "sizes": "36x36", "type": "image/png" },
+    { "src": "assets/img/favicon/android-icon-48x48.png", "sizes": "48x48", "type": "image/png" },
+    { "src": "assets/img/favicon/android-icon-72x72.png", "sizes": "72x72", "type": "image/png" },
+    { "src": "assets/img/favicon/android-icon-96x96.png", "sizes": "96x96", "type": "image/png" },
+    { "src": "assets/img/favicon/android-icon-144x144.png", "sizes": "144x144", "type": "image/png" },
+    { "src": "assets/img/favicon/android-icon-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

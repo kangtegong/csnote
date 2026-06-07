@@ -1,0 +1,462 @@
+sections:
+  - title: 자료구조
+    content:
+      - subtitle: 자료구조의 큰 그림
+        items:
+          - term: Data Structure
+            description: A subject concerning methods of efficiently storing and managing data.
+            superscript: 자료구조
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/256_페이지
+          - term: Algorithm
+            description: A subject concerning a series of step-by-step procedures for solving a problem.
+            superscript: 알고리즘
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/256_페이지
+          - term: Time Complexity
+            description: A measure of an algorithm's execution time (number of operations), expressed as a function of the input size.
+            superscript: 시간 복잡도
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/257_페이지
+          - term: Space Complexity
+            description: A measure of the amount of memory an algorithm uses.
+            superscript: 공간 복잡도
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/263_페이지
+          - term: Big-O Notation
+            description: A mathematical notation expressing the asymptotic upper bound of an algorithm's performance.
+            superscript: 빅 오 표기법
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/260_페이지
+          - term: Big-θ Notation
+            description: A mathematical notation expressing the average performance of an algorithm.
+            superscript: 빅 세타 표기법
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/260_페이지
+          - term: Big-Ω Notation
+            description: A mathematical notation expressing the asymptotic lower bound of an algorithm's performance.
+            superscript: 빅 오메가 표기법
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/260_페이지
+      - subtitle: 배열과 연결리스트
+        items:
+          - term: Array
+            description: A data structure of many elements laid out sequentially in contiguous memory. Each element is assigned an index, a unique sequence number starting from 0, and data access performance is O(1).
+            superscript: 배열
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/265_페이지
+            image: assets/img/ds/array.png
+          - term: Index (Array)
+            description: An integer value starting from 0 used to reference a specific element in an array; it indicates the distance from the array's start to the element.
+            superscript: 인덱스 (배열)
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/265_페이지
+          - term: Two-Dimensional Array
+            description: An array composed of rows and columns, used to store data in matrix form.
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/267_페이지
+            superscript: 이차원 배열
+          - term: Three-Dimensional Array
+            description: An array composed of several two-dimensional arrays.
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/267_페이지
+            superscript: 삼차원 배열
+          - term: Static Array
+            description: An array whose size is fixed before the program runs; the array's size is specified at initialization.
+            superscript: 정적 배열
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/268_페이지
+          - term: Dynamic Array
+            description: An array whose size can be adjusted dynamically, allowing flexible resizing. It is also referred to as a vector.
+            superscript: 동적 배열
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/268_페이지
+          - term: Linked List
+            description: A data structure in which each node holds data and a pointer to the next node; insertion and deletion performance is O(1).
+            superscript: 연결 리스트
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/268_페이지
+            image: assets/img/ds/linked_list.png
+          - term: Head Node (Linked List)
+            description: The first node of a linked list, representing its starting point.
+            superscript: 헤드 노드 (연결 리스트)
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/268_페이지
+          - term: Tail Node (Linked List)
+            description: The last node of a linked list; it has no next node.
+            superscript: 꼬리 노드 (연결 리스트)
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/268_페이지
+          - term: Doubly Linked List
+            description: A linked list in which each node holds pointers to both the next and the previous node, allowing bidirectional traversal.
+            superscript: 이중 연결 리스트
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/270_페이지
+            image: assets/img/ds/doubly_linked_list.png
+          - term: Circular Linked List
+            description: A linked list in which the last node points to the first node, connecting the list in a circle.
+            superscript: 환형 연결 리스트
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/271_페이지
+            image: assets/img/ds/circular_linked_list.png
+      - subtitle: 스택과 큐
+        items:
+          - term: Stack
+            description: A data structure that operates in a last-in-first-out (LIFO) manner; insertion and deletion occur only at one end.
+            superscript: 스택
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/272_페이지
+            image: assets/img/ds/stack.png
+          - term: Last In First Out (LIFO)
+            description: A scheme in which the most recently inserted element is removed first, representing how a stack operates.
+            superscript: 후입 선출(LIFO)
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/272_페이지
+          - term: Push (Stack Operation)
+            description: An operation that adds an element to a stack, inserting a new element at the top.
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/272_페이지
+            superscript: PUSH (스택 연산)
+          - term: Pop (Stack Operation)
+            description: An operation that removes an element from a stack, deleting the topmost element.
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/272_페이지
+            superscript: POP (스택 연산)
+          - term: Queue
+            description: A data structure that operates in a first-in-first-out (FIFO) manner; insertion and deletion occur at opposite ends.
+            superscript: 큐
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/275_페이지
+            image: assets/img/ds/queue.png
+          - term: First In First Out (FIFO)
+            description: A scheme in which the element inserted first is removed first, representing how a queue operates.
+            superscript: 선입 선출(FIFO)
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/275_페이지
+          - term: Enqueue
+            description: An operation that adds an element to a queue, inserting a new element at the rear.
+            superscript: 인큐
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/275_페이지
+          - term: Dequeue
+            description: An operation that removes an element from a queue, deleting the front element.
+            superscript: 디큐
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/275_페이지
+          - term: Circular Queue
+            description: A queue in which the last position is connected to the first, forming a circular structure.
+            superscript: 원형 큐
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/276_페이지
+          - term: Deque (Double-Ended Queue)
+            description: A data structure allowing addition and removal of elements at both ends, having the characteristics of both a stack and a queue.
+            superscript: 덱
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/276_페이지
+          - term: Priority Queue
+            description: A queue in which each element has a priority, and the element with the highest priority is removed first.
+            superscript: 우선순위 큐
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/276_페이지
+      - subtitle: 해시 테이블
+        items:
+          - term: Hash Table
+            description: A data structure that stores data as key-value pairs, using a hash function for fast data retrieval.
+            superscript: 해시 테이블
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/277_페이지
+          - term: Bucket (Hash Table)
+            description: A unit for storing data in a hash table; a memory space allocated by the hash function.
+            superscript: 버킷 (해시 테이블)
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/278_페이지
+          - term: Hash Function
+            description: A function that converts a key into a hash table index, distributing data evenly for storage.
+            superscript: 해시 함수
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/278_페이지
+          - term: Hash Algorithm
+            description: An algorithm that implements a hash function, minimizing collisions and distributing data efficiently.
+            superscript: 해시 알고리즘
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/278_페이지
+          - term: Hash Collision
+            description: The case in which different keys produce the same hash value; a method is needed to resolve it.
+            superscript: 해시 충돌
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/282_페이지
+            image: assets/img/ds/hashcollision.png
+          - term: Chaining (Hash Table)
+            description: A method that resolves collisions by linking colliding data together with a linked list.
+            superscript: 체이닝 (해시 테이블)
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/283_페이지
+          - term: Open Addressing
+            description: A method that resolves collisions by storing colliding data in another empty slot of the hash table. It includes linear probing, quadratic probing, and double hashing.
+            superscript: 개방 주소법
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/284_페이지
+          - term: Linear Probing
+            description: A method that finds the next empty slot in the hash table when a collision occurs; the simplest collision-resolution method.
+            superscript: 선형 조사법
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/284_페이지
+          - term: Clustering (Hash Table)
+            description: A phenomenon in which frequent hash collisions concentrate data in a particular region, occurring mainly in linear probing.
+            superscript: 군집화 (해시 테이블)
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/284_페이지
+          - term: Quadratic Probing
+            description: A method that searches for an empty slot at fixed intervals when a collision occurs, reducing clustering compared to linear probing.
+            superscript: 이차 조사법
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/285_페이지
+          - term: Double Hashing
+            description: A method that resolves collisions using two hash functions, reducing collision frequency.
+            superscript: 이중 해싱
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/285_페이지
+      - subtitle: 트리
+        items:
+          - term: Tree
+            description: A data structure with a hierarchical structure, composed of nodes and edges.
+            superscript: 트리
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/286_페이지
+            image: assets/img/ds/tree.png
+          - term: Parent Node
+            description: A node that points to another node, having child nodes.
+            superscript: 부모 노드
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/286_페이지
+          - term: Child Node
+            description: A node pointed to by another node, having a parent node.
+            superscript: 자식 노드
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/286_페이지
+          - term: Sibling Node
+            description: Nodes that share the same parent node, forming a sibling relationship.
+            superscript: 형제 노드
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/287_페이지
+          - term: Ancestor Node
+            description: All higher nodes up to the root node, representing a node's ancestors.
+            superscript: 조상 노드
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/287_페이지
+          - term: Descendant Node
+            description: All nodes below the current node, representing a node's descendants.
+            superscript: 자손 노드
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/287_페이지
+          - term: Root Node
+            description: The topmost node of a tree; it has no parent node.
+            superscript: 루트 노드
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/287_페이지
+          - term: Leaf Node
+            description: A node with no child nodes, representing the end of a tree.
+            superscript: 리프 노드
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/287_페이지
+          - term: Degree (Tree)
+            description: The number of child nodes a node has.
+            superscript: 차수 (트리)
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/287_페이지
+          - term: Level (Tree)
+            description: The depth within a tree; the distance from the root node.
+            superscript: 레벨 (트리)
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/287_페이지
+          - term: Depth (Tree)
+            description: The distance from the root node to a specific node, representing the tree's depth.
+            superscript: 깊이 (트리)
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/287_페이지
+          - term: Height (Tree)
+            description: The distance from a specific node to a leaf node, representing the tree's height.
+            superscript: 높이 (트리)
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/287_페이지
+          - term: Subtree
+            description: A part of a tree, forming a substructure.
+            superscript: 서브트리
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/288_페이지
+          - term: Tree Traversal
+            description: The task of visiting all nodes of a tree; it includes preorder, inorder, postorder, and level-order traversal.
+            superscript: 트리 순회
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/290_페이지
+          - term: Preorder Traversal
+            description: A tree traversal that visits the root node first, then the left subtree and the right subtree in order.
+            superscript: 전위 순회
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/291_페이지
+          - term: Inorder Traversal
+            description: A tree traversal that visits the left subtree first, then the root node, then the right subtree.
+            superscript: 중위 순회
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/293_페이지
+          - term: Postorder Traversal
+            description: A tree traversal that visits the left subtree and the right subtree first, then the root node.
+            superscript: 후위 순회
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/296_페이지
+          - term: Level-Order Traversal
+            description: A tree traversal that visits nodes in level order, based on breadth-first search.
+            superscript: 레벨 순서 순회
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/300_페이지
+          - term: Binary Tree
+            description: A tree in which each node has at most two child nodes; it includes the binary search tree, AVL tree, and heap.
+            superscript: 이진 트리
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/300_페이지
+            image: assets/img/ds/binarytree.png
+          - term: Skewed Binary Tree
+            description: A binary tree that has child nodes in only one direction; there are left-skewed and right-skewed trees.
+            superscript: 편향된 이진 트리
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/301_페이지
+            image: assets/img/ds/skewed_tree.png
+          - term: Full Binary Tree
+            description: A binary tree in which every node has exactly two child nodes; a perfectly filled binary tree.
+            superscript: 정 이진 트리
+            image: assets/img/ds/full_binarytree.png
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/301_페이지
+          - term: Perfect Binary Tree
+            description: A binary tree in which all leaf nodes are at the same level and every internal node has child nodes.
+            superscript: 포화 이진 트리
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/302_페이지
+            image: assets/img/ds/perfect_binarytree.png
+          - term: Complete Binary Tree
+            description: A binary tree in which every level except the last is completely filled, with nodes filled in level order.
+            superscript: 완전 이진 트리
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/302_페이지
+            image: assets/img/ds/complete_binarytree.png
+          - term: Binary Search Tree (BST)
+            description: A tree in which all node values in the left subtree are smaller than the root node and all node values in the right subtree are larger than the root node.
+            superscript: 이진 탐색 트리
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/303_페이지
+          - term: Heap
+            description: A data structure that implements a priority queue in the form of a complete binary tree; there are max heaps and min heaps.
+            superscript: 힙
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/303_페이지
+            image: assets/img/ds/heap.png
+          - term: Self-Balancing Binary Search Tree
+            description: A binary search tree that maintains balance even after insertion and deletion operations; it includes the AVL tree and red-black tree.
+            superscript: 자가 균형 이진 탐색 트리
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/306_페이지
+          - term: Red-Black Tree
+            description: A binary search tree in which each node is colored red or black, maintaining balance during insertion and deletion.
+            superscript: RB 트리
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/307_페이지
+            image: assets/img/ds/rbtree.png
+          - term: Tree Rotation
+            description: An operation that changes the structure of a binary tree to balance it; there are left and right rotations.
+            superscript: 트리의 회전
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/309_페이지
+          - term: Left Rotation (Tree Rotation)
+            description: A rotation operation that promotes the right child to parent, changing the relationship between the left child and the parent.
+            superscript: 왼쪽 회전 (트리의 회전)
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/309_페이지
+          - term: Right Rotation (Tree Rotation)
+            description: A rotation operation that promotes the left child to parent, changing the relationship between the right child and the parent.
+            superscript: 오른쪽 회전 (트리의 회전)
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/309_페이지
+          - term: B-Tree
+            description: A balanced multi-way search tree used in databases and file systems.
+            superscript: B 트리
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/311_페이지
+            image: assets/img/ds/btree.png
+          - term: Multi-Way Search Tree
+            description: A tree in which a single node has multiple children, efficient for search, insertion, and deletion operations.
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/311_페이지
+            superscript: 다진 탐색 트리
+          - term: B+ Tree
+            description: A variant of the B-tree in which the leaf nodes are connected as a linked list.
+            superscript: B+ 트리
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/314_페이지
+      - subtitle: 그래프
+        items:
+          - term: Graph
+            description: A data structure composed of vertices and the edges connecting them, used to represent network models.
+            superscript: 그래프
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/315_페이지
+            image: assets/img/ds/graph.png
+          - term: Connected Graph
+            description: A graph in which all vertices are connected to one another, so a path exists between every pair of vertices.
+            superscript: 연결 그래프
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/316_페이지
+          - term: Disconnected Graph
+            description: A graph in which some vertices are not connected, so no path exists between some vertices.
+            superscript: 비연결 그래프
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/316_페이지
+          - term: Directed Graph
+            description: A graph in which the edges between vertices have direction, expressing directional relationships.
+            superscript: 방향 그래프
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/317_페이지
+          - term: Undirected Graph
+            description: A graph in which the edges between vertices have no direction, expressing symmetric relationships.
+            superscript: 무방향 그래프
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/317_페이지
+          - term: Weighted Graph
+            description: A graph in which edges carry weights, where a weight represents a cost, distance, and the like.
+            superscript: 가중치 그래프
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/317_페이지
+          - term: Subgraph
+            description: A graph that forms part of a graph; a subset of the original graph.
+            superscript: 서브 그래프
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/317_페이지
+          - term: Adjacency Matrix (Graph)
+            description: A method of representing a graph as a matrix, indicating whether vertices are connected.
+            superscript: 인접 행렬 (그래프)
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/318_페이지
+          - term: Adjacency List (Graph)
+            description: A method of representing a graph as lists, expressing the other vertices connected to each vertex as a list.
+            superscript: 인접 리스트 (그래프)
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/320_페이지
+          - term: Depth-First Search (DFS)
+            description: An algorithm that explores the vertices of a graph depth-first, using a recursive approach.
+            superscript: 깊이 우선 탐색 (DFS)
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/322_페이지
+          - term: Breadth-First Search (BFS)
+            description: An algorithm that explores the vertices of a graph breadth-first, implemented using a queue.
+            superscript: 너비 우선 탐색 (BFS)
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/325_페이지
+          - term: Shortest-Path Algorithm
+            description: An algorithm that finds the shortest path between vertices; it includes Dijkstra's algorithm and the Bellman-Ford algorithm.
+            superscript: 최단 경로 알고리즘
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/327_페이지
+          - term: Dijkstra's Algorithm
+            description: An algorithm that finds the shortest path from a start vertex to all other vertices in a weighted graph, iteratively updating the shortest path to each vertex.
+            superscript: 다익스트라 알고리즘
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/327_페이지

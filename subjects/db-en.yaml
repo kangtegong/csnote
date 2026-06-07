@@ -1,0 +1,455 @@
+sections:
+  - title: 데이터베이스
+    content:
+      - subtitle: 데이터베이스의 큰 그림
+        items:
+          - term: Database
+            description: An organized, integrated collection of data managed for shared use by many people.
+            superscript: 데이터베이스
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/512 페이지
+          - term: Database Management System (DBMS)
+            description: Software for managing a database; it performs the definition, manipulation, and control of data.
+            superscript: 데이터베이스 관리 시스템(DBMS)
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/512 페이지
+            image: assets/img/db/dbms.png
+          - term: Relational Database Management System (RDBMS)
+            description: A system that stores data in tables and defines relationships between them. Examples include MySQL, Oracle, PostgreSQL, SQLite, MariaDB, and MS SQL Server.
+            superscript: 관계형 데이터베이스 관리 시스템(RDBMS)
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/513 페이지
+            image: assets/img/db/rdbms.png
+          - term: NoSQL Database Management System
+            description: A database system that does not use the relational model, offering a flexible schema and high scalability. MongoDB and Redis are representative examples.
+            superscript: NoSQL 데이터베이스 관리 시스템
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/513 페이지
+            image: assets/img/db/mongodb.png
+          - term: Query
+            description: A command used to read, insert, update, or delete data in a database.
+            superscript: 쿼리 (데이터베이스)
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/515 페이지
+          - term: SQL (Structured Query Language)
+            description: A structured language for querying a database, used to define, manipulate, and control it. It includes commands such as SELECT, INSERT, UPDATE, and DELETE.
+            superscript: SQL
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/515 페이지
+          - term: DDL (Data Definition Language)
+            description: A language for defining data that creates and manages data structures such as tables and indexes. It includes commands such as CREATE, ALTER, and DROP.
+            superscript: DDL
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/516 페이지
+          - term: DML (Data Manipulation Language)
+            description: A language for manipulating data that reads, inserts, updates, and deletes the records of a table. It includes commands such as SELECT, INSERT, UPDATE, and DELETE.
+            superscript: DML
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/516 페이지
+          - term: DCL (Data Control Language)
+            description: A language for controlling data that commits or rolls back database work and grants or revokes privileges to users. It includes commands such as COMMIT, ROLLBACK, GRANT, and REVOKE.
+            superscript: DCL
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/516 페이지
+          - term: TCL (Transaction Control Language)
+            description: A language that controls transactions, managing their start, end, and recovery. It includes commands such as BEGIN, COMMIT, and ROLLBACK.
+            superscript: TCL
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/516 페이지
+          - term: Entity
+            description: An object that can exist independently; a unit of data stored and managed in a database.
+            superscript: 엔티티
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/519 페이지
+          - term: Attribute
+            description: A characteristic of an entity; a field that describes the data an entity holds.
+            superscript: 속성
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/519 페이지
+          - term: Domain
+            description: The range of values that an attribute of an entity can take.
+            superscript: 도메인
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/520 페이지
+          - term: Relation
+            description: A set of entities that stores data in the form of a two-dimensional table.
+            superscript: 릴레이션
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/520 페이지
+          - term: Collection
+            description: A unit for storing data in MongoDB; a unit that represents a set of entities.
+            superscript: 컬렉션
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/520 페이지
+          - term: Record
+            description: An instance of an entity stored in a database, corresponding to a single row.
+            superscript: 레코드
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/520 페이지
+          - term: Field
+            description: A column that represents an attribute of an entity, denoting a single data element.
+            superscript: 필드
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/520 페이지
+          - term: Document
+            description: A unit in MongoDB that stores an individual record in JSON form.
+            superscript: 도큐먼트
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/520 페이지
+          - term: Cardinality
+            description: The number of unique values for a field; the count of non-duplicate records in a database.
+            superscript: 카디날리티
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/521 페이지
+          - term: Schema
+            description: A structure that defines the structure and constraints of the data stored in a database.
+            superscript: 스키마
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/521 페이지
+          - term: Schemaless Database
+            description: A database that stores data without a fixed schema, providing flexibility.
+            superscript: 스키마리스 데이터베이스
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/521 페이지
+          - term: Transaction
+            description: A logical unit of work performed in a database that holds the ACID properties.
+            superscript: 트랜잭션
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/523 페이지
+          - term: Transactions Per Second (TPS)
+            description: A metric indicating database performance; the number of transactions that can be processed per second.
+            superscript: 초당 트랜잭션 (TPS)
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/523 페이지
+          - term: ACID
+            description: "The properties a database transaction must uphold: atomicity, consistency, isolation, and durability."
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/524 페이지
+            superscript: ACID
+          - term: Atomicity
+            description: The property that a transaction must be performed completely or not at all.
+            superscript: 원자성 (데이터베이스)
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/524 페이지
+          - term: Commit
+            description: An operation that permanently saves the work of a transaction.
+            superscript: 커밋
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/525 페이지
+          - term: Rollback
+            description: An operation that cancels a transaction's work and reverts to the previous state.
+            superscript: 롤백
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/525 페이지
+          - term: Consistency
+            description: The property that a database must remain in a consistent state before and after a transaction.
+            superscript: 일관성 (데이터베이스)
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/525 페이지
+          - term: Isolation
+            description: The property ensuring that multiple concurrently executing transactions do not interfere with one another.
+            superscript: 격리성 (데이터베이스)
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/526 페이지
+          - term: Durability
+            description: The property that once a transaction completes successfully, its result is permanently reflected.
+            superscript: 지속성 (데이터베이스)
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/526 페이지
+      - subtitle: RDBMS의 기본
+        items:
+          - term: Key
+            description: One or more fields that can identify a record in a table; types include primary key, candidate key, and foreign key.
+            superscript: 키
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/532 페이지
+          - term: Candidate Key
+            description: The minimal set of fields that can uniquely identify a single record in a table.
+            superscript: 후보 키
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/533 페이지
+          - term: Composite Key
+            description: A candidate key composed of two or more fields, combining several fields to guarantee uniqueness.
+            superscript: 복합 키
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/533 페이지
+          - term: Super Key
+            description: A set of fields that satisfies uniqueness but not minimality.
+            superscript: 슈퍼 키
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/533 페이지
+          - term: Primary Key
+            description: A field that uniquely identifies each record in a table; only one exists per table.
+            superscript: 기본 키
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/534 페이지
+          - term: Alternate Key
+            description: A candidate key that is not the primary key.
+            superscript: 대체 키
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/534 페이지
+          - term: Foreign Key
+            description: A field that references the primary key of another table, defining relationships between tables.
+            superscript: 외래 키
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/534 페이지
+            image: assets/img/db/fk.png
+          - term: One-to-One Relationship
+            description: A relationship in which one record corresponds to exactly one record in another table.
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/536 페이지
+            image: assets/img/db/onetoone.png
+            superscript: 일대일 대응 관계 (데이터베이스)
+          - term: One-to-Many Relationship
+            description: A relationship in which one record corresponds to multiple records in another table.
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/536 페이지
+            image: assets/img/db/onetomany.png
+            superscript: 일대다 대응 관계 (데이터베이스)
+          - term: Many-to-Many Relationship
+            description: A relationship in which multiple records are linked to multiple records in another table.
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/536 페이지
+            image: assets/img/db/manytomany.png
+            superscript: 다대다 대응 관계 (데이터베이스)
+          - term: Integrity Constraint
+            description: A rule that must be observed to keep the data in a database consistent and valid.
+            superscript: 무결성 제약 조건
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/539 페이지
+          - term: Domain Constraint
+            description: A rule about the field types and value ranges a table can have.
+            superscript: 도메인 제약 조건
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/540 페이지
+          - term: Atomic Value
+            description: A single value that cannot be divided any further.
+            superscript: 원자 값
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/540 페이지
+          - term: Key Constraint
+            description: A constraint that no duplicate value may exist in a field designated as a key.
+            superscript: 키 제약 조건
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/541 페이지
+          - term: Entity Integrity Constraint
+            description: The rule that a field designated as the primary key must have unique values and must not be NULL.
+            superscript: 엔티티 무결성 제약 조건
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/541 페이지
+          - term: Referential Integrity Constraint
+            description: The rule that data referenced through a foreign key must actually exist.
+            superscript: 참조 무결성 제약 조건
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/541 페이지
+      - subtitle: 효율적 쿼리
+        items:
+          - term: Subquery
+            description: An SQL statement contained within another SQL statement, mainly used in SELECT, INSERT, UPDATE, and DELETE statements.
+            superscript: 서브 쿼리
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/573_페이지
+          - term: Join
+            description: An SQL operation that combines two or more tables and returns them as a single result set.
+            superscript: 조인
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/576_페이지
+          - term: Inner Join
+            description: A join method that returns only the records satisfying the join condition between two tables.
+            superscript: 내부 조인
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/577_페이지
+            image: assets/img/db/inner_join.png
+          - term: Outer Join
+            description: A join method that also returns records that do not satisfy the join condition. It includes left, right, and full outer joins.
+            superscript: 외부 조인
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/577_페이지
+          - term: Left Outer Join
+            description: Includes all records of the left table and returns NULL for right-table records that do not satisfy the join condition.
+            superscript: 왼쪽 외부 조인
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/577_페이지
+            image: assets/img/db/left_join.png
+          - term: Right Outer Join
+            description: Includes all records of the right table and returns NULL for left-table records that do not satisfy the join condition.
+            superscript: 오른쪽 외부 조인
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/577_페이지
+            image: assets/img/db/right_join.png
+          - term: Full Outer Join
+            description: Includes all records of both tables and returns NULL for records that do not satisfy the join condition.
+            superscript: 전체 외부 조인
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/577_페이지
+            image: assets/img/db/full_join.png
+          - term: View
+            description: A virtual table created from the result of a SELECT statement. It exposes only part of the stored data to strengthen security and simplify complex queries.
+            superscript: 뷰
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/584_페이지
+          - term: Index
+            description: A data structure used to speed up searches on a table, enabling efficient lookups over large amounts of data.
+            superscript: 인덱스
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/587_페이지
+            image: assets/img/db/index.png
+          - term: Clustered Index
+            description: Only one can be created per table; it sorts the physical order of the table to match the index order.
+            superscript: 클러스터형 인덱스
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/588_페이지
+          - term: Secondary Index
+            description: An index that can be created in addition to the clustered index; unlike the clustered index, it does not change the table's physical order.
+            superscript: 세컨더리 인덱스
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/588_페이지
+      - subtitle: 데이터베이스 설계
+        items:
+          - term: ER Diagram
+            description: A diagram that models the structure of the entities stored in a database, depicting entities, attributes, and relationships.
+            superscript: ER 다이어그램
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/594 페이지
+          - term: Peter Chen Notation
+            description: A traditional ERD notation that expresses entities and relationships as a diagram.
+            superscript: 피터 첸 표기법
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/595 페이지
+            image: assets/img/db/peterchen.png
+          - term: IE Notation
+            description: Information Engineering notation that intuitively expresses relationships between tables.
+            superscript: IE 표기법
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/596 페이지
+            image: assets/img/db/ie.png
+          - term: Identifying Relationship
+            description: A relationship in which the referencing entity can exist only if the referenced entity exists.
+            superscript: 식별 관계
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/596 페이지
+          - term: Non-Identifying Relationship
+            description: A relationship in which the referencing entity can exist even if the referenced entity does not.
+            superscript: 비식별 관계
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/596 페이지
+          - term: Normalization
+            description: The process of decomposing tables during database design to minimize data redundancy and maintain consistency.
+            superscript: 정규화
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/597 페이지
+            image: assets/img/db/normalization.png
+          - term: First Normal Form (1NF)
+            description: Organizing a table so that every attribute holds an atomic value.
+            superscript: 제 1 정규화
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/599 페이지
+          - term: Second Normal Form (2NF)
+            description: Organizing a table so that every non-key attribute is fully dependent on the entire primary key.
+            superscript: 제 2 정규화
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/600 페이지
+          - term: Third Normal Form (3NF)
+            description: Organizing a table so that no non-key attribute is transitively dependent on the primary key.
+            superscript: 제 3 정규화
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/602 페이지
+          - term: Boyce-Codd Normal Form (BCNF)
+            description: Organizing a table so that, while satisfying 3NF, every determinant is a candidate key.
+            superscript: 보이스/코드 정규화
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/603 페이지
+          - term: Partial Functional Dependency
+            description: A field dependent on only part of the primary key.
+            superscript: 부분 함수 종속성
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/600 페이지
+          - term: Full Functional Dependency
+            description: A field dependent on the entire primary key.
+            superscript: 완전 함수 종속성
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/600 페이지
+          - term: Transitive Functional Dependency
+            description: A relationship in which a non-key field depends on yet another field.
+            superscript: 이행 함수 종속성
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/602 페이지
+          - term: Denormalization
+            description: The process of recombining normalized tables to improve performance.
+            superscript: 역정규화
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/604 페이지
+      - subtitle: NoSQL
+        items:
+          - term: Key-Value Database
+            description: A database that stores records as key-value pairs, enabling fast data access.
+            superscript: 키-값 데이터베이스
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/605_페이지
+          - term: In-Memory Database
+            description: A database that stores data in memory rather than secondary storage to provide fast access speeds.
+            superscript: 인-메모리 데이터베이스
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/605_페이지
+          - term: Document Database
+            description: A database that stores and manages records in units called documents, storing data in JSON or BSON form.
+            superscript: 도큐먼트 데이터베이스
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/606_페이지
+          - term: Graph Database
+            description: A database that stores data as graph nodes, efficiently managing complex relational data.
+            superscript: 그래프 데이터베이스
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/607_페이지
+          - term: Column-Family Database
+            description: A database that stores data by column, efficiently managing large amounts of data.
+            superscript: 칼럼 패밀리 데이터베이스
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/607_페이지
+          - term: Database Partitioning
+            description: A technique that physically splits a table to efficiently manage a database in a distributed environment.
+            superscript: 데이터베이스 분할
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/621_페이지
+            image: assets/img/db/db_partitioning.png
+          - term: Horizontal Partitioning
+            description: Dividing and storing a table by its rows to efficiently manage only a portion of the data.
+            superscript: 수평적 분할
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/621_페이지
+          - term: Vertical Partitioning
+            description: Dividing and storing a table by its columns to efficiently manage only specific parts of the data.
+            superscript: 수직적 분할
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/621_페이지
+          - term: Range Partitioning
+            description: Defining the range of values records can have and dividing the table based on those ranges.
+            superscript: 범위 분할
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/622_페이지
+          - term: List Partitioning
+            description: Splitting records into separate tables when their data contains values belonging to a specific list.
+            superscript: 목록 분할
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/623_페이지
+          - term: Hash Partitioning
+            description: Partitioning a table based on the hash value of a specific column to distribute data evenly.
+            superscript: 해시 분할
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/624_페이지
+          - term: Key Partitioning
+            description: Partitioning a table based on a specific key to manage data efficiently.
+            superscript: 키 분할
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/624_페이지
+          - term: Sharding
+            description: A technique that distributes partitioned tables across separate database servers to efficiently manage large-scale data.
+            superscript: 샤딩
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/625_페이지
+            image: assets/img/db/sharding.png
+          - term: Shard
+            description: Each unit of a database divided through sharding; each shard operates as an independent database.
+            superscript: 샤드
+            references:
+              - 이것이_취업을_위한_컴퓨터과학이다/625_페이지

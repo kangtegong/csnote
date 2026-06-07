@@ -1,0 +1,1514 @@
+sections:
+  - title: 컴퓨터 구조
+    content:
+      - subtitle: 컴퓨터 구조 시작하기
+        content:
+          - subsubtitle: 컴퓨터 구조의 큰 그림
+            items:
+              - term: Data
+                description: Static information that the computer understands, such as numbers, text, images, and video.
+                superscript: 데이터
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/37_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/37_페이지
+              - term: Instruction
+                description: Information that uses data to operate the CPU.
+                superscript: 명령어
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/37_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/36_페이지
+              - term: Main Memory
+                description: A component that stores the instructions and data of the currently running program. The hardware used includes RAM (Random Access Memory) and ROM (Read Only Memory), and the term 'memory' usually refers to RAM.
+                superscript: 메인 메모리
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/40_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/39_페이지
+                image: assets/img/arch/memory.png
+              - term: Central Processing Unit (CPU)
+                description: A component that reads instructions stored in memory, interprets them, and executes them.
+                superscript: 중앙처리장치(CPU)
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/41_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/38_페이지
+                image: assets/img/arch/cpu.png
+              - term: Arithmetic Logic Unit (ALU)
+                description: One of the CPU's internal components; a component (a calculation circuit) that exists for computations such as addition, subtraction, multiplication, division, and logical operations.
+                superscript: 산술논리연산장치(ALU)
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/42_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/38_페이지
+              - term: Register
+                description: One of the CPU's internal components; a small temporary storage device inside the CPU. It temporarily stores the values needed to run a program, and the CPU contains several registers, each with a different name and role.
+                superscript: 레지스터
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/42_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/38_페이지
+              - term: Control Unit
+                description: One of the CPU's internal components; a device that sends out electrical signals called control signals and interprets instructions.
+                superscript: 제어장치
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/42_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/38_페이지
+              - term: Secondary Storage
+                description: Storage devices such as hard disks, SSDs, USB memory, DVDs, and CD-ROMs that are larger than memory and do not lose their contents when the power is off. While memory stores the currently running program, secondary storage stores programs to be kept.
+                superscript: 보조기억장치
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/45_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/40_페이지
+                image: assets/img/arch/storage.png
+              - term: I/O Device
+                description: Devices connected to the outside of the computer that exchange information with its interior, such as microphones, speakers, printers, mice, and keyboards.
+                superscript: 입출력장치
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/46_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/41_페이지
+                image: assets/img/arch/io.png
+              - term: Peripheral Device
+                description: A collective term for secondary storage and I/O devices.
+                superscript: 주변 장치
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/41_페이지
+              - term: System Bus
+                description: The path through which the computer's four core components (CPU, memory, secondary storage, and I/O devices) exchange information. It consists of the address bus, data bus, and control bus.
+                superscript: 시스템 버스
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/47_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/42_페이지
+              - term: Address Bus
+                description: The path for exchanging addresses.
+                superscript: 주소 버스
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/48_페이지
+              - term: Data Bus
+                description: The path for exchanging instructions and data.
+                superscript: 데이터 버스
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/48_페이지
+              - term: Control Bus
+                description: The path for exchanging control signals.
+                superscript: 제어 버스
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/48_페이지
+      - subtitle: 데이터
+        content:
+          - subsubtitle: 0과 1로 숫자를 표현하는 방법
+            items:
+              - term: Bit
+                description: The smallest unit of information, representing 0 and 1.
+                superscript: 비트
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/55_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/45_페이지
+              - term: Byte
+                description: A unit grouping 8 bits, one step larger than a bit.
+                superscript: 바이트
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/56_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/46_페이지
+              - term: Word
+                description: The size of data the CPU can process at one time.
+                superscript: 워드
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/56_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/46_페이지
+              - term: Half Word
+                description: Half the size of a word.
+                superscript: 하프워드
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/56_페이지
+              - term: Full Word
+                description: One times the size of a word.
+                superscript: 풀 워드
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/56_페이지
+              - term: Double Word
+                description: Twice the size of a word.
+                superscript: 더블 워드
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/56_페이지
+              - term: Binary (Notation)
+                description: A method of representing all numbers with only 0 and 1, carrying over when the value exceeds 1.
+                superscript: 이진법
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/57_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/46_페이지
+              - term: Decimal (Notation)
+                description: A method of representing all numbers with only ten digits from 0 to 9, carrying over when a digit exceeds 9.
+                superscript: 십진법
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/57_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/46_페이지
+              - term: Binary Number
+                description: A number expressed in binary.
+                superscript: 이진수
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/57_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/46_페이지
+              - term: Decimal Number
+                description: A number expressed in decimal.
+                superscript: 십진수
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/57_페이지
+              - term: One's Complement
+                description: A number obtained by flipping all the 0s and 1s of a binary number.
+                superscript: 1의 보수
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/59_페이지
+              - term: Two's Complement
+                description: A value obtained by subtracting a number from the next larger 2^n (= flipping all 0s and 1s and adding 1).
+                superscript: 2의 보수
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/58_페이지
+              - term: Flag
+                description: Additional information the CPU must consider while processing an instruction (e.g., sign flag, zero flag, carry flag, overflow flag, interrupt flag).
+                superscript: 플래그
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/59_페이지
+              - term: Hexadecimal (Notation)
+                description: A number representation that carries over when the value exceeds 15. The decimal numbers 10, 11, 12, 13, 14, and 15 are written as A, B, C, D, E, and F in hexadecimal.
+                superscript: 십육진법
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/60_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/47_페이지
+              - term: Floating Point
+                description: A method of representing real numbers inside a computer, consisting of a sign bit, an exponent part, and a mantissa part.
+                superscript: 부동 소수점
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/48_페이지
+                image: assets/img/arch/floatingpoint.png
+          - subsubtitle: 0과 1로 문자를 표현하는 방법
+            items:
+              - term: Character Set
+                description: The collection of characters a computer can recognize and represent.
+                superscript: 문자 집합
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/67_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/51_페이지
+              - term: Character Encoding
+                description: A method of converting characters into a code the computer can understand.
+                superscript: 문자 인코딩
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/67_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/51_페이지
+              - term: Character Decoding
+                description: A method of converting a character code made of 0s and 1s into characters a human can understand (the reverse of encoding).
+                superscript: 문자 디코딩
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/67_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/51_페이지
+              - term: ASCII (American Standard Code for Information Interchange)
+                description: An early character set including the English alphabet, Arabic numerals, and some special characters.
+                superscript: 아스키
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/68_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/51_페이지
+              - term: ASCII Character
+                description: A character belonging to the ASCII character set.
+                superscript: 아스키 문자
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/68_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/52_페이지
+              - term: ASCII Code
+                description: A unique number corresponding to an ASCII character. ASCII characters map one-to-one to one of the 128 numbers from 0 to 127.
+                superscript: 아스키 코드
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/69_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/52_페이지
+              - term: Code Point
+                description: The unique value assigned to a character.
+                superscript: 코드 포인트
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/69_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/53_페이지
+              - term: Extended ASCII
+                description: An 8-bit character set that adds 1 bit to ASCII code to represent a wider variety of characters than standard ASCII.
+                superscript: 확장 아스키
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/69_페이지
+              - term: EUC-KR
+                description: A precomposed encoding scheme that can encode Hangul in 2 bytes.
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/70_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/53_페이지
+                superscript: EUC-KR
+              - term: Hangul Precomposed Encoding
+                description: An encoding scheme that assigns a unique code to each fully composed character made of a combination of initial, medial, and final jamo.
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/70_페이지
+                superscript: 한글 완성형 인코딩
+              - term: Hangul Combinational Encoding
+                description: An encoding scheme that allocates bit strings for the initial, medial, and final components and completes one character code from their combination.
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/70_페이지
+                superscript: 한글 조합형 인코딩
+              - term: Code Page 949 (CP949)
+                description: An extended version of EUC-KR that represents an even wider variety of characters that EUC-KR cannot.
+                superscript: CP949
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/71_페이지
+              - term: Unicode
+                description: A unified character set that can broadly represent the characters of many countries; UTF-8, UTF-16, and UTF-32 are encoding schemes for Unicode characters.
+                superscript: 유니코드
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/72_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/54_페이지
+              - term: Unicode Transformation Format (UTF)
+                description: A method of encoding Unicode. A variable-length encoding; UTF-8, UTF-16, and UTF-32 are representative examples.
+                superscript: UTF
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/73_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/56_페이지
+              - term: Base64
+                description: A base-64 encoding scheme that converts binary data such as images into ASCII-based strings.
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/57_페이지
+                superscript: Base64
+      - subtitle: 명령어
+        content:
+          - subsubtitle: 소스 코드와 명령어
+            items:
+              - term: High-Level Programming Language
+                description: A language designed to be easy for humans to understand and write.
+                superscript: 고급 언어
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/79_페이지
+              - term: Low-Level Programming Language
+                description: A language a computer can directly understand and execute (e.g., machine code, assembly language).
+                superscript: 저급 언어
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/79_페이지
+              - term: Machine Code
+                description: A language made of instruction bits of 0s and 1s.
+                superscript: 기계어
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/79_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/62_페이지
+              - term: Assembly Language
+                description: A language that translates instructions expressed in 0s and 1s (machine code) into a more readable form.
+                superscript: 어셈블리어
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/80_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/62_페이지
+              - term: Compiled Language
+                description: A programming language that works through compilation; a high-level language whose entire source code is converted to a low-level language by a compiler before execution.
+                superscript: 컴파일 언어
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/83_페이지
+              - term: Interpreted Language
+                description: A programming language that works through interpretation.
+                superscript: 인터프리터 언어
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/83_페이지
+              - term: Compile
+                description: The process of converting source code written in a compiled language into a low-level language.
+                superscript: 컴파일
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/84_페이지
+              - term: Compiler
+                description: A tool that compiles source code into a low-level language from start to finish.
+                superscript: 컴파일러
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/84_페이지
+              - term: Object Code
+                description: Code converted into a low-level language by a compiler.
+                superscript: 목적 코드
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/84_페이지
+              - term: Interpreter
+                description: A tool that converts source code into a low-level language line by line and executes it.
+                superscript: 인터프리터
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/84_페이지
+              - term: Object File
+                description: A file made of object code.
+                superscript: 목적 파일
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/87_페이지
+              - term: Executable File
+                description: A file made of executable code produced through linking.
+                superscript: 실행 파일
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/87_페이지
+              - term: Linking
+                description: The process of combining several object files to produce an executable file.
+                superscript: 링킹
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/88_페이지
+          - subsubtitle: 명령어의 구조
+            items:
+              - term: Instruction Structure
+                description: Composed of an operation code and operands.
+                superscript: 명령어의 구조
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/91_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/59_페이지
+                image: assets/img/arch/instructionstructure.png
+              - term: Operation Code
+                description: The operation an instruction will perform (also called an operator).
+                superscript: 연산 코드
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/91_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/59_페이지
+              - term: Operand
+                description: The data to be used in an operation, or the location where such data is stored (also called the operand).
+                superscript: 오퍼랜드
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/91_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/59_페이지
+              - term: Operation Code Field
+                description: The region that holds an instruction's operation code.
+                superscript: 연산 코드 필드
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/91_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/60_페이지
+              - term: Operand Field
+                description: The region that holds an instruction's operand (also called the address field).
+                superscript: 오퍼랜드 필드
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/91_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/60_페이지
+              - term: Zero-Address Instruction
+                description: An instruction with no operands at all.
+                superscript: 0-주소 명령어
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/93_페이지
+              - term: One-Address Instruction
+                description: An instruction with one operand.
+                superscript: 1-주소 명령어
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/93_페이지
+              - term: Two-Address Instruction
+                description: An instruction with two operands.
+                superscript: 2-주소 명령어
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/93_페이지
+              - term: Three-Address Instruction
+                description: An instruction with three operands.
+                superscript: 3-주소 명령어
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/93_페이지
+              - term: Effective Address
+                description: The location where the data to be used by the operation code is stored, i.e., the location of the data that is the target of the operation.
+                superscript: 유효 주소
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/96_페이지
+              - term: Addressing Mode
+                description: A method of finding the location of the data to be used in an operation (= a method of finding the effective address).
+                superscript: 주소 지정 방식
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/97_페이지
+              - term: Immediate Addressing Mode
+                description: An addressing mode that specifies the data to be used in the operation directly in the operand field.
+                superscript: 즉시 주소 지정 방식
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/97_페이지
+              - term: Direct Addressing Mode
+                description: An addressing mode that specifies the effective address directly in the operand field.
+                superscript: 직접 주소 지정 방식
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/97_페이지
+              - term: Indirect Addressing Mode
+                description: An addressing mode that specifies the address of the effective address in the operand field.
+                superscript: 간접 주소 지정 방식
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/98_페이지
+              - term: Register Addressing Mode
+                description: An addressing mode that specifies, directly in the operand field, the register holding the data to be used in the operation.
+                superscript: 레지스터 주소 지정 방식
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/98_페이지
+              - term: Register Indirect Addressing Mode
+                description: An addressing mode that stores the data to be used in memory and specifies, in the operand field, the register holding that (effective) address.
+                superscript: 레지스터 간접 주소 지정 방식
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/99_페이지
+              - term: Stack
+                description: A data structure like a container blocked at one end; also called a LIFO data structure.
+                superscript: 스택
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/100_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/61_페이지
+              - term: Last In First Out (LIFO)
+                description: A data management scheme that removes the most recently stored data first.
+                superscript: LIFO
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/100_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/61_페이지
+              - term: Queue
+                description: A data structure that stores data on one side and removes it from the other in the order it was stored; also called a FIFO data structure.
+                superscript: 큐
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/100_페이지
+              - term: First In First Out (FIFO)
+                description: A data management scheme that removes the earliest stored data first.
+                superscript: FIFO
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/100_페이지
+      - subtitle: CPU의 작동 원리
+        content:
+          - subsubtitle: ALU와 제어장치
+            items:
+              - term: ALU
+                description: A component of the CPU responsible for computation. It receives operands through registers and a control signal indicating the operation to perform from the control unit, and sends out the result value and flags.
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/105_페이지
+                superscript: ALU
+              - term: Flag
+                description: Additional status information about the result of an operation.
+                superscript: 플래그
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/106_페이지
+              - term: Sign Flag
+                description: A flag indicating the sign of an operation's result.
+                superscript: 부호 플래그
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/106_페이지
+              - term: Zero Flag
+                description: A flag indicating whether an operation's result is 0.
+                superscript: 제로 플래그
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/106_페이지
+              - term: Carry Flag
+                description: A flag indicating whether a carry or borrow occurred as a result of an operation.
+                superscript: 캐리 플래그
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/106_페이지
+              - term: Overflow Flag
+                description: A flag indicating whether overflow occurred.
+                superscript: 오버플로우 플래그
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/106_페이지
+              - term: Interrupt Flag
+                description: A flag indicating whether interrupts are enabled.
+                superscript: 인터럽트 플래그
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/106_페이지
+              - term: Supervisor Flag
+                description: A flag indicating whether execution is in kernel mode or user mode.
+                superscript: 슈퍼바이저 플래그
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/106_페이지
+              - term: Overflow
+                description: A situation where an operation's result is larger than the register meant to hold it.
+                superscript: 오버플로우
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/106_페이지
+              - term: Flag Register
+                description: A register that stores flag values.
+                superscript: 플래그 레지스터
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/106_페이지
+              - term: Control Unit
+                description: A component of the CPU that sends out control signals and interprets instructions. It receives the clock, the current instruction to perform, flags, and control signals.
+                superscript: 제어장치
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/107_페이지
+              - term: Control Signal
+                description: A kind of electrical signal for managing and operating the computer's components.
+                superscript: 제어 신호
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/107_페이지
+              - term: Clock
+                description: A time unit, in GHz, that operates the computer's components.
+                superscript: 클럭
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/108_페이지
+          - subsubtitle: 레지스터
+            items:
+              - term: Program Counter (PC)
+                description: A register that stores the address of the instruction to fetch from memory, i.e., the address of the instruction to be read from memory.
+                superscript: 프로그램 카운터
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/113_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/67_페이지
+              - term: Instruction Pointer (IP)
+                description: A synonym for the program counter.
+                superscript: 명령어 포인터
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/113_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/67_페이지
+              - term: Instruction Register (IR)
+                description: A register that stores the instruction to interpret, i.e., the instruction just read from memory.
+                superscript: 명령어 레지스터
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/113_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/68_페이지
+              - term: Memory Address Register (MAR)
+                description: A register that stores a memory address.
+                superscript: 메모리 주소 레지스터
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/114_페이지
+              - term: Memory Buffer Register (MBR)
+                description: A register that stores values (data and instructions) to be exchanged with memory; values to be written to or received from memory pass through it.
+                superscript: 메모리 버퍼 레지스터
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/114_페이지
+              - term: Memory Data Register (MDR)
+                description: A synonym for the memory buffer register.
+                superscript: 메모리 데이터 레지스터
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/114_페이지
+              - term: General Purpose Register
+                description: A register that can be freely used in various general situations.
+                superscript: 범용 레지스터
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/118_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/68_페이지
+              - term: Flag Register
+                description: A register that stores additional information (flags) about operation results or the CPU state.
+                superscript: 플래그 레지스터
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/118_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/68_페이지
+              - term: Stack Pointer
+                description: A register that points to the top of the stack, storing the location of the last value pushed onto the stack.
+                superscript: 스택 포인터
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/119_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/69_페이지
+              - term: Stack Addressing Mode
+                description: An addressing mode that uses the stack and the stack pointer.
+                superscript: 스택 주소 지정 방식
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/119_페이지
+              - term: Displacement Addressing Mode
+                description: An addressing mode that obtains the effective address by adding the operand field value (displacement) and the value of a specific register.
+                superscript: 변위 주소 지정 방식
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/120_페이지
+              - term: Relative Addressing Mode
+                description: An addressing mode that obtains the effective address by adding the operand and the value of the program counter.
+                superscript: 상대 주소 지정 방식
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/121_페이지
+              - term: Base-Register Addressing Mode
+                description: An addressing mode that obtains the effective address by adding the operand and the value of the base register.
+                superscript: 베이스 레지스터 주소 지정 방식
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/122_페이지
+          - subsubtitle: 명령어 사이클과 인터럽트
+            items:
+              - term: Instruction Cycle
+                description: The cycle in which each instruction in a program is repeatedly and regularly executed.
+                superscript: 명령어 사이클
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/127_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/64_페이지
+                image: assets/img/arch/instructioncycle.png
+              - term: Fetch Cycle
+                description: The stage of bringing an instruction in memory to the CPU.
+                superscript: 인출 사이클
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/127_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/64_페이지
+              - term: Execution Cycle
+                description: The stage of executing the instruction brought to the CPU.
+                superscript: 실행 사이클
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/127_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/64_페이지
+              - term: Indirect Cycle
+                description: The stage of performing additional memory access to execute an instruction.
+                superscript: 간접 사이클
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/128_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/64_페이지
+              - term: Interrupt
+                description: A signal that disrupts the CPU's normal work.
+                superscript: 인터럽트
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/129_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/70_페이지
+              - term: Synchronous Interrupt
+                description: An interrupt raised by the CPU.
+                superscript: 동기 인터럽트
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/129_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/70_페이지
+              - term: Exception
+                description: Another word for a synchronous interrupt.
+                superscript: 예외
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/129_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/70_페이지
+              - term: Asynchronous Interrupt
+                description: An interrupt raised mainly by I/O devices; used so the CPU can process instructions efficiently during I/O operations.
+                superscript: 비동기 인터럽트
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/130_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/70_페이지
+              - term: Hardware Interrupt
+                description: Another word for an asynchronous interrupt.
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/131_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/71_페이지
+                superscript: 하드웨어 인터럽트
+              - term: Interrupt Request (IRQ) Signal
+                description: A signal sent to the CPU to check whether an interrupt is possible.
+                superscript: 인터럽트 요청 신호
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/132_페이지
+              - term: Interrupt Flag (IF)
+                description: A flag that decides whether to accept or ignore a hardware interrupt.
+                superscript: 인터럽트 플래그
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/133_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/72_페이지
+              - term: Interrupt Service Routine (ISR)
+                description: A program for handling an interrupt.
+                superscript: 인터럽트 서비스 루틴
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/133_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/72_페이지
+                image: assets/img/arch/interrupt.png
+              - term: Interrupt Handler
+                description: Another word for an interrupt service routine.
+                superscript: 인터럽트 핸들러
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/133_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/72_페이지
+              - term: Interrupt Vector
+                description: Information for identifying an interrupt service routine.
+                superscript: 인터럽트 벡터
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/134_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/74_페이지
+              - term: Fault
+                description: A kind of exception in which execution resumes from the instruction where the exception occurred, right after the exception is handled (e.g., page fault).
+                superscript: 폴트
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/138_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/77_페이지
+              - term: Trap
+                description: A kind of exception in which execution resumes from the instruction after the one where the exception occurred, right after the exception is handled (e.g., debugging breakpoint).
+                superscript: 트랩
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/139_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/77_페이지
+              - term: Debugging
+                description: The task of diagnosing and resolving problems that arise during program development.
+                superscript: 디버깅
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/139_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/77_페이지
+              - term: Abort
+                description: A kind of exception that occurs when the CPU detects a serious error that forces it to halt the running program.
+                superscript: 중단
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/139_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/78_페이지
+              - term: Software Interrupt
+                description: A kind of software interrupt that occurs when a system call is invoked.
+                superscript: 소프트웨어 인터럽트
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/139_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/78_페이지
+      - subtitle: CPU 성능 향상 기법
+        content:
+          - subsubtitle: 빠른 CPU를 위한 설계 기법
+            items:
+              - term: Clock
+                description: A time unit, in GHz, that synchronizes the computer's components.
+                superscript: 클럭
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/146_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/78_페이지
+              - term: Overclocking
+                description: A technique that forcibly raises the maximum clock speed even higher.
+                superscript: 오버클럭킹
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/146_페이지
+              - term: Core
+                description: A component that contains multiple components for executing instructions.
+                superscript: 코어
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/147_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/79_페이지
+              - term: Multi-Core (CPU)
+                description: A CPU that contains multiple cores.
+                superscript: 멀티코어 CPU
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/147_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/80_페이지
+              - term: Multi-Core Processor
+                description: A CPU that contains multiple cores.
+                superscript: 멀티코어 프로세서
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/147_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/80_페이지
+              - term: Thread
+                description: A unit of execution flow. There are hardware threads and software threads.
+                superscript: 스레드
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/148_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/80_페이지
+              - term: Hardware Thread
+                description: A unit of instructions that a single core processes simultaneously.
+                superscript: 하드웨어적 스레드
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/149_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/80_페이지
+              - term: Multithread Processor
+                description: A CPU that processes multiple instructions simultaneously with a single core.
+                superscript: 멀티스레드 프로세서
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/149_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/80_페이지
+              - term: Multithread CPU
+                description: A CPU that supports multiple hardware threads.
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/149_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/80_페이지
+                superscript: 멀티스레드 CPU
+              - term: Hyper-Threading
+                description: Intel's multithreading technology.
+                superscript: 하이퍼스레딩
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/149_페이지
+              - term: Software Thread
+                description: A unit that executes independently within a single program.
+                superscript: 소프트웨어적 스레드
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/150_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/81_페이지
+              - term: Logical Processor
+                description: Another word for a hardware thread.
+                superscript: 논리 프로세서
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/152_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/81_페이지
+              - term: Parallelism
+                description: The property of physically processing tasks simultaneously.
+                superscript: 병렬성
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/84_페이지
+                image: assets/img/arch/parallelism.png
+              - term: Concurrency
+                description: The property of appearing to process tasks simultaneously.
+                superscript: 동시성
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/84_페이지
+                image: assets/img/arch/concurrency.png
+          - subsubtitle: 명령어 병렬 처리 기법
+            items:
+              - term: Instruction-Level Parallelism (ILP)
+                description: A technique that processes instructions simultaneously to keep the CPU working without rest.
+                superscript: 명령어 병렬 처리 기법
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/156_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/85_페이지
+              - term: Instruction Pipelining
+                description: An instruction-level parallelism technique that increases instruction processing speed by putting several instructions into an instruction pipeline and executing them in an overlapping manner.
+                superscript: 명령어 파이프라이닝
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/158_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/85_페이지
+                image: assets/img/arch/pipeline.png
+              - term: Pipeline Hazard
+                description: A case where pipelining fails to improve performance.
+                superscript: 파이프라인 위험
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/158_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/88_페이지
+              - term: Data Hazard
+                description: A pipeline hazard caused by data dependencies between instructions.
+                superscript: 데이터 위험
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/159_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/88_페이지
+              - term: Control Hazard
+                description: A pipeline hazard caused by a sudden change of the program counter due to branching and the like.
+                superscript: 제어 위험
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/159_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/88_페이지
+              - term: Branch Prediction
+                description: A technique that predicts in advance where a program will branch and fetches that address.
+                superscript: 분기 예측
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/160_페이지
+              - term: Structural Hazard
+                description: A pipeline hazard that occurs when different instructions try to use the same CPU component, such as the ALU or a register, at the same time while being executed in an overlapping manner.
+                superscript: 구조적 위험
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/160_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/88_페이지
+              - term: Resource Hazard
+                description: Another word for a structural hazard.
+                superscript: 자원 위험
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/160_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/89_페이지
+              - term: Superscalar
+                description: A structure that includes multiple instruction pipelines inside the CPU.
+                superscript: 슈퍼스칼라
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/160_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/86_페이지
+              - term: Superscalar Processor
+                description: A CPU capable of processing instructions with a superscalar structure.
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/161_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/86_페이지
+                superscript: 슈퍼스칼라 프로세서
+              - term: Superscalar CPU
+                description: A CPU capable of processing instructions with a superscalar structure.
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/161_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/86_페이지
+                superscript: 슈퍼스칼라 CPU
+              - term: Out-of-Order Execution (OoOE)
+                description: A technique that prevents the instruction pipeline from stalling by not executing instructions strictly in order, instead executing first those instructions whose order can safely be changed.
+                superscript: 비순차적 명령어 처리 기법
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/163_페이지
+          - subsubtitle: CISC와 RISC
+            items:
+              - term: Instruction Set Architecture (ISA)
+                description: The collection of instructions the CPU can understand.
+                superscript: 명령어 집합 구조
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/167_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/87_페이지
+              - term: CISC (Complex Instruction Set Computer)
+                description: An instruction set that uses a complex instruction set; it uses a complex, varied set of variable-length instructions.
+                superscript: CISC
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/170_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/87_페이지
+              - term: Variable-Length Instruction
+                description: An instruction of varied form and size.
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/170_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/87_페이지
+                superscript: 가변 길이 명령어
+              - term: RISC (Reduced Instruction Set Computer)
+                description: An instruction set that is standardized and in which one instruction executes in roughly one clock cycle. It uses a short, standardized instruction set, is advantageous for instruction pipelining, and is also called a load-store architecture.
+                superscript: RISC
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/172_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/87_페이지
+      - subtitle: 메모리와 캐시 메모리
+        content:
+          - subsubtitle: RAM의 특징과 종류
+            items:
+              - term: RAM (Random Access Memory)
+                description: A volatile storage device used as main memory.
+                superscript: RAM
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/179_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/90_페이지
+              - term: Volatile Memory
+                description: A storage device whose stored contents disappear when the power is turned off.
+                superscript: 휘발성 저장 장치
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/179_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/90_페이지
+              - term: Non-Volatile Memory
+                description: A storage device that retains its stored contents even when the power is off; secondary storage is a representative non-volatile storage device.
+                superscript: 비휘발성 저장 장치
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/179_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/90_페이지
+              - term: Random Access
+                description: A scheme that directly accesses an arbitrary location rather than accessing stored elements sequentially.
+                superscript: 임의 접근
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/90_페이지
+              - term: Sequential Access
+                description: A scheme that accesses stored elements sequentially.
+                superscript: 순차 접근
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/91_페이지
+              - term: Direct Access
+                description: Another name for random access.
+                superscript: 직접 접근
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/90_페이지
+              - term: DRAM (Dynamic RAM)
+                description: RAM whose stored data changes (disappears) dynamically.
+                superscript: DRAM
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/181_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/91_페이지
+              - term: SRAM (Static RAM)
+                description: RAM whose stored data does not change.
+                superscript: SRAM
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/182_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/91_페이지
+              - term: SDRAM (Synchronous Dynamic RAM)
+                description: DRAM synchronized with a clock signal.
+                superscript: SDRAM
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/182_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/92_페이지
+              - term: DDR SDRAM (Double Data Rate SDRAM)
+                description: SDRAM made faster by widening the bandwidth.
+                superscript: DDR SDRAM
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/183_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/92_페이지
+              - term: Bandwidth (Data Rate)
+                description: The width of the transmission path for exchanging data.
+                superscript: 대역폭
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/183_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/92_페이지
+              - term: SDR SDRAM (Single Data Rate SDRAM)
+                description: SDRAM that can exchange one piece of data per clock cycle.
+                superscript: SDR SDRAM
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/183_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/92_페이지
+              - term: DDR2 SDRAM
+                description: SDRAM with twice the bandwidth of DDR SDRAM.
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/183_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/92_페이지
+                superscript: DDR2 SDRAM
+              - term: DDR3 SDRAM
+                description: SDRAM with twice the bandwidth of DDR2 SDRAM.
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/183_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/92_페이지
+                superscript: DDR3 SDRAM
+              - term: Big-Endian
+                description: A memory storage scheme that stores the most significant byte first at the lowest address.
+                superscript: 빅 엔디안
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/93_페이지
+                image: assets/img/arch/bigendian.png
+              - term: Little-Endian
+                description: A memory storage scheme that stores the least significant byte first at the lowest address.
+                superscript: 리틀 엔디안
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/91_페이지
+                image: assets/img/arch/littleendian.png
+              - term: Bi-Endian
+                description: A scheme that selects and uses either big-endian or little-endian.
+                superscript: 바이 엔디안
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/95_페이지
+              - term: Most Significant Bit (MSB)
+                description: The highest-order bit, the digit that has the greatest effect on a number's magnitude.
+                superscript: MSB
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/95_페이지
+              - term: Least Significant Bit (LSB)
+                description: The lowest-order bit, the digit that has the smallest effect on a number's magnitude.
+                superscript: LSB
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/95_페이지
+          - subsubtitle: 메모리의 주소 공간
+            items:
+              - term: Physical Address
+                description: The address on the memory hardware where information is actually stored.
+                superscript: 물리 주소
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/187_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/205_페이지
+              - term: Logical Address
+                description: An address starting from 0 assigned to each running program; the address used by the CPU and the running program.
+                superscript: 논리 주소
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/187_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/205_페이지
+                image: assets/img/os/logical_address.png
+              - term: Memory Management Unit (MMU)
+                description: Hardware that performs conversion between logical and physical addresses.
+                superscript: 메모리 관리 장치 (MMU)
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/189_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/205_페이지
+                image: assets/img/os/mmu.png
+              - term: Base Register
+                description: A register that stores the smallest physical address of a program.
+                superscript: 베이스 레지스터
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/190_페이지
+              - term: Limit Register
+                description: A register that stores the maximum size of the logical address to prevent executing instructions that exceed the logical address range.
+                superscript: 한계 레지스터
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/191_페이지
+          - subsubtitle: 캐시 메모리
+            items:
+              - term: Memory Hierarchy
+                description: A structure that represents storage devices hierarchically based on their distance from the CPU; a structure that layers storage devices of different capacities and performance.
+                superscript: 저장 장치 계층 구조
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/197_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/43_페이지
+                image: assets/img/arch/memoryhierarchy.png
+              - term: Cache Memory
+                description: An SRAM-based storage device located between the CPU and memory, larger than a register and faster than memory; it exists to reduce the CPU's memory access time.
+                superscript: 캐시 메모리
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/198_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/97_페이지
+              - term: L1 Cache (Level 1)
+                description: The cache memory closest to the core.
+                superscript: L1 캐시
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/199_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/97_페이지
+              - term: L2 Cache (Level 2)
+                description: The cache memory next closest to the core after the L1 cache.
+                superscript: L2 캐시
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/199_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/97_페이지
+              - term: L3 Cache (Level 3)
+                description: The cache memory next closest to the core after the L2 cache.
+                superscript: L3 캐시
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/199_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/98_페이지
+              - term: Split Cache
+                description: An L1 cache memory split into an L1I cache that stores only instructions and an L1D cache that stores only data.
+                superscript: 분리형 캐시
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/200_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/99_페이지
+              - term: Cache Hit
+                description: A situation where data predicted to be frequently used is actually correct, so the data in the cache memory is used by the CPU.
+                superscript: 캐시 히트
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/201_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/99_페이지
+              - term: Cache Miss
+                description: A situation where data was stored in the cache memory expecting frequent use, but the prediction was wrong, so the needed data must be fetched directly from memory.
+                superscript: 캐시 미스
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/202_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/99_페이지
+              - term: Cache Hit Rate
+                description: The proportion of cache hits; a high cache hit rate reduces the CPU's number of memory accesses. Cache hits / (cache hits + cache misses).
+                superscript: 캐시 적중률
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/202_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/100_페이지
+              - term: Locality of Reference (Principle of Locality)
+                description: 'A principle based on the CPU''s main tendencies when accessing memory: 1) the CPU tends to access memory space it recently accessed again, and 2) the CPU tends to access space near the memory space it accessed.'
+                superscript: 참조 지역성의 원리
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/202_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/100_페이지
+              - term: Temporal Locality
+                description: The tendency to access recently accessed memory space again (e.g., variables).
+                superscript: 시간 지역성
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/203_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/100_페이지
+              - term: Spatial Locality
+                description: The tendency to access space near accessed memory space (e.g., arrays).
+                superscript: 공간 지역성
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/204_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/101_페이지
+              - term: Write-Through
+                description: A cache memory write policy that writes to memory immediately as soon as a value is written to the cache.
+                superscript: 즉시 쓰기
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/104_페이지
+                image: assets/img/arch/writethrough.png
+              - term: Write-Back
+                description: A cache memory write policy that writes values only to the cache and later reflects the data to memory all at once.
+                superscript: 지연 쓰기
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/104_페이지
+                image: assets/img/arch/writeback.png
+      - subtitle: 보조기억장치
+        content:
+          - subsubtitle: 다양한 보조기억장치
+            items:
+              - term: Hard Disk Drive (HDD)
+                description: A secondary storage device that stores data magnetically.
+                superscript: 하드 디스크
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/209_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/107_페이지
+                image: assets/img/arch/harddisk.png
+              - term: Platter
+                description: The round disk on which data is actually stored in a hard disk.
+                superscript: 플래터
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/209_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/107_페이지
+              - term: Spindle
+                description: The component that rotates the platter.
+                superscript: 스핀들
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/209_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/107_페이지
+              - term: Revolutions Per Minute (RPM)
+                description: Revolutions per minute; a unit used to express the speed at which the spindle turns the platter.
+                superscript: RPM
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/209_페이지
+              - term: Head
+                description: The component that reads and writes data on the platter.
+                superscript: 헤드
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/210_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/107_페이지
+              - term: Disk Arm
+                description: The component that moves the head to the desired location.
+                superscript: 디스크 암
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/210_페이지
+              - term: Track
+                description: One of the concentric circles when a platter is divided into many circles.
+                superscript: 트랙
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/210_페이지
+              - term: Sector
+                description: The smallest unit in which information is stored within a track.
+                superscript: 섹터
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/210_페이지
+              - term: Block
+                description: A unit that groups one or more sectors.
+                superscript: 블록
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/210_페이지
+              - term: Cylinder
+                description: A logical unit that connects the locations of the same track across multiple stacked platters.
+                superscript: 실린더
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/210_페이지
+              - term: Seek Time
+                description: The time to move the head to the track where the data to be accessed is stored.
+                superscript: 탐색 시간
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/211_페이지
+              - term: Rotational Latency
+                description: The time to rotate the platter to where the head is.
+                superscript: 회전 지연
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/212_페이지
+              - term: Transfer Time
+                description: The time to transfer data between the hard disk and the computer.
+                superscript: 전송 시간
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/212_페이지
+              - term: Packet
+                description: The basic transmission unit of a network.
+                superscript: 패킷
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/212_페이지
+              - term: Single-Head Disk
+                description: A hard disk with one head per side of the platter.
+                superscript: 단일 헤드 디스크
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/213_페이지
+              - term: Multiple-Head Disk
+                description: A hard disk with multiple heads, one per track.
+                superscript: 다중 헤드 디스크
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/213_페이지
+              - term: Fixed-Head Disk
+                description: A multiple-head disk that does not need to move its heads.
+                superscript: 고정 헤드 디스크
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/213_페이지
+              - term: Movable-Head Disk
+                description: A single-head disk that must move its head to where the data is.
+                superscript: 이동 헤드 디스크
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/213_페이지
+              - term: Flash Memory
+                description: A semiconductor-based secondary storage device that can read and write data electrically.
+                superscript: 플래시 메모리
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/214_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/107_페이지
+                image: assets/img/arch/ssd.png
+              - term: NAND Flash Memory
+                description: A storage device built on circuits (NAND gates) that perform the NAND operation.
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/214_페이지
+                superscript: NAND 플래시 메모리
+              - term: NOR Flash Memory
+                description: A storage device built on circuits (NOR gates) that perform the NOR operation.
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/214_페이지
+                superscript: NOR 플래시 메모리
+              - term: Cell
+                description: The smallest unit that stores data in flash memory.
+                superscript: 셀
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/214_페이지
+              - term: Single-Level Cell (SLC)
+                description: A flash memory type that can store 1 bit per cell; one cell can represent two pieces of information.
+                superscript: SLC 타입
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/214_페이지
+              - term: Multi-Level Cell (MLC)
+                description: A flash memory type that can store 2 bits per cell; one cell can represent four pieces of information.
+                superscript: MLC 타입
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/214_페이지
+              - term: Triple-Level Cell (TLC)
+                description: A flash memory type that can store 3 bits per cell; one cell can represent eight pieces of information.
+                superscript: TLC 타입
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/214_페이지
+              - term: Quad-Level Cell (QLC)
+                description: A flash memory type that can store 4 bits per cell.
+                superscript: QLC 타입
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/214_페이지
+              - term: Page
+                description: A unit grouping several cells in flash memory.
+                superscript: 페이지
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/217_페이지
+              - term: Block
+                description: A unit grouping several pages in flash memory.
+                superscript: 블록
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/217_페이지
+              - term: Plane
+                description: A unit grouping several blocks in flash memory.
+                superscript: 플레인
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/217_페이지
+              - term: Die
+                description: A unit grouping several planes in flash memory.
+                superscript: 다이
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/217_페이지
+              - term: Free State
+                description: A state in flash memory where no data is stored, so new data can be stored.
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/217_페이지
+                superscript: Free 상태
+              - term: Valid State
+                description: A state in flash memory where valid data is already stored.
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/217_페이지
+                superscript: Valid 상태
+              - term: Invalid State
+                description: A state in flash memory where invalid data, called garbage values, is stored.
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/217_페이지
+                superscript: Invalid 상태
+              - term: Garbage Collection
+                description: A feature that flash memory, including SSDs, provides to clean up garbage values; it copies only valid pages to a new block and then erases the old block to free up space.
+                superscript: 가비지 컬렉션
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/218_페이지
+          - subsubtitle: RAID의 정의와 종류
+            items:
+              - term: RAID (Redundant Array of Independent Disks)
+                description: A technology that uses multiple physical secondary storage devices (hard disks and SSDs) as if they were a single logical secondary storage device, for data safety or high performance.
+                superscript: RAID
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/221_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/108_페이지
+              - term: RAID Level
+                description: A way of configuring RAID.
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/221_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/108_페이지
+                superscript: RAID 레벨
+              - term: RAID 0
+                description: A RAID configuration that simply divides and stores data across multiple secondary storage devices.
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/222_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/109_페이지
+                image: assets/img/arch/raid0.png
+                superscript: RAID 0
+              - term: RAID 1
+                description: A RAID configuration that creates a copy.
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/224_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/109_페이지
+                image: assets/img/arch/raid1.png
+                superscript: RAID 1
+              - term: Mirroring
+                description: Another word for RAID 1.
+                superscript: 미러링
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/224_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/109_페이지
+              - term: RAID 4
+                description: A RAID configuration that, instead of creating a full copy like RAID 1, has a device storing information (parity) for detecting and recovering from errors.
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/225_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/110_페이지
+                image: assets/img/arch/raid4.png
+                superscript: RAID 4
+              - term: Parity (Bit)
+                description: Information used for error detection.
+                superscript: 패리티
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/225_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/110_페이지
+              - term: RAID 5
+                description: A RAID configuration that distributes parity information to resolve RAID 4's bottleneck problem.
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/226_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/111_페이지
+                image: assets/img/arch/raid5.png
+                superscript: RAID 5
+              - term: RAID 6
+                description: A RAID configuration that has two different parities.
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/227_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/111_페이지
+                image: assets/img/arch/raid6.png
+                superscript: RAID 6
+              - term: Nested RAID
+                description: A RAID configuration that mixes several RAID levels.
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/227_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/112_페이지
+                superscript: Nested RAID
+      - subtitle: 입출력장치
+        content:
+          - subsubtitle: 장치 컨트롤러와 장치 드라이버
+            items:
+              - term: Transfer Rate
+                description: A metric indicating the speed of data exchange.
+                superscript: 전송률
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/233_페이지
+              - term: Device Controller
+                description: A device that mediates the connection and communication between an I/O device and the CPU.
+                superscript: 장치 컨트롤러
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/234_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/113_페이지
+              - term: I/O Controller
+                description: Another word for a device controller.
+                superscript: 입출력 제어기
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/234_페이지
+              - term: I/O Module
+                description: Another word for a device controller.
+                superscript: 입출력 모듈
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/234_페이지
+              - term: Buffering
+                description: A method that stores data exchanged between high- and low-transfer-rate devices in a buffer to match their transfer rates; it gathers data little by little and sends it out all at once, or receives a lot at once and sends it out little by little.
+                superscript: 버퍼링
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/234_페이지
+              - term: Buffer
+                description: A space for temporarily storing data.
+                superscript: 버퍼
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/234_페이지
+              - term: Data Register
+                description: A register in the device controller that holds the data to be exchanged between the CPU and the I/O device.
+                superscript: 데이터 레지스터
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/236_페이지
+              - term: Status Register
+                description: A register in the device controller that stores status information, such as whether the I/O device is ready to perform I/O, whether the I/O operation is complete, and whether there is an error in the I/O device.
+                superscript: 상태 레지스터
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/236_페이지
+              - term: Control Register
+                description: A register in the device controller that stores control information and commands about what the I/O device should perform.
+                superscript: 제어 레지스터
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/236_페이지
+              - term: Device Driver
+                description: A program that detects and controls the operation of the device controller so it can exchange information with the computer's interior.
+                superscript: 장치 드라이버
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/236_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/114_페이지
+          - subsubtitle: 다양한 입출력 방법
+            items:
+              - term: Programmed I/O
+                description: An I/O method that controls I/O devices through instructions in a program.
+                superscript: 프로그램 입출력
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/241_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/114_페이지
+              - term: Memory-Mapped I/O
+                description: A kind of programmed I/O that treats the address space for accessing memory and the address space for accessing I/O devices as a single address space.
+                superscript: 메모리 맵 입출력
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/242_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/114_페이지
+              - term: Isolated I/O
+                description: A kind of programmed I/O that separates the address space for memory from the address space for I/O devices.
+                superscript: 고립형 입출력
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/243_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/114_페이지
+              - term: Interrupt-Driven I/O
+                description: An I/O method based on interrupts.
+                superscript: 인터럽트 기반 입출력
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/245_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/115_페이지
+              - term: Polling
+                description: A scheme that periodically checks, during I/O, the state of the I/O device and whether there is data to process.
+                superscript: 폴링
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/245_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/71_페이지
+              - term: Non-Maskable Interrupt (NMI)
+                description: An interrupt that cannot be ignored even if the interrupt bit is disabled.
+                superscript: NMI
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/247_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/72_페이지
+              - term: Programmable Interrupt Controller (PIC)
+                description: A device that determines the priority of hardware interrupt requests sent by device controllers and then tells the CPU which hardware interrupt it should process now.
+                superscript: 프로그래머블 인터럽트 컨트롤러
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/247_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/117_페이지
+              - term: Direct Memory Access (DMA)
+                description: An I/O scheme in which I/O devices and memory can interact without going through the CPU.
+                superscript: DMA
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/249_페이지
+              - term: DMA Controller
+                description: Hardware connected to the system bus that is needed to perform DMA I/O.
+                superscript: DMA 컨트롤러
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/249_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/119_페이지
+              - term: Cycle Stealing
+                description: A term for the way DMA uses the system bus.
+                superscript: 사이클 스틸링
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/252_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/120_페이지
+              - term: Peripheral Component Interconnect Express (PCIe)
+                description: A representative I/O bus.
+                superscript: PCIe
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/121_페이지
+                image: assets/img/arch/pcie.png
+              - term: PCIe Slot
+                description: The path that connects various I/O devices to the PCIe bus.
+                superscript: PCIe 슬롯
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/253_페이지
+                  - 이것이_취업을_위한_컴퓨터과학이다/121_페이지
+              - term: Input/Output Processor (IOP)
+                description: A kind of dedicated I/O CPU that not only directly accesses memory but also directly fetches, interprets, and executes I/O instructions.
+                superscript: 입출력 프로세서
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/254_페이지
+              - term: Input/Output Channel
+                description: Another word for an I/O processor.
+                superscript: 입출력 채널
+                references:
+                  - 혼자_공부하는_컴퓨터구조_운영체제/254_페이지
+              - term: Graphics Processing Unit (GPU)
+                description: An I/O processor built for large amounts of core computation such as graphics processing; it has more cores than a CPU but cannot perform computations as complex as a CPU's cores.
+                superscript: GPU
+                references:
+                  - 이것이_취업을_위한_컴퓨터과학이다/123_페이지
+                image: assets/img/arch/gpu.png
