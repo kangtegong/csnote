@@ -1,5 +1,5 @@
 // CSnote 서비스워커 — 오프라인 지원 (앱 셸 + 데이터 캐시)
-const VERSION = 'csnote-v2';
+const VERSION = 'csnote-v3';
 const SHELL = [
   './',
   './index.html',

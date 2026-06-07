@@ -3,6 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no" />
+  <script>
+    (function () {
+      try {
+        if (window.matchMedia('(min-width: 768px)').matches) {
+          location.replace('desktop.html' + location.search + location.hash);
+        }
+      } catch (e) {}
+    })();
+  </script>
   <title>CSnote — 컴퓨터과학 핵심 키워드 노트</title>
   <meta name="description" content="개발자를 위한 컴퓨터과학(CS) 핵심 키워드 노트. 운영체제·네트워크·데이터베이스·자료구조·컴퓨터구조 용어를 모바일에서 앱처럼." />
 
